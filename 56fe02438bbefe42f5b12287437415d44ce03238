@@ -1,0 +1,18 @@
+Revision: 56fe02438bbefe42f5b12287437415d44ce03238
+Patch-set: 1
+File: libs/ui/FramebufferNativeWindow.cpp
+
+69
+Fri Aug 10 16:32:29 2012 +0000
+Author: Rodrigo Obregon <1001692@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAIMX///5s=
+Bytes: 59
+After this patch, this statement doesn't hold true any more
+
+167
+Fri Aug 10 16:32:29 2012 +0000
+Author: Rodrigo Obregon <1001692@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAIMX///5w=
+Bytes: 70
+I believe your patch misses another free() in case of having 3 buffers
+
