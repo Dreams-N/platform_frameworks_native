@@ -9,10 +9,28 @@ UUID: AAAIMX///5s=
 Bytes: 59
 After this patch, this statement doesn't hold true any more
 
+69
+Fri Aug 10 16:47:48 2012 +0000
+Author: Jiejing Zhang <1000793@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAIMX///5s=
+UUID: AAAIN3///8E=
+Bytes: 49
+OK, I will change the statement here in next rev.
+
 167
 Fri Aug 10 16:32:29 2012 +0000
 Author: Rodrigo Obregon <1001692@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: AAAIMX///5w=
 Bytes: 70
 I believe your patch misses another free() in case of having 3 buffers
+
+167
+Fri Aug 10 16:47:48 2012 +0000
+Author: Jiejing Zhang <1000793@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAIMX///5w=
+UUID: AAAIN3///8I=
+Bytes: 115
+Yes, you're right, if three buffer case, it should be free the third buffer too.
+
+I will do this in next rev patch.
 
