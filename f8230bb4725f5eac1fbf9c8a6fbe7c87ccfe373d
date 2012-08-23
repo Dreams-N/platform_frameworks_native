@@ -1,0 +1,11 @@
+Revision: f8230bb4725f5eac1fbf9c8a6fbe7c87ccfe373d
+Patch-set: 1
+File: opengl/tests/gl2_jni/jni/gl_code.cpp
+
+156
+Thu Aug 23 21:34:02 2012 +0000
+Author: Mathias Agopian <1001056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAI2H//+dY=
+Bytes: 37
+why not just omit the parameter name?
+
