@@ -1,0 +1,11 @@
+Revision: 349149b52a424c212e33d165bc146bc0337ea4c4
+Base-for-patch-set: 1
+File: opengl/tests/gl_jni/jni/gl_code.cpp
+
+143
+Thu Aug 23 21:32:57 2012 +0000
+Author: Mathias Agopian <1001056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAI2H//+ds=
+Bytes: 71
+wouldn't it be simpler to just remove the name of the unused parameter?
+
