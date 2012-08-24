@@ -9,3 +9,11 @@ UUID: AAAI2H//+dY=
 Bytes: 37
 why not just omit the parameter name?
 
+156
+Fri Aug 24 14:03:04 2012 +0000
+Author: Edwin Vane <1010717@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAI2H//+dY=
+UUID: AAAI2X//94I=
+Bytes: 290
+In general, if we saw the function was exported, or in this case, part of a JNI interface we didn't remove parameters even if we determined the function wasn't used anywhere as it would change binary interface. Since this is a JNI function can we even remove the 'env' and 'obj' parameters?
+
