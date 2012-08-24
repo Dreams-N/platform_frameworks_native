@@ -17,3 +17,11 @@ UUID: AAAI2X//94I=
 Bytes: 290
 In general, if we saw the function was exported, or in this case, part of a JNI interface we didn't remove parameters even if we determined the function wasn't used anywhere as it would change binary interface. Since this is a JNI function can we even remove the 'env' and 'obj' parameters?
 
+156
+Fri Aug 24 14:22:54 2012 +0000
+Author: Edwin Vane <1010717@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAI2H//+dY=
+UUID: AAAI2X//93o=
+Bytes: 241
+Oh. I see now I missed an important point in  your comment. You suggest to remove the parameter *name* to avoid the warning. Clang doesn't like this. All parameters must be named. I'd suspect just removing parameter names is a GNU extension.
+
