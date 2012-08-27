@@ -1,0 +1,18 @@
+Revision: 51f6e1d3f21b284ec97ff88de524a885ba3b5bf7
+Patch-set: 1
+File: opengl/libs/EGL/Loader.cpp
+
+316
+Mon Aug 27 17:01:54 2012 +0000
+Author: Jean-Baptiste Queru <1000660@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAI6X///rA=
+Bytes: 26
+use spaces instead of tabs
+
+328
+Mon Aug 27 17:01:54 2012 +0000
+Author: Jean-Baptiste Queru <1000660@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAI6n///yo=
+Bytes: 18
+Indentation issue.
+
