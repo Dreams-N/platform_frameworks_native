@@ -1,0 +1,34 @@
+Revision: 1f6c2c016e69e00f2aabdbea5c1779e221069e6f
+Patch-set: 1
+File: libs/ui/FramebufferNativeWindow.cpp
+
+69
+Fri Aug 31 03:18:09 2012 +0000
+Author: Jiejing Zhang <1000793@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAI63//8i0=
+Bytes: 29
+the comments needs to change.
+
+265
+Fri Aug 31 03:18:09 2012 +0000
+Author: Jiejing Zhang <1000793@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAI63//8iw=
+Bytes: 767
+There is a lock bug in this line if use 3 buffer, 
+This line should change to :
+
+if (self->mNumFreeBuffers == 0)
+       self->front = static_cast<NativeBuffer*>(buffer);
+
+The reason is list in my patch: 
+
+// only change the front buffer pointer when only one buffer left,	
+ // if we have buffer free, don't needs to change front pointer.	
+    // otherwise it will dead-lock in this case in three buffer:	
+    // queueBuffer() index=2 (front become buffer[2])	
+    // queueBuffer() index=0 (front become buffer[0])	
+    // dequeueBuffer() (return buffer[0] since bufferHead == 0)	
+    // lockBuffer()  the front == dequeuedBuffer, it will the lockBuffer will infinite wait.
+
+From: https://android-review.googlesource.com/#/c/40580/3/libs/ui/FramebufferNativeWindow.cpp
+
