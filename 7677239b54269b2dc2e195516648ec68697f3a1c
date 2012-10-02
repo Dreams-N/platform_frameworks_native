@@ -1,0 +1,11 @@
+Revision: 7677239b54269b2dc2e195516648ec68697f3a1c
+Patch-set: 1
+File: libs/utils/tests/Android.mk
+
+27
+Tue Oct 02 16:17:17 2012 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAJx3///00=
+Bytes: 232
+if you're using the shared library, don't the exported headers get made available to you anyway? if you can change your #includes to <libz/...> and so on, you might want to do that and stop putting random stuff on your include path.
+
