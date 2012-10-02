@@ -1,0 +1,11 @@
+Revision: 5ee54f4a9b26ba77e789acc8b3784e7e7289d71c
+Patch-set: 2
+File: libs/utils/tests/Android.mk
+
+29
+Tue Oct 02 16:42:48 2012 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAJx3///yg=
+Bytes: 28
+but you do need these three?
+
