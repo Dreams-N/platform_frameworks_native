@@ -9,3 +9,11 @@ UUID: AAAJx3///00=
 Bytes: 232
 if you're using the shared library, don't the exported headers get made available to you anyway? if you can change your #includes to <libz/...> and so on, you might want to do that and stop putting random stuff on your include path.
 
+27
+Tue Oct 02 16:40:52 2012 +0000
+Author: Kenny Root <1002975@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAJx3///00=
+UUID: AAAJxn///3k=
+Bytes: 74
+I just tried removing them and it works fine. Not sure why they were here.
+
