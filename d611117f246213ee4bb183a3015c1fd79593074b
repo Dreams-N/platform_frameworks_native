@@ -1,0 +1,11 @@
+Revision: d611117f246213ee4bb183a3015c1fd79593074b
+Patch-set: 2
+File: libs/utils/ZipUtils.cpp
+
+107
+Tue Oct 16 21:26:47 2012 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAKcn///0w=
+Bytes: 109
+can't we cope with a short read? just pass zlib the amount we actually read, rather than what we'd hoped for?
+
