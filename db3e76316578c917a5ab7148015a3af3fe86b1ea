@@ -1,0 +1,11 @@
+Revision: db3e76316578c917a5ab7148015a3af3fe86b1ea
+Patch-set: 1
+File: opengl/libs/EGL/eglApi.cpp
+
+776
+Tue Dec 11 23:37:35 2012 +0000
+Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: M1FC9fgY
+Bytes: 198
+Should be '#if USE_FAST_TLS_KEY' to match the code that fills in gExtensionForwarders. Alternatively you could check at runtime: "if (gExtensionForwarders[slot]) addr = gExtensionForwarders[slot];".
+
