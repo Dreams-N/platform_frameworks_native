@@ -1,0 +1,11 @@
+Revision: 4f643860e97278572abfc46b5cc3891669f01c75
+Patch-set: 1
+File: libs/binder/ProcessState.cpp
+
+313
+Tue Dec 11 18:21:19 2012 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: M5Bnb-Bw
+Bytes: 170
+the ioctl to get the binder version _reads_ the version passed in? that sounds more like either (a) valgrind is confused or (b) there's a bug in the ioctl implementation?
+
