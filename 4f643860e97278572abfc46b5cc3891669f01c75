@@ -9,3 +9,15 @@ UUID: M5Bnb-Bw
 Bytes: 170
 the ioctl to get the binder version _reads_ the version passed in? that sounds more like either (a) valgrind is confused or (b) there's a bug in the ioctl implementation?
 
+313
+Wed Dec 12 08:06:51 2012 +0000
+Author: Wei Jin <1010988@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: M5Bnb-Bw
+UUID: M4psH-M8
+Bytes: 362
+Yes. valgrind may be confused about some system calls and ioctl is just a case in point. Normally, you need to add a wrapper in valgrind itself for specific kind of operation so that valgrind could recognize it.
+
+Here it seems that it is not only just read, macro BINDER_VERSION uses _IOWR, like this:
+
+#define BINDER_VERSION	_IOWR('b', 9, struct binder_version)
+
