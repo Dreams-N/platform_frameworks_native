@@ -21,3 +21,13 @@ Here it seems that it is not only just read, macro BINDER_VERSION uses _IOWR, li
 
 #define BINDER_VERSION	_IOWR('b', 9, struct binder_version)
 
+313
+Thu Dec 13 18:23:42 2012 +0000
+Author: Iliyan Malchev <1000866@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: M4psH-M8
+UUID: M75AH5c8
+Bytes: 171
+Yeah that should be _IOW only.  Add Arve for comments.
+
+Is Valgrind smart enough to track the specific ioctl declaration and generate a warning based on that?  If so--WOW.
+
