@@ -31,3 +31,11 @@ Yeah that should be _IOW only.  Add Arve for comments.
 
 Is Valgrind smart enough to track the specific ioctl declaration and generate a warning based on that?  If so--WOW.
 
+313
+Thu Dec 13 18:29:33 2012 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: M75AH5c8
+UUID: M1PL8Z2k
+Bytes: 377
+You can't change it to _IOW, because that would change the ioctl number and break the api.  The ioctl number is just a number to the kernel.  The _IOWR macros provide a convenient convention to store a direction flag that most modern ioctls use, but binder does not.  The direction bits in binder ioctls are not reliable, so you'll need a manual definition in valgrind somehow.
+
