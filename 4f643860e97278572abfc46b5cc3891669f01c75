@@ -48,3 +48,11 @@ Bytes: 142
 There's a special case in
 external/valgrind/main/coregrind/m_syswrap/syswrap-linux.c for BINDER_VERSION. What's the exact error you're seeing?
 
+313
+Thu Dec 13 22:51:55 2012 +0000
+Author: Arve Hjønnevåg <1000205@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: M1PL8Z2k
+UUID: M1DJG7FE
+Bytes: 169
+You can add an ioctl to the driver without breaking compatibility as long as you keep the old one. If you change user-space to use it however, old kernels will not work.
+
