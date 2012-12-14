@@ -56,3 +56,13 @@ UUID: M1DJG7FE
 Bytes: 169
 You can add an ioctl to the driver without breaking compatibility as long as you keep the old one. If you change user-space to use it however, old kernels will not work.
 
+313
+Fri Dec 14 09:57:00 2012 +0000
+Author: Evgenii Stepanov <1005967@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: M11KZ9is
+UUID: M3QepBHw
+Bytes: 351
+In general, Valgrind relies on the ioctl direction flag, but, as Kenny said, there is a special case for BINDER_VERSION that should take care of this. Reading Valgrind code, a read warning for this argument should not be possible.
+
+Note that this argument is declared as struct {long; } in binder.h (under bionic/). Does not matter on 32-bits, though.
+
