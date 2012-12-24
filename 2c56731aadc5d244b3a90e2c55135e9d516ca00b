@@ -9,10 +9,26 @@ UUID: M5JnPDFE
 Bytes: 222
 would we be better off casting the incoming "const char*" to a "const uint8_t*" here, and then using uint8_t rather than char in the rest of this function, since we're dealing with bytes here and "char" is just misleading?
 
+365
+Mon Dec 24 03:45:47 2012 +0000
+Author: Wang LiangX <1018229@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: M5JnPDFE
+UUID: NL3wPSJc
+Bytes: 4
+Done
+
 368
 Tue Dec 11 18:28:15 2012 +0000
 Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: M5LnMyFw
 Bytes: 44
 first_char should really be first_byte, too.
+
+368
+Mon Dec 24 03:45:47 2012 +0000
+Author: Wang LiangX <1018229@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: M5LnMyFw
+UUID: NL5wUpK0
+Bytes: 4
+Done
 
