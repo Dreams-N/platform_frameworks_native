@@ -1,0 +1,18 @@
+Revision: f07c2a84c076754c436c1b13a02f68f27e049f6c
+Patch-set: 1
+File: libs/binder/Parcel.cpp
+
+1432
+Mon Mar 11 17:03:57 2013 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: RYkDMLl0
+Bytes: 61
+is there a std::unique_ptr equivalent available to this code?
+
+1482
+Mon Mar 11 17:03:57 2013 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: RYgC5Rrw
+Bytes: 83
+oops! looks like there should have been an "else" on the "if" after the realloc(3).
+
