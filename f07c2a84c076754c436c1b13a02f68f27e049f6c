@@ -25,10 +25,26 @@ UUID: Rf4aXLNk
 Bytes: 228
 i think that's just my one from libcore copied out by kroot. you're welcome to copy it here too. it's not likely to change until we have C++11, and hopefully then we'll actually have std::unique_ptr and can stop rolling our own.
 
+1432
+Tue Mar 12 08:18:14 2013 +0000
+Author: Hyejin Kim <1019634@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: Rf4aXLNk
+UUID: RhnxjecA
+Bytes: 4
+Done
+
 1482
 Mon Mar 11 17:03:57 2013 +0000
 Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: RYgC5Rrw
 Bytes: 83
 oops! looks like there should have been an "else" on the "if" after the realloc(3).
+
+1482
+Tue Mar 12 08:18:14 2013 +0000
+Author: Hyejin Kim <1019634@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: RYgC5Rrw
+UUID: RhpxNJUk
+Bytes: 4
+Done
 
