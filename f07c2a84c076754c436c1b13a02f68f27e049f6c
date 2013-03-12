@@ -17,6 +17,14 @@ UUID: RfwbW3Lk
 Bytes: 57
 There is UniquePtr<> in libutils, but it's fairly recent.
 
+1432
+Tue Mar 12 04:44:10 2013 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: RfwbW3Lk
+UUID: Rf4aXLNk
+Bytes: 228
+i think that's just my one from libcore copied out by kroot. you're welcome to copy it here too. it's not likely to change until we have C++11, and hopefully then we'll actually have std::unique_ptr and can stop rolling our own.
+
 1482
 Mon Mar 11 17:03:57 2013 +0000
 Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
