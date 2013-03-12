@@ -9,6 +9,14 @@ UUID: RYkDMLl0
 Bytes: 61
 is there a std::unique_ptr equivalent available to this code?
 
+1432
+Tue Mar 12 04:13:11 2013 +0000
+Author: Mathias Agopian <1001056@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: RYkDMLl0
+UUID: RfwbW3Lk
+Bytes: 57
+There is UniquePtr<> in libutils, but it's fairly recent.
+
 1482
 Mon Mar 11 17:03:57 2013 +0000
 Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
