@@ -1,0 +1,11 @@
+Revision: 981bc4c0c8b42cbee789e7e21ac036a2a670926f
+Patch-set: 1
+File: libs/binder/MemoryBase.cpp
+
+37
+Wed Mar 13 21:40:56 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: RpzvvF.k
+Bytes: 20
+should we LOGW here?
+
