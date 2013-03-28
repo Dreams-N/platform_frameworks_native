@@ -9,3 +9,13 @@ UUID: Sk8kZleY
 Bytes: 118
 I didn't think this file was even built anymore.  Was this change necessary or just part of a general search & update?
 
+23
+Thu Mar 28 19:19:33 2013 +0000
+Author: Duane Sand <1010669@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: Sk8kZleY
+UUID: Sl6AcICQ
+Bytes: 350
+Done, change is unnecessary and removed.
+
+Chris Dearman of Mips first made this change in the Donut release, when clz_impl() was still in use.  We have been carrying this change forward ever since.  We did not notice how Mathias's change 7bb843ca077711 in Apr 2011 eliminated the use of clz_impl() in ICS.  We will drop this part of this change, now.
+
