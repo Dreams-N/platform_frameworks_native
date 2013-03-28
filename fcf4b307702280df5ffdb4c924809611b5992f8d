@@ -1,0 +1,11 @@
+Revision: fcf4b307702280df5ffdb4c924809611b5992f8d
+Patch-set: 1
+File: services/surfaceflinger/clz.cpp
+
+23
+Thu Mar 28 17:30:45 2013 +0000
+Author: Andy McFadden <1000483@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: Sk8kZleY
+Bytes: 118
+I didn't think this file was even built anymore.  Was this change necessary or just part of a general search & update?
+
