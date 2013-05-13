@@ -1,0 +1,11 @@
+Revision: adc6104f8c39f9c4ef38482a4e85dd8c4f4de11d
+Patch-set: 1
+File: services/surfaceflinger/SurfaceFlinger.cpp
+
+1524
+Mon May 13 18:46:24 2013 +0000
+Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: Ui53VIw8
+Bytes: 159
+This sounds overly alarming. Could you add the display name (hw->getDisplayName()) and make it clearer that composition is only being aborted for this display?
+
