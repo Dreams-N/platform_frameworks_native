@@ -11,6 +11,14 @@ free(data);
 
 We know data is not null because we checked earlier during allocation.
 
+1475
+Wed May 29 01:41:04 2013 +0000
+Author: Sungmin Choi <1016953@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: VA3NkSCY
+UUID: 7dced94c_2c121367
+Bytes: 4
+Done
+
 1523
 Tue May 28 20:08:59 2013 +0000
 Author: Jeff Brown <1003957@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -21,4 +29,12 @@ We should not return here.  Note that we have already called release_object for 
 It's ok if realloc fails since we are merely shrinking the buffer.  Worst case we can continue to use the buffer we had before.  It's just a little too big.
 
 The original code was correct.
+
+1523
+Wed May 29 01:41:04 2013 +0000
+Author: Sungmin Choi <1016953@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: VAzNewFo
+UUID: 7dced94c_cc26efc3
+Bytes: 4
+Done
 
