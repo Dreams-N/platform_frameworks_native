@@ -1,0 +1,11 @@
+Revision: 31a46410aced1785d3fb4c6f93d3dfb7c7f5ecd7
+Patch-set: 2
+File: cmds/servicemanager/binder.c
+
+301
+Tue Jan 14 23:00:32 2014 +0000
+Author: Arve Hjønnevåg <1000205@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ed5785b2_eacea39e
+Bytes: 210
+Can you fix the kernel header instead. Right now the size of this command does not match the payload on 64 bit systems. We either need to make the handler 64 bit, (and/)or introduce a binder_handle_cookie type.
+
