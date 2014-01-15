@@ -1,0 +1,11 @@
+Revision: fc1e237373ee6b297de8ada06de3081550179c1e
+Patch-set: 1
+File: include/media/openmax/OMX_IVCommon.h
+
+165
+Wed Jan 15 23:03:34 2014 +0000
+Author: Lajos Molnar <1021605@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8ddb69ac_c90b917c
+Bytes: 84
+How is the layout of this format differ from OMX_COLOR_FormatYUV420PackedSemiPlanar?
+
