@@ -9,3 +9,13 @@ UUID: d210a297_699141c9
 Bytes: 87
 This should be done only for self.name == "pointer"? The others should still be an int?
 
+56
+Tue Jan 28 21:26:24 2014 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d210a297_699141c9
+UUID: 7220d6de_3c02e926
+Bytes: 152
+yeah, I interpreted "char" as "char*"
+
+That also means my search-and-replace in gltrace_api.cpp won't work, I'll have to actually get the script to run.
+
