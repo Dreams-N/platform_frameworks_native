@@ -1,0 +1,11 @@
+Revision: b8a7ab21c06f7da1418f2e721e257f583bb11f57
+Patch-set: 1
+File: opengl/libs/GLES_trace/tools/genapi.py
+
+56
+Tue Jan 28 21:23:51 2014 +0000
+Author: Siva Velusamy <1010055@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d210a297_699141c9
+Bytes: 87
+This should be done only for self.name == "pointer"? The others should still be an int?
+
