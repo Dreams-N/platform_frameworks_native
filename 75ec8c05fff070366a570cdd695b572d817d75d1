@@ -1,0 +1,31 @@
+Revision: 75ec8c05fff070366a570cdd695b572d817d75d1
+Patch-set: 1
+File: cmds/servicemanager/binder.c
+
+153
+Wed Jan 29 11:41:47 2014 +0000
+Author: Serban Constantinescu <1030338@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 12a87aa1_ddb84bf6
+Bytes: 53
+should this be a (binder_uintptr_t)(uintptr_t) cast ?
+
+188
+Wed Jan 29 11:41:47 2014 +0000
+Author: Serban Constantinescu <1030338@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 929c6a85_212eee70
+Bytes: 17
+see above comment
+
+310
+Wed Jan 29 11:41:47 2014 +0000
+Author: Serban Constantinescu <1030338@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 929c6a85_013acaad
+Bytes: 182
+Once this are accepted I will add a patch that switches this to use:
+
+struct binder_handle_cookie
+
+and deletes the above comment.
+
+https://android-review.googlesource.com/#/c/79228/4
+
