@@ -1,0 +1,11 @@
+Revision: fd84862d50303dfa505c9ff98eb24629c939fe08
+Patch-set: 1
+File: cmds/servicemanager/binder.h
+
+36:4-36:20
+Wed Jan 29 19:04:17 2014 +0000
+Author: Todd Poynor <1004277@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f2b4c6fd_02840eb0
+Bytes: 66
+Could add comment that this must match the definition in IBinder.h
+
