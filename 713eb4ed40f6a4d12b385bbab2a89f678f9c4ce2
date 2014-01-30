@@ -1,0 +1,11 @@
+Revision: 713eb4ed40f6a4d12b385bbab2a89f678f9c4ce2
+Patch-set: 1
+File: include/binder/Parcel.h
+
+95
+Thu Jan 30 02:20:46 2014 +0000
+Author: Dianne Hackborn <1000559@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 52811216_dc43a9ca
+Bytes: 244
+Please make this and the read functions private, I don't think these should be used outside of the Parcel implementation (since pointers can't be marshalled across processes).  If we need to use this in IPCThreadState, make that a friend class.
+
