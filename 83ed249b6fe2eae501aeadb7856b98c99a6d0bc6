@@ -18,6 +18,14 @@ UUID: 52811216_70ae61af
 Bytes: 18
 What does this do?
 
+11
+Thu Jan 30 15:12:55 2014 +0000
+Author: Serban Constantinescu <1030338@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 52811216_70ae61af
+UUID: 929c6a85_84a828a0
+Bytes: 116
+Not needed I will drop it from the next series. I was dumping info to logcat while fixing this. Not needed any more.
+
 File: cmds/servicemanager/binder.c
 
 114
@@ -27,6 +35,14 @@ UUID: f2b4c6fd_8347fdd8
 Bytes: 33
 This should be a separate change.
 
+114
+Thu Jan 30 15:12:55 2014 +0000
+Author: Serban Constantinescu <1030338@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f2b4c6fd_8347fdd8
+UUID: 12a87aa1_a0c5544c
+Bytes: 54
+I will group the error handling into a different patch
+
 File: cmds/servicemanager/service_manager.c
 
 281
@@ -35,4 +51,12 @@ Author: Arve Hjønnevåg <1000205@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: f2b4c6fd_4341f5c1
 Bytes: 56
 This can go with the change to check the binder version.
+
+281
+Thu Jan 30 15:12:55 2014 +0000
+Author: Serban Constantinescu <1030338@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f2b4c6fd_4341f5c1
+UUID: 929c6a85_64240491
+Bytes: 4
+Done
 
