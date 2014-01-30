@@ -9,10 +9,26 @@ UUID: ed5785b2_eacea39e
 Bytes: 210
 Can you fix the kernel header instead. Right now the size of this command does not match the payload on 64 bit systems. We either need to make the handler 64 bit, (and/)or introduce a binder_handle_cookie type.
 
+301
+Thu Jan 30 14:22:45 2014 +0000
+Author: Serban Constantinescu <1030338@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ed5785b2_eacea39e
+UUID: d2b1820e_fe4f7d85
+Bytes: 4
+Done
+
 388:37-388:45
 Thu Jan 30 03:34:56 2014 +0000
 Author: Arve Hjønnevåg <1000205@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 92870a29_52716565
 Bytes: 25
 readbuf is still unsigned
+
+388
+Thu Jan 30 14:22:45 2014 +0000
+Author: Serban Constantinescu <1030338@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 92870a29_52716565
+UUID: 929c6a85_c4d6303a
+Bytes: 29
+Done. readbuf is now uint32_t
 
