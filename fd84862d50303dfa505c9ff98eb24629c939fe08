@@ -9,3 +9,11 @@ UUID: f2b4c6fd_02840eb0
 Bytes: 66
 Could add comment that this must match the definition in IBinder.h
 
+36:4-36:20
+Thu Jan 30 00:40:31 2014 +0000
+Author: Arve Hjønnevåg <1000205@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f2b4c6fd_02840eb0
+UUID: f2b4c6fd_36150899
+Bytes: 49
+That applies to all the other constants here too.
+
