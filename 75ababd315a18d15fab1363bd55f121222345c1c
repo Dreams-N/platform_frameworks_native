@@ -19,3 +19,19 @@ UUID: d2b1820e_5ee311ba
 Bytes: 145
 Colin - for multi-lib does the 2nd Arch pick up TARGET_IS_64_BIT ? If so we can use this flag here since both will be using the 64bit binder ABI,
 
+8
+Fri Jan 31 20:48:48 2014 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d2b1820e_5ee311ba
+UUID: 12ff9ab9_8564a2f3
+Bytes: 311
+Selecting this based on TARGET_IS_64_BIT is not what we want.  We want future 32-bit devices to be setting the flag, and in the future we will change this from
+
+ ifneq ($(TARGET_USES_64_BIT_BINDER),true)
+
+to
+
+ ifeq ($(TARGET_USES_64_BIT_BINDER),false)
+
+which will change the default to use the 64 bit interface.
+
