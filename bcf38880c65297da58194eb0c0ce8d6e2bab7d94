@@ -1,0 +1,11 @@
+Revision: bcf38880c65297da58194eb0c0ce8d6e2bab7d94
+Patch-set: 2
+File: cmds/servicemanager/service_manager.c
+
+218
+Fri Jan 31 22:56:37 2014 +0000
+Author: Arve Hjønnevåg <1000205@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b20eceb3_90d05ce6
+Bytes: 155
+This is not correct. The driver fills sets target.ptr, not target.handle. In a 64 bit process another node could have a non-0 ptr value but 0 handle value.
+
