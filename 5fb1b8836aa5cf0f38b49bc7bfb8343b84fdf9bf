@@ -1,0 +1,20 @@
+Revision: 5fb1b8836aa5cf0f38b49bc7bfb8343b84fdf9bf
+Patch-set: 1
+File: cmds/servicemanager/binder.c
+
+302:13-302:23
+Fri Jan 31 22:51:46 2014 +0000
+Author: Arve Hjønnevåg <1000205@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b20eceb3_b0d6c038
+Bytes: 24
+Cast is no longer needed
+
+File: cmds/servicemanager/service_manager.c
+
+53:22-53:23
+Fri Jan 31 22:51:46 2014 +0000
+Author: Arve Hjønnevåg <1000205@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f2e2061a_f29c4016
+Bytes: 53
+This should be a magic ptr value, not a magic handle.
+
