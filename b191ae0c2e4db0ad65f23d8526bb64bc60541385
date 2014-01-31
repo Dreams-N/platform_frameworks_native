@@ -1,0 +1,80 @@
+Revision: b191ae0c2e4db0ad65f23d8526bb64bc60541385
+Patch-set: 3
+File: include/binder/Parcel.h
+
+40
+Fri Jan 31 11:30:40 2014 +0000
+Author: Serban Constantinescu <1030338@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 929c6a85_44722028
+Bytes: 120
+I have added this to the previous binder patch as per Dianne's review. Now read_pointer() & write_pointer() are private.
+
+208
+Fri Jan 31 11:30:40 2014 +0000
+Author: Serban Constantinescu <1030338@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d2b1820e_7ebfed91
+Bytes: 36
+binder_uintptr_t* ipcData() const; ?
+
+210
+Fri Jan 31 11:30:40 2014 +0000
+Author: Serban Constantinescu <1030338@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 12a87aa1_40a5701a
+Bytes: 38
+binder_size_t*  ipcObjects() const;  ?
+
+File: libs/binder/IPCThreadState.cpp
+
+156
+Fri Jan 31 11:30:40 2014 +0000
+Author: Serban Constantinescu <1030338@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 929c6a85_84f70840
+Bytes: 177
+We will need to fix this as well, however we can do this in a later series since it is used just for debug builds. Makes assumption that "cmd" can iterate over ints and void* s.
+
+189
+Fri Jan 31 11:30:40 2014 +0000
+Author: Serban Constantinescu <1030338@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d2b1820e_1e80e9dd
+Bytes: 5
+e.g.:
+
+817
+Fri Jan 31 11:30:40 2014 +0000
+Author: Serban Constantinescu <1030338@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 929c6a85_c403d067
+Bytes: 43
+reinterpret_cast<const binder_uintptr_t*> ?
+
+1069
+Fri Jan 31 11:30:40 2014 +0000
+Author: Serban Constantinescu <1030338@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 12a87aa1_c0674037
+Bytes: 89
+reinterpret_cast<const binder_size_t*> ?
+
+Used only in debug fixes so can be fixed later.
+
+File: libs/binder/Parcel.cpp
+
+79
+Fri Jan 31 11:30:40 2014 +0000
+Author: Serban Constantinescu <1030338@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 929c6a85_e40ed491
+Bytes: 18
+(void *)obj.cookie
+
+426
+Fri Jan 31 11:30:40 2014 +0000
+Author: Serban Constantinescu <1030338@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d2b1820e_deaf2161
+Bytes: 19
+binder_size_t off ?
+
+537
+Fri Jan 31 11:30:40 2014 +0000
+Author: Serban Constantinescu <1030338@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d2b1820e_beb455b6
+Bytes: 79
+%zd for mDataPos - there are other places where we should use %zd for size_t s.
+
