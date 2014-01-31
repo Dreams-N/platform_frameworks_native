@@ -11,3 +11,11 @@ We've been trying to standardize on 64_BIT in the make files instead of 64BIT.  
 
 TARGET_ prefix is normally used to mean GCC build target (armv7, etc), maybe BOARD_KERNEL_USES_64_BIT_BINDER?
 
+8
+Fri Jan 31 11:44:05 2014 +0000
+Author: Serban Constantinescu <1030338@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 12731a25_eb78a5d7
+UUID: d2b1820e_5ee311ba
+Bytes: 145
+Colin - for multi-lib does the 2nd Arch pick up TARGET_IS_64_BIT ? If so we can use this flag here since both will be using the 64bit binder ABI,
+
