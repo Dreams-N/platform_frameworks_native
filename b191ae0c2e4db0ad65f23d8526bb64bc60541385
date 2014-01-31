@@ -16,6 +16,14 @@ UUID: d2b1820e_7ebfed91
 Bytes: 36
 binder_uintptr_t* ipcData() const; ?
 
+208
+Fri Jan 31 22:18:24 2014 +0000
+Author: Arve Hjønnevåg <1000205@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d2b1820e_7ebfed91
+UUID: d2dfc254_2ec6e7dc
+Bytes: 165
+The driver expects a binder_uintptr_t now, so it is simpler to return an integer type here. No-one should touch the data returned from these functions in user-space.
+
 210
 Fri Jan 31 11:30:40 2014 +0000
 Author: Serban Constantinescu <1030338@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -70,6 +78,14 @@ Author: Serban Constantinescu <1030338@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: d2b1820e_deaf2161
 Bytes: 19
 binder_size_t off ?
+
+426
+Fri Jan 31 22:18:24 2014 +0000
+Author: Arve Hjønnevåg <1000205@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d2b1820e_deaf2161
+UUID: b20eceb3_8d95e5b6
+Bytes: 87
+That is not really needed. The offset can't be larger than 32 bits in a 32 bit process.
 
 537
 Fri Jan 31 11:30:40 2014 +0000
