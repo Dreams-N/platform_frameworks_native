@@ -1,0 +1,11 @@
+Revision: c0f31d278273b3e09c6c0c53180dd135cc203dca
+Patch-set: 2
+File: include/binder/Parcel.h
+
+26
+Fri Jan 31 01:47:57 2014 +0000
+Author: Dianne Hackborn <1000559@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f26f6639_4de55147
+Bytes: 83
+Let's include the Linux header directly instead of something from the private path.
+
