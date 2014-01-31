@@ -54,6 +54,14 @@ UUID: 929c6a85_c403d067
 Bytes: 43
 reinterpret_cast<const binder_uintptr_t*> ?
 
+817
+Fri Jan 31 23:42:23 2014 +0000
+Author: Arve Hjønnevåg <1000205@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 929c6a85_c403d067
+UUID: b20eceb3_f0d7988e
+Bytes: 88
+uintptr_t would be more accurate. Nor is the data const, as the driver will write to it.
+
 1069
 Fri Jan 31 11:30:40 2014 +0000
 Author: Serban Constantinescu <1030338@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -62,6 +70,14 @@ Bytes: 89
 reinterpret_cast<const binder_size_t*> ?
 
 Used only in debug fixes so can be fixed later.
+
+1069
+Fri Jan 31 23:42:23 2014 +0000
+Author: Arve Hjønnevåg <1000205@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 12a87aa1_c0674037
+UUID: b20eceb3_b0036068
+Bytes: 61
+It is only printing the address, so a void * would also work.
 
 File: libs/binder/Parcel.cpp
 
