@@ -1,0 +1,11 @@
+Revision: a44542ca74b7da5b44ba30c205c3244805bb0600
+Patch-set: 1
+File: cmds/servicemanager/binder.c
+
+114:73-114:76
+Fri Jan 31 22:23:03 2014 +0000
+Author: Arve Hjønnevåg <1000205@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f2e2061a_72cbb060
+Bytes: 69
+Printing both versions or that the ioctl failed would be useful here.
+
