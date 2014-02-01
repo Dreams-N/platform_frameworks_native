@@ -1,0 +1,11 @@
+Revision: 22163f9e322ce229847b8c336902c43cabf1f398
+Patch-set: 3
+File: cmds/servicemanager/binder.c
+
+47
+Sat Feb 01 00:05:09 2014 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 92138adb_6914e5cf
+Bytes: 119
+uint64_t is a long on arm64.  to print it portably, include #include <inttypes.h> and replace %016llx with %016"PRIu64"
+
