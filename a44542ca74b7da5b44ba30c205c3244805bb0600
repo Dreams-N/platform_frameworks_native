@@ -9,3 +9,11 @@ UUID: f2e2061a_72cbb060
 Bytes: 69
 Printing both versions or that the ioctl failed would be useful here.
 
+114
+Mon Feb 03 09:39:51 2014 +0000
+Author: Serban Constantinescu <1030338@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f2e2061a_72cbb060
+UUID: 3202de8d_e6847efb
+Bytes: 82
+Once the series is accepted I will add a patch that displays both binder versions.
+
