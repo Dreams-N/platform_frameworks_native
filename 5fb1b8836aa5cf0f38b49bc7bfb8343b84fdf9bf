@@ -9,6 +9,14 @@ UUID: b20eceb3_b0d6c038
 Bytes: 24
 Cast is no longer needed
 
+302
+Mon Feb 03 09:42:49 2014 +0000
+Author: Serban Constantinescu <1030338@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b20eceb3_b0d6c038
+UUID: 9238ea5d_611df67b
+Bytes: 114
+The next patch in this series replaces unit32_t cmd[3] with binder_handle_cookie and removes the unnecessary cast.
+
 File: cmds/servicemanager/service_manager.c
 
 53:22-53:23
@@ -17,4 +25,12 @@ Author: Arve Hjønnevåg <1000205@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: f2e2061a_f29c4016
 Bytes: 53
 This should be a magic ptr value, not a magic handle.
+
+53
+Mon Feb 03 09:42:49 2014 +0000
+Author: Serban Constantinescu <1030338@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f2e2061a_f29c4016
+UUID: 9238ea5d_811a7a83
+Bytes: 58
+Will add a patch to the end of the series that fixes this.
 
