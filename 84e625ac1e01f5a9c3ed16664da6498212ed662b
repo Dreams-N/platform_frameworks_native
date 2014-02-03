@@ -1,0 +1,11 @@
+Revision: 84e625ac1e01f5a9c3ed16664da6498212ed662b
+Patch-set: 5
+File: include/binder/Parcel.h
+
+84
+Mon Feb 03 09:47:41 2014 +0000
+Author: Serban Constantinescu <1030338@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d2f8a2d4_a388ba5d
+Bytes: 36
+Maybe group private/ public members.
+
