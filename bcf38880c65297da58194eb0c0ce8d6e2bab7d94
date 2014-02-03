@@ -9,3 +9,11 @@ UUID: b20eceb3_90d05ce6
 Bytes: 155
 This is not correct. The driver fills sets target.ptr, not target.handle. In a 64 bit process another node could have a non-0 ptr value but 0 handle value.
 
+218
+Mon Feb 03 09:35:58 2014 +0000
+Author: Serban Constantinescu <1030338@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b20eceb3_90d05ce6
+UUID: 9238ea5d_012e6aa6
+Bytes: 77
+Should I fix this by uploading a new patch set? Or fix this in a later patch?
+
