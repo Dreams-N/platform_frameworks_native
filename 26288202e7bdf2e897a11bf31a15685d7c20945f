@@ -1,0 +1,24 @@
+Revision: 26288202e7bdf2e897a11bf31a15685d7c20945f
+Patch-set: 1
+File: cmds/dumpstate/utils.c
+
+472
+Tue Feb 11 17:16:08 2014 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2fc51524_11eacec8
+Bytes: 65
+Shouldnt we use the macro for this:
+
+selinux_android_restorecon()
+
+File: cmds/installd/installd.c
+
+395
+Tue Feb 11 17:16:08 2014 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: afbae599_2a6e7f14
+Bytes: 65
+Shouldnt we use the macro for this:
+
+selinux_android_restorecon()
+
