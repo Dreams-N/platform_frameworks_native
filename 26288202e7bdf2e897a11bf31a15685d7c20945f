@@ -11,6 +11,14 @@ Shouldnt we use the macro for this:
 
 selinux_android_restorecon()
 
+472
+Wed Feb 12 15:32:52 2014 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2fc51524_11eacec8
+UUID: ef65bd2a_b4472093
+Bytes: 121
+No, see the libselinux change; it removes the macro and renames the _flags API call to just selinux_android_restorecon().
+
 File: cmds/installd/installd.c
 
 395
