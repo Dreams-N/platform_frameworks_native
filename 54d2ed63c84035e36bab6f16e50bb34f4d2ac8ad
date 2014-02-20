@@ -9,3 +9,14 @@ UUID: 2f1c351e_f06da017
 Bytes: 37
 What generated code does this affect?
 
+1301
+Thu Feb 20 19:53:07 2014 +0000
+Author: Ashok Bhat <1037066@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2f1c351e_f06da017
+UUID: af64a5c8_5af815ee
+Bytes: 237
+Original code generated (GLvoid *)arg. 
+
+To change this to reinterpret_cast<GLoid *>(arg), two changes were required. (a) Change (GLvoid*) to reinterpret_cast<GLoid *> 
+(b) Add extra braces around arg. The above code does the second bit.
+
