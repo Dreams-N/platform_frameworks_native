@@ -10,12 +10,30 @@ Bytes: 160
 If done this way, you'll have to free them (and allocate each time).
 Looks like they are pre-created during initialization in legacy_data_dir and user_data_dir?
 
+1218
+Thu Feb 20 19:20:47 2014 +0000
+Author: Robert Craig <1013157@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 0f9e91d0_d0018221
+UUID: 4fbc0932_f2980668
+Bytes: 211
+Doh! Will add the frees.
+
+I see where both legacy_data_dir and user_data_dir are created but not where they are saved off. This function is only called once per boot so maybe the malloc and free aren't that bad.
+
 1225
 Thu Feb 20 18:31:08 2014 +0000
 Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 0f9e91d0_d036a2fd
 Bytes: 26
 Maybe add an ALOGE() call?
+
+1225
+Thu Feb 20 19:20:47 2014 +0000
+Author: Robert Craig <1013157@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 0f9e91d0_d036a2fd
+UUID: 6fb70d4d_f3a5aa51
+Bytes: 93
+I didn't add because the underlying libselinux function seemed chatty when things went wrong.
 
 1228
 Thu Feb 20 18:31:08 2014 +0000
