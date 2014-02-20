@@ -1,0 +1,11 @@
+Revision: 54d2ed63c84035e36bab6f16e50bb34f4d2ac8ad
+Patch-set: 1
+File: opengl/tools/glgen/src/JniCodeEmitter.java
+
+1301:0-1301:59
+Thu Feb 20 18:38:23 2014 +0000
+Author: Andy McFadden <1000483@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2f1c351e_f06da017
+Bytes: 37
+What generated code does this affect?
+
