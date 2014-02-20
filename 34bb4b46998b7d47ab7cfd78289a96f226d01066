@@ -1,0 +1,11 @@
+Revision: 34bb4b46998b7d47ab7cfd78289a96f226d01066
+Patch-set: 2
+File: cmds/installd/commands.c
+
+1221
+Thu Feb 20 19:51:20 2014 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ef713d8d_b4078035
+Bytes: 107
+Coding style nit: Don't intermingle code and declarations; move this after all local variable declarations.
+
