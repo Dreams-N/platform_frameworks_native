@@ -1,0 +1,26 @@
+Revision: 34dc3517d77c54c50c71cec03d46abe16d4e8221
+Patch-set: 1
+File: cmds/installd/commands.c
+
+1218
+Thu Feb 20 18:31:08 2014 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0f9e91d0_d0018221
+Bytes: 160
+If done this way, you'll have to free them (and allocate each time).
+Looks like they are pre-created during initialization in legacy_data_dir and user_data_dir?
+
+1225
+Thu Feb 20 18:31:08 2014 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0f9e91d0_d036a2fd
+Bytes: 26
+Maybe add an ALOGE() call?
+
+1228
+Thu Feb 20 18:31:08 2014 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6fb70d4d_33ec52a1
+Bytes: 6
+Ditto.
+
