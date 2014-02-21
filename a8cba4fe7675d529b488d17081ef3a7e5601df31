@@ -1,0 +1,15 @@
+Revision: a8cba4fe7675d529b488d17081ef3a7e5601df31
+Patch-set: 3
+File: cmds/installd/installd.c
+
+132
+Fri Feb 21 01:10:30 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: cf6e39b0_d65de266
+Bytes: 102
+Can you please add:
+
+__attribute__((unused))
+
+to the two arguments. This avoids compile time warnings.
+
