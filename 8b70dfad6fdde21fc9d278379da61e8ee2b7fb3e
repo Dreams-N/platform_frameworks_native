@@ -15,3 +15,11 @@ I'm wondering if there's value in adding
 
 to prevent mixing & matching 64-bit pointers with getHandle().
 
+47
+Sat Feb 22 23:56:41 2014 +0000
+Author: Ashok Bhat <1037066@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2f78b56e_c7e1a180
+UUID: ef985df7_9fa9b760
+Bytes: 65
+Good idea. How about throwing an unsupported operation exception?
+
