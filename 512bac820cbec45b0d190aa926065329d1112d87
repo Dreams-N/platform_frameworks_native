@@ -1,0 +1,11 @@
+Revision: 512bac820cbec45b0d190aa926065329d1112d87
+Patch-set: 4
+File: /COMMIT_MSG
+
+12
+Sat Feb 22 05:35:53 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2f78b56e_c70c3ec5
+Bytes: 218
+Have you actually verified that installd is able to successfully set the security. xattr value? Installd doesn't run as root, and I thought the kernel imposed restrictions on which processes could set security. xattrs.
+
