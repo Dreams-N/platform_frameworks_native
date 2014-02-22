@@ -1,0 +1,17 @@
+Revision: 8b70dfad6fdde21fc9d278379da61e8ee2b7fb3e
+Patch-set: 1
+File: opengl/tools/glgen/static/egl/EGLObjectHandle.java
+
+47:0-47:28
+Sat Feb 22 00:18:11 2014 +0000
+Author: Andy McFadden <1000483@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2f78b56e_c7e1a180
+Bytes: 167
+I'm wondering if there's value in adding
+
+  if ((mHandle & 0xffffffffL) != mHandle) {
+    throw ...
+  }
+
+to prevent mixing & matching 64-bit pointers with getHandle().
+
