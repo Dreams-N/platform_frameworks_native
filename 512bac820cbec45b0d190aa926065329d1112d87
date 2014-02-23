@@ -9,3 +9,11 @@ UUID: 2f78b56e_c70c3ec5
 Bytes: 218
 Have you actually verified that installd is able to successfully set the security. xattr value? Installd doesn't run as root, and I thought the kernel imposed restrictions on which processes could set security. xattrs.
 
+12
+Sun Feb 23 15:36:33 2014 +0000
+Author: Robert Craig <1013887@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2f78b56e_c70c3ec5
+UUID: ef713d8d_080817f2
+Bytes: 212
+Yeah, grumble. I believe installd would need to retain CAP_SYS_ADMIN to pull this off. Hold off on this til something else can be decided. I can't imagine adding back in CAP_SYS_ADMIN would be seen as a solution.
+
