@@ -17,3 +17,13 @@ UUID: ef713d8d_080817f2
 Bytes: 212
 Yeah, grumble. I believe installd would need to retain CAP_SYS_ADMIN to pull this off. Hold off on this til something else can be decided. I can't imagine adding back in CAP_SYS_ADMIN would be seen as a solution.
 
+12
+Sun Feb 23 16:05:59 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ef713d8d_080817f2
+UUID: ef469d41_860cfec3
+Bytes: 345
+As another idea, have you considered a one-shot service triggered by init for doing the relabeling of /data/data and /data/user ? The one-shot service could reuse the existing relabeling code in init, and the service could be triggered by system_server when packages.list is in a fixed state.
+
+It might be easier to implement too, which is nice.
+
