@@ -36,3 +36,13 @@ Bytes: 448
 The security.selinux attribute does not require CAP_SYS_ADMIN, since SELinux has its own relabelfrom and relabelto checks.  It does require CAP_FOWNER if the inode is owned by another UID, but installd already requires that capability.
 So I assume the only issue is with setting security.restorecon_last?  We could perhaps relax that in the kernel as well and apply a different check there, or just go with the oneshot service approach you suggest.
 
+12
+Mon Feb 24 17:20:08 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: af49054f_7bf33383
+UUID: ef713d8d_c841bf7b
+Bytes: 302
+Ya, I was referring to the security.restorecon_last xattr. Sorry if that was confusing.
+
+Another alternative is to record the hash of /seapp_contexts in system_server, and only to the relabel if the hash changed. We don't have to store it in an xattr, we can store it in system_server's home directory.
+
