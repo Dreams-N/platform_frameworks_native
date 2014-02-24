@@ -27,3 +27,12 @@ As another idea, have you considered a one-shot service triggered by init for do
 
 It might be easier to implement too, which is nice.
 
+12
+Mon Feb 24 13:23:34 2014 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ef469d41_860cfec3
+UUID: af49054f_7bf33383
+Bytes: 448
+The security.selinux attribute does not require CAP_SYS_ADMIN, since SELinux has its own relabelfrom and relabelto checks.  It does require CAP_FOWNER if the inode is owned by another UID, but installd already requires that capability.
+So I assume the only issue is with setting security.restorecon_last?  We could perhaps relax that in the kernel as well and apply a different check there, or just go with the oneshot service approach you suggest.
+
