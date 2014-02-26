@@ -1,0 +1,11 @@
+Revision: db2aefb1e7212dddf5973259e09931709160ecc6
+Patch-set: 1
+File: opengl/tools/glgen/stubs/egl/eglGetDisplay.java
+
+6:6-6:53
+Wed Feb 26 17:38:53 2014 +0000
+Author: Andy McFadden <1000483@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3cfb9535_9bdeb981
+Bytes: 94
+I'd drop this comment as well -- no need to un-hide the API if we don't have a use for it yet.
+
