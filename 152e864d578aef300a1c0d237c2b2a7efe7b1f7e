@@ -1,0 +1,32 @@
+Revision: 152e864d578aef300a1c0d237c2b2a7efe7b1f7e
+Patch-set: 5
+File: cmds/servicemanager/service_manager.c
+
+27
+Wed Mar 05 16:59:44 2014 +0000
+Author: Wink Saville <1001401@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1c7df19f_c8733227
+Bytes: 102
+Do not change types, I'm guessing what happened is this file is based on "old" it needs to be rebased.
+
+46
+Wed Mar 05 16:59:44 2014 +0000
+Author: Wink Saville <1001401@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1c7df19f_c8fed219
+Bytes: 111
+Hopefully in L we won't need to add mainismsX, iphonesubinfoX, simphonebookX. It will be difficult to maintain.
+
+48
+Wed Mar 05 16:59:44 2014 +0000
+Author: Wink Saville <1001401@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: dc76f9c4_061cbfc5
+Bytes: 87
+remove any added trailing white space, do not remove pre-existing trailing white space.
+
+91:4-91:12
+Wed Mar 05 16:59:44 2014 +0000
+Author: Wink Saville <1001401@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1c7df19f_e8fb8e26
+Bytes: 27
+again, do not change types.
+
