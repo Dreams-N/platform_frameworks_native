@@ -1,0 +1,29 @@
+Revision: e9887e46cea4a095e4219927eadbe4c57bb1a5ee
+Patch-set: 7
+File: cmds/installd/commands.c
+
+1252
+Wed Mar 19 19:03:45 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: fcfbbdcb_98e76551
+Bytes: 2267
+Installd doesn't have sufficient selinux capabilities to perform this operation. In particular, I'm seeing the following denials when I try to perform an upgrade from Android 4.2 to tip-of-tree:
+
+<5>[  100.719340] type=1400 audit(1395253832.270:5): avc:  denied  { relabelto } for  pid=139 comm="installd" name="lib" dev=mmcblk0p10 ino=114693 scontext=u:r:installd:s0 tcontext=u:object_r:app_data_file:s0 tclass=lnk_file
+
+<5>[  100.720458] type=1400 audit(1395253832.270:6): avc:  denied  { relabelto } for  pid=139 comm="installd" name="lib" dev=mmcblk0p10 ino=114695 scontext=u:r:installd:s0 tcontext=u:object_r:app_data_file:s0 tclass=lnk_file
+
+<5>[  100.721537] type=1400 audit(1395253832.270:7): avc:  denied  { relabelto } for  pid=139 comm="installd" name="lib" dev=mmcblk0p10 ino=114697 scontext=u:r:installd:s0 tcontext=u:object_r:app_data_file:s0 tclass=lnk_file
+
+<5>[  100.722668] type=1400 audit(1395253832.270:8): avc:  denied  { relabelto } for  pid=139 comm="installd" name="lib" dev=mmcblk0p10 ino=114699 scontext=u:r:installd:s0 tcontext=u:object_r:bluetooth_data_file:s0 tclass=lnk_file
+
+<5>[  100.725224] type=1400 audit(1395253832.270:9): avc:  denied  { relabelto } for  pid=139 comm="installd" name="lib" dev=mmcblk0p10 ino=114701 scontext=u:r:installd:s0 tcontext=u:object_r:app_data_file:s0 tclass=lnk_file
+
+<5>[  100.726396] type=1400 audit(1395253832.280:10): avc:  denied  { relabelto } for  pid=139 comm="installd" name="lib" dev=mmcblk0p10 ino=114703 scontext=u:r:installd:s0 tcontext=u:object_r:app_data_file:s0 tclass=lnk_file
+
+<5>[  100.727488] type=1400 audit(1395253832.280:11): avc:  denied  { relabelto } for  pid=139 comm="installd" name="lib" dev=mmcblk0p10 ino=114705 scontext=u:r:installd:s0 tcontext=u:object_r:app_data_file:s0 tclass=lnk_file
+
+<5>[  100.728587] type=1400 audit(1395253832.280:12): avc:  denied  { relabelto } for  pid=139 comm="installd" name="lib" dev=mmcblk0p10 ino=114707 scontext=u:r:installd:s0 tcontext=u:object_r:app_data_file:s0 tclass=lnk_file
+
+<5>[  100.732010] type=1400 audit(1395253832.280:13): avc:  denied  { relabelto } for  pid=139 comm="installd" name="com.android.calendar_preferences.xml" dev=mmcblk0p10 ino=115007 scontext=u:r:installd:s0 tcontext=u:object_r:app_data_file:s0 tclass=file
+
