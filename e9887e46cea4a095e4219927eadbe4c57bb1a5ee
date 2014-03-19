@@ -27,3 +27,11 @@ Installd doesn't have sufficient selinux capabilities to perform this operation.
 
 <5>[  100.732010] type=1400 audit(1395253832.280:13): avc:  denied  { relabelto } for  pid=139 comm="installd" name="com.android.calendar_preferences.xml" dev=mmcblk0p10 ino=115007 scontext=u:r:installd:s0 tcontext=u:object_r:app_data_file:s0 tclass=file
 
+1252
+Wed Mar 19 20:16:55 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: fcfbbdcb_98e76551
+UUID: bc33057e_a2345ef4
+Bytes: 54
+Fixed by https://android-review.googlesource.com/88265
+
