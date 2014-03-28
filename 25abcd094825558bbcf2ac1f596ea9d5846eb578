@@ -62,3 +62,11 @@ UUID: 99157331_8db2117a
 Bytes: 105
 What about '.' and '..'? I guess we can place additional logic before this to skip without logging those?
 
+1278
+Fri Mar 28 17:02:18 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 99157331_8db2117a
+UUID: b935d7d3_b99e20d2
+Bytes: 30
+Good point. Sounds good to me.
+
