@@ -1,0 +1,32 @@
+Revision: 25abcd094825558bbcf2ac1f596ea9d5846eb578
+Patch-set: 5
+File: cmds/installd/commands.c
+
+1243
+Fri Mar 28 16:09:10 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f91d8f5d_058db56a
+Bytes: 111
+I'd prefer if we don't use PATH_MAX. See http://insanecoding.blogspot.com/2007/11/pathmax-simply-isnt.html why.
+
+1252
+Fri Mar 28 16:09:10 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f91d8f5d_2590b181
+Bytes: 93
+This feels like a big error if this occurs. Add an ALOGE() to make sure the error is visible?
+
+1255
+Fri Mar 28 16:09:10 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b935d7d3_b9f5009e
+Bytes: 56
+we can use asprintf here instead of relying on PATH_MAX.
+
+1278
+Fri Mar 28 16:09:10 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b935d7d3_39c3504c
+Bytes: 55
+This feels like a bad error if it occurs. Add an ALOGE?
+
