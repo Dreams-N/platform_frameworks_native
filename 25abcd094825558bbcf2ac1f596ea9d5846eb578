@@ -9,12 +9,28 @@ UUID: f91d8f5d_058db56a
 Bytes: 111
 I'd prefer if we don't use PATH_MAX. See http://insanecoding.blogspot.com/2007/11/pathmax-simply-isnt.html why.
 
+1243
+Fri Mar 28 16:51:52 2014 +0000
+Author: Robert Craig <1013157@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f91d8f5d_058db56a
+UUID: b910773f_0e24bb93
+Bytes: 4
+Done
+
 1252
 Fri Mar 28 16:09:10 2014 +0000
 Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: f91d8f5d_2590b181
 Bytes: 93
 This feels like a big error if this occurs. Add an ALOGE() to make sure the error is visible?
+
+1252
+Fri Mar 28 16:51:52 2014 +0000
+Author: Robert Craig <1013157@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f91d8f5d_2590b181
+UUID: 99157331_4dbcf94b
+Bytes: 4
+Done
 
 1255
 Fri Mar 28 16:09:10 2014 +0000
@@ -23,10 +39,26 @@ UUID: b935d7d3_b9f5009e
 Bytes: 56
 we can use asprintf here instead of relying on PATH_MAX.
 
+1255
+Fri Mar 28 16:51:52 2014 +0000
+Author: Robert Craig <1013157@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b935d7d3_b9f5009e
+UUID: 39fba735_926d8c1e
+Bytes: 4
+Done
+
 1278
 Fri Mar 28 16:09:10 2014 +0000
 Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: b935d7d3_39c3504c
 Bytes: 55
 This feels like a bad error if it occurs. Add an ALOGE?
+
+1278
+Fri Mar 28 16:51:52 2014 +0000
+Author: Robert Craig <1013157@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b935d7d3_39c3504c
+UUID: 99157331_8db2117a
+Bytes: 105
+What about '.' and '..'? I guess we can place additional logic before this to skip without logging those?
 
