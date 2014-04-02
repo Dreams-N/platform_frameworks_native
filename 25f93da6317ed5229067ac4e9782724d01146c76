@@ -1,0 +1,13 @@
+Revision: 25f93da6317ed5229067ac4e9782724d01146c76
+Patch-set: 1
+File: include/media/openmax/OMX_Types.h
+
+163
+Wed Apr 02 17:58:59 2014 +0000
+Author: Glenn Kasten <1004395@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f9a74f88_7a6d161b
+Bytes: 222
+This doesn't follow the "include what you use" rule, so fails in some contexts where <stdint.h> was not yet included.
+
+I'll upload another patch set to fix it, along with some CLs on other projects to fix the log problems.
+
