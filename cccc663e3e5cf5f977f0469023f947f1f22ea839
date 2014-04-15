@@ -1,0 +1,13 @@
+Revision: cccc663e3e5cf5f977f0469023f947f1f22ea839
+Patch-set: 3
+File: cmds/installd/commands.c
+
+646:1-652:2
+Tue Apr 15 07:23:41 2014 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9980137b_cda70c8c
+Bytes: 296
+i talked to Narayan and was thinking that we should just use the abi to select subdirs in /data/dalvik-cache and keep the 64-bit stuff orthogonal. 
+
+the problem is keeping mapping abi -> instruction set as well as setting extra instruction set features via board config and passing them here too.
+
