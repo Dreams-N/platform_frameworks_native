@@ -11,3 +11,11 @@ i talked to Narayan and was thinking that we should just use the abi to select s
 
 the problem is keeping mapping abi -> instruction set as well as setting extra instruction set features via board config and passing them here too.
 
+646:1-652:2
+Tue Apr 15 07:26:46 2014 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 9980137b_cda70c8c
+UUID: f9c3cfc8_c71ee046
+Bytes: 197
+As I mentioned in another thread, we would need that for java "shared libraries" anyway. Brian says we should do that for all compiler output and that does seem like it would simplify things a lot.
+
