@@ -1,0 +1,18 @@
+Revision: 757d5ac612f8d955b7f4cd3017b4b7a4a5cd3ca3
+Patch-set: 1
+File: libs/ui/GraphicBufferMapper.cpp
+
+118
+Wed Apr 16 21:53:43 2014 +0000
+Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 25f61b4a_c5afce80
+Bytes: 99
+This needs to check the gralloc version; if <0.3 it should wait on the fence before calling lock().
+
+131
+Wed Apr 16 21:53:43 2014 +0000
+Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e5f7a345_834302ce
+Bytes: 75
+Ditto, need a version check before calling this, with fallback to unlock().
+
