@@ -1,0 +1,11 @@
+Revision: c1c1c6fa8a5c41c0bed14e3f38e70e1bb6709217
+Patch-set: 1
+File: opengl/libs/EGL/egl_object.cpp
+
+112:21-112:73
+Thu Apr 17 20:59:03 2014 +0000
+Author: Andy McFadden <1000483@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c51d3f5e_69f44d3b
+Bytes: 160
+If glGetString() fails, and we store "", gl_extensions.isEmpty() will return true every time (since it's just testing for length==0).  So this isn't quite true.
+
