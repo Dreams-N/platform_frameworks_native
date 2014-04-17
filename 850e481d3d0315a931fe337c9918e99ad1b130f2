@@ -1,0 +1,11 @@
+Revision: 850e481d3d0315a931fe337c9918e99ad1b130f2
+Patch-set: 1
+File: opengl/libs/EGL/egl_object.cpp
+
+97:8-97:32
+Thu Apr 17 22:46:12 2014 +0000
+Author: Andy McFadden <1000483@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c51d3f5e_be5df6a7
+Bytes: 107
+Seems like the String8 destructor should be cleaning this up.  Is the egl_context_t destructor not running?
+
