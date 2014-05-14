@@ -9,3 +9,11 @@ UUID: c51d3f5e_69f44d3b
 Bytes: 160
 If glGetString() fails, and we store "", gl_extensions.isEmpty() will return true every time (since it's just testing for length==0).  So this isn't quite true.
 
+112:21-112:73
+Wed May 14 18:19:29 2014 +0000
+Author: Robert Tray <1015467@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c51d3f5e_69f44d3b
+UUID: 2ad50879_aa5a8f2a
+Bytes: 95
+But immediately below the debug_marker string is appended.  So it shouldn't be empty next time.
+
