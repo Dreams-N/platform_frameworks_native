@@ -1,0 +1,11 @@
+Revision: afcfde327a31c73660208d5ed9450933a63773a1
+Patch-set: 2
+File: include/media/hardware/HardwareAPI.h
+
+164:60-164:73
+Fri May 23 01:16:55 2014 +0000
+Author: Lajos Molnar <1021605@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9f9d5828_c4656feb
+Bytes: 45
+I would rather not add OMX_EXTRADATA support.
+
