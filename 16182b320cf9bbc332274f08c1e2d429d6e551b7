@@ -1,0 +1,20 @@
+Revision: 16182b320cf9bbc332274f08c1e2d429d6e551b7
+Patch-set: 1
+File: opengl/libs/EGL/getProcAddress.cpp
+
+91
+Sat May 24 05:52:36 2014 +0000
+Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: bf4cdcb3_fc5ea9a0
+Bytes: 52
+Why doesn't x86_64 use cmovne like the i386 version?
+
+File: opengl/libs/GLES_CM/gl.cpp
+
+146:21-146:22
+Sat May 24 05:52:36 2014 +0000
+Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7f6c24f1_23521811
+Bytes: 219
+Shouldn't this be 'i' instead of 'I'? The gl2.cpp version uses 'i'. If I'm understanding the gcc docs right, 'I' happens to work for the current value of TLS_SLOT_OPENGL_API, but if it would break if that value changed.
+
