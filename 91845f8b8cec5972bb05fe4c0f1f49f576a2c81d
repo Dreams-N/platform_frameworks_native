@@ -13,6 +13,18 @@ I'd prefer to use __attribute__((aligned(8)) throughout and remove "padding" her
 
 (The use of padding here was incorrect anyway, since it doesn't really force 8 byte alignment unless InputMessage itself was 8 byte aligned...)
 
+52
+Tue May 27 14:27:19 2014 +0000
+Author: Fengwei Yin <1011068@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5f34c006_2423dc44
+UUID: dfed10cb_ad65fd9d
+Bytes: 309
+I agree. The padding working here needs InputMessage 8 byte aligned.
+
+And padding could be removed if we use __attribute__ thing. I will update the patch.
+
+Moreover, I prefer to use __attribute__ instead of padding because adding new fields must be very careful not to break the old layout if padding is used.
+
 72
 Tue May 27 12:51:58 2014 +0000
 Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -24,10 +36,28 @@ Also, IIRC - the fact that eventTime is aligned(8) implies that the compiler wil
 
 It's probably better to leave this as is for clarity.
 
+72
+Tue May 27 14:27:19 2014 +0000
+Author: Fengwei Yin <1011068@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5f34c006_8418e809
+UUID: bf65bc2b_88f647f7
+Bytes: 296
+I didn't try moving the __attribute__ thing to union. So not sure whether it could work. I was trying to maintain the ARM layout not changed.
+
+Yes. The union/structure alignment depends on the biggest alignment of the fields. So eventTime and downTime aligned to 8 make sure key align to 8 bytes.
+
 93
 Tue May 27 12:51:58 2014 +0000
 Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 9fa47888_09c62d27
 Bytes: 25
 please revert this change
+
+93
+Tue May 27 14:27:19 2014 +0000
+Author: Fengwei Yin <1011068@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 9fa47888_09c62d27
+UUID: dfed10cb_6daf9570
+Bytes: 22
+Will update the patch.
 
