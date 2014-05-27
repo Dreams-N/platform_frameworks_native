@@ -1,0 +1,33 @@
+Revision: 91845f8b8cec5972bb05fe4c0f1f49f576a2c81d
+Patch-set: 1
+File: include/input/InputTransport.h
+
+52
+Tue May 27 12:51:58 2014 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5f34c006_2423dc44
+Bytes: 400
+Doesn't this line guarantee that Key, Motion & Finished are 8 byte aligned ? Also, this method of aligning structs is different from the __attribute__ we are adding below.
+
+I'd prefer to use __attribute__((aligned(8)) throughout and remove "padding" here.
+
+(The use of padding here was incorrect anyway, since it doesn't really force 8 byte alignment unless InputMessage itself was 8 byte aligned...)
+
+72
+Tue May 27 12:51:58 2014 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5f34c006_8418e809
+Bytes: 310
+Is it possible to move this to the union declaration (so that all variants of the union are 8 bytes aligned ?) or is that not allowed ?
+
+Also, IIRC - the fact that eventTime is aligned(8) implies that the compiler will apply that alignment to Key as well.
+
+It's probably better to leave this as is for clarity.
+
+93
+Tue May 27 12:51:58 2014 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9fa47888_09c62d27
+Bytes: 25
+please revert this change
+
