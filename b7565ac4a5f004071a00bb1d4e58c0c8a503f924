@@ -1,0 +1,20 @@
+Revision: b7565ac4a5f004071a00bb1d4e58c0c8a503f924
+Patch-set: 1
+File: cmds/installd/installd.c
+
+376
+Tue May 27 18:50:26 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: dfed10cb_137554dd
+Bytes: 223
+Are we planning on explicitly allowing installd unlabeled:lnk_file read? Otherwise, if we ever delete the unlabeled compatibility rules in domain.te, access() on the symlink will return false even though the symlink exists.
+
+381
+Tue May 27 18:50:26 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7ffd0472_a606bee9
+Bytes: 163
+I'd feel more comfortable if we unconditionally did this symlink retorecon, not just when access() returned true.
+
+Can we move this to immediately before line 375?
+
