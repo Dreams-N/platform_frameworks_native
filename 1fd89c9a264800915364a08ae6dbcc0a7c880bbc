@@ -11,3 +11,12 @@ I'll be honest, it feels like we're just sprinking these around to fixup problem
 
 How would we have known this was necessary if we wrote this code from scratch today?
 
+376
+Tue May 27 20:40:47 2014 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7ffd0472_01897412
+UUID: df3fd0e6_2390ee37
+Bytes: 411
+We likely wouldn't; it is a corner case for handling upgrades from 4.2 with an unlabeled userdata.
+Maybe we should instead change the restorecon logic for the init.rc restorecon_recursive /data to descend into /data/user and fix up any top-level symlinks (and directories - it occurs to me that we also need to deal with any other user ID directories) as well, only pruning the actual package directories there.
+
