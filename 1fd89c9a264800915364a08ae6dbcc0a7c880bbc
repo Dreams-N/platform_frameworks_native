@@ -20,3 +20,15 @@ Bytes: 411
 We likely wouldn't; it is a corner case for handling upgrades from 4.2 with an unlabeled userdata.
 Maybe we should instead change the restorecon logic for the init.rc restorecon_recursive /data to descend into /data/user and fix up any top-level symlinks (and directories - it occurs to me that we also need to deal with any other user ID directories) as well, only pruning the actual package directories there.
 
+376
+Tue May 27 20:55:29 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: df3fd0e6_2390ee37
+UUID: dfed10cb_0125fac9
+Bytes: 603
+With the exception of /data/data and /data/user, labels are based off of the contents of /file_contexts. When /file_contexts changes, a relabeling of /data occurs. This has allowed us to minimize the number of selinux_android_restorecons sprinkled through the code, compared to the proliferation of chmod / chown / etc... calls within Android. 
+
+Currently, there are only approximately 11 calls to SELinux.restorecon(), and approximately 12 calls to selinux_android_restorecon() sprinkled throughout our code.
+
+Hopefully we'll continue to keep the number of selinux_android_restorecon() calls minimized.
+
