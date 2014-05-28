@@ -1,0 +1,11 @@
+Revision: ce9b9f270a1c790a4070a1eaf71ccf10a8a66903
+Patch-set: 1
+File: cmds/atrace/atrace.cpp
+
+87
+Wed May 28 21:37:50 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ff8c944a_4e52b311
+Bytes: 112
+i think this should just say "Bionic" or "Bionic C Library" or "C Library". none of the others mention systrace.
+
