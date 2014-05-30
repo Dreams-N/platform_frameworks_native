@@ -1,0 +1,25 @@
+Revision: d408feac93fdf92b1480a68bf4c3ba93c3d690a5
+Patch-set: 1
+File: libs/binder/Parcel.cpp
+
+29:0-29:24
+Fri May 30 23:47:36 2014 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1ff408d0_c9f515ed
+Bytes: 37
+Ultimately we want to remove this ...
+
+1183:9-1183:17
+Fri May 30 23:47:36 2014 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1ff408d0_e900d924
+Bytes: 71
+Merde .. we will remove this if we have to go through a second pass ...
+
+1264:0-1264:8
+Fri May 30 23:47:36 2014 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: dfd51034_16f0e2fd
+Bytes: 21
+more space issues ...
+
