@@ -9,6 +9,14 @@ UUID: 1fbfa8df_2c981d21
 Bytes: 10
 or just 0U
 
+264
+Tue Jun 03 18:22:26 2014 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 1fbfa8df_2c981d21
+UUID: dffef0bb_53d786cb
+Bytes: 78
+Thanks for KISS advice. Without would promote the expression to long <mumble>.
+
 File: libs/binder/Parcel.cpp
 
 1101
@@ -17,4 +25,12 @@ Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: bfcdbca8_06a41cd8
 Bytes: 22
 len is already size_t.
+
+1101
+Tue Jun 03 18:22:26 2014 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: bfcdbca8_06a41cd8
+UUID: dffef0bb_b3e0faac
+Bytes: 370
+Good Catch! I do not know what possessed me!? ;-} Was a result of the gnu++11 testing I was doing when I was not sure whether the problem was the first or the second argument that prevented the linker from recognizing libutils (we eventually discovered that char16_t is irreconcilably incompatible between gnu++0x and gnu++11 and forgot to undo the test for second arg).
 
