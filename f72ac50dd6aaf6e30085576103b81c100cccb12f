@@ -1,0 +1,20 @@
+Revision: f72ac50dd6aaf6e30085576103b81c100cccb12f
+Patch-set: 2
+File: libs/binder/BpBinder.cpp
+
+264
+Tue Jun 03 17:17:57 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1fbfa8df_2c981d21
+Bytes: 10
+or just 0U
+
+File: libs/binder/Parcel.cpp
+
+1101
+Tue Jun 03 17:17:57 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: bfcdbca8_06a41cd8
+Bytes: 22
+len is already size_t.
+
