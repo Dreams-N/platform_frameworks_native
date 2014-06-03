@@ -1,0 +1,48 @@
+Revision: 7218f187736b38ee63577dfb346e5350e48ed100
+Patch-set: 4
+File: services/surfaceflinger/SurfaceFlinger.cpp
+
+148:28-148:29
+Tue Jun 03 23:02:43 2014 +0000
+Author: Dan Stoza <1043625@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7f33447f_79c11d61
+Bytes: 30
+false after converting to bool
+
+1689:51-1689:56
+Tue Jun 03 23:02:43 2014 +0000
+Author: Dan Stoza <1043625@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3f162cdd_f8c3f1cd
+Bytes: 112
+I'd prefer static_cast<float>, and it might be nice to split this across two lines to reduce some of the parens.
+
+1689:14-1689:15
+Tue Jun 03 23:02:43 2014 +0000
+Author: Dan Stoza <1043625@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: df4350e0_b70d789c
+Bytes: 11
+Extra space
+
+1693:8-1693:12
+Tue Jun 03 23:02:43 2014 +0000
+Author: Dan Stoza <1043625@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: df4350e0_772850ed
+Bytes: 6
+ALOGI?
+
+2546:42-2546:47
+Tue Jun 03 23:02:43 2014 +0000
+Author: Dan Stoza <1043625@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7f33447f_19d25138
+Bytes: 39
+'true : false' after converting to bool
+
+File: services/surfaceflinger/SurfaceFlinger.h
+
+449:4-449:7
+Tue Jun 03 23:02:43 2014 +0000
+Author: Dan Stoza <1043625@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: bf505ca5_2504d4e0
+Bytes: 4
+bool
+
