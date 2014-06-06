@@ -1,0 +1,11 @@
+Revision: 662beb6d8d98720d38df974729c200c33c6dfc1b
+Patch-set: 1
+File: cmds/installd/commands.c
+
+681:82-681:89
+Fri Jun 06 17:39:05 2014 +0000
+Author: Dave Allison <1036486@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9f26384e_e888f7a6
+Bytes: 108
+This won't work.  It will terminate the execl argument list.  You need to pass something other than 0 (NULL)
+
