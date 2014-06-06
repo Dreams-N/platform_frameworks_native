@@ -1,0 +1,27 @@
+Revision: 05797ada9698e4f7f804d570ceeb0f888cfc15b1
+Patch-set: 1
+File: opengl/libs/EGL/getProcAddress.cpp
+
+59:26-59:47
+Fri Jun 06 16:37:35 2014 +0000
+Author: Andy McFadden <1000483@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1f1b2808_4f47a383
+Bytes: 57
+Do we need this here?  Nothing else in this file uses it.
+
+154:0-154:6
+Fri Jun 06 16:37:35 2014 +0000
+Author: Andy McFadden <1000483@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: df4350e0_25aa80aa
+Bytes: 106
+Should this have a final #else / #error "unknown arch" ?  Looks like the default handler is a non-handler.
+
+File: opengl/libs/GLES2/gl2.cpp
+
+43:0-43:41
+Fri Jun 06 16:37:35 2014 +0000
+Author: Andy McFadden <1000483@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1f1b2808_6f306720
+Bytes: 141
+I'm wondering if this block should start with "#if USE_SLOW_BINDING", and this becomes a #elif, so we don't have to append it to every entry.
+
