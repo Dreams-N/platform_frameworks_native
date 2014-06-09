@@ -47,3 +47,11 @@ I don't like implicitly terminating the argument list early - it seems wrong and
 
 I think we should change this to execv and avoid the problem altogether - execl is only for when you always pass the same number of arguments.
 
+681:82-681:89
+Mon Jun 09 16:03:52 2014 +0000
+Author: Calin Juravle <1022077@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: bf505ca5_02a97cb1
+UUID: 7f81844b_8607dae6
+Bytes: 84
+Yea, changing to execv seems to be the proper solution here. I'll upload another PS.
+
