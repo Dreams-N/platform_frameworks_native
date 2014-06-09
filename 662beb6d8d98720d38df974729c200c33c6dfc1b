@@ -25,3 +25,11 @@ UUID: df719054_d0d4c257
 Bytes: 134
 Must the dex2oat_flags always be at the end ? The code would've looked simpler if you could have put the profile_top_k_arg at the end.
 
+681:82-681:89
+Mon Jun 09 14:11:22 2014 +0000
+Author: Calin Juravle <1022077@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: df719054_d0d4c257
+UUID: bf7e9c23_6f82cd41
+Bytes: 197
+I don't think so, but dex2oat_flags could be empty as well so that wouldn't make much of a difference. And I don't really like adding something similar to "--no-profile-file" just to simplify this.
+
