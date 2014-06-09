@@ -33,3 +33,17 @@ UUID: bf7e9c23_6f82cd41
 Bytes: 197
 I don't think so, but dex2oat_flags could be empty as well so that wouldn't make much of a difference. And I don't really like adding something similar to "--no-profile-file" just to simplify this.
 
+681:82-681:89
+Mon Jun 09 15:35:52 2014 +0000
+Author: Dave Allison <1036486@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: bf7e9c23_6f82cd41
+UUID: bf505ca5_02a97cb1
+Bytes: 713
+ACK on the second comment Calin, but the code is very hard to read and I didn't see the second ?:.  The problem with passing NULL here to execl is that we've been bitten by this before and someone added a new argument to the list (at the end - it didn't work sometimes).
+
+If you want to avoid passing an argument just to say that there is no argument (although passing "" or "*" or something isn't too bad), we should probably change execl to execv and thus make it obvious.
+
+I don't like implicitly terminating the argument list early - it seems wrong and error prone.
+
+I think we should change this to execv and avoid the problem altogether - execl is only for when you always pass the same number of arguments.
+
