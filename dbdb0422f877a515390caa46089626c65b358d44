@@ -27,3 +27,13 @@ Hmm, I thought the general rule was have_<argument-name>, like (profile_top_k_ar
 
 Side note: I found have_dex2oat_arg confusing because there is no indication that it's the same as dex2oat-flags.
 
+625
+Tue Jun 10 13:34:09 2014 +0000
+Author: Calin Juravle <1022077@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5fb2005d_51bab459
+UUID: 1fbc0831_4f1fadbc
+Bytes: 130
+ah, now I noticed. It should have been have_profile_file_arg as well. Sorry about it. 
+
+I will change all to have_<argument-name>.
+
