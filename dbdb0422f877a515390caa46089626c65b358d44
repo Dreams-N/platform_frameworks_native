@@ -17,3 +17,13 @@ UUID: 1fbc0831_eff6613f
 Bytes: 90
 hmm ok, I preferred "_arg" over "_flag" to be more consistent with the other arguments. :)
 
+625
+Tue Jun 10 11:55:52 2014 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 1fbc0831_eff6613f
+UUID: 5fb2005d_51bab459
+Bytes: 363
+Hmm, I thought the general rule was have_<argument-name>, like (profile_top_k_arg, have_profile_top_k_arg) but it seems pretty inconsistent already eg. (profile_file_arg, have_profile_file). So perhaps we should choose a convention and stick to it.
+
+Side note: I found have_dex2oat_arg confusing because there is no indication that it's the same as dex2oat-flags.
+
