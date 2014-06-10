@@ -1,0 +1,11 @@
+Revision: dbdb0422f877a515390caa46089626c65b358d44
+Patch-set: 4
+File: cmds/installd/commands.c
+
+625
+Tue Jun 10 11:02:45 2014 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1fbc0831_0fe8058b
+Bytes: 18
+have_dex2oat_flags
+
