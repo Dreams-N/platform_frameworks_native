@@ -9,6 +9,14 @@ UUID: dfc6f0d8_ebcc85a0
 Bytes: 105
 android.h includes label.h and label.h includes selinux.h so only the first #include should be necessary.
 
+14
+Wed Jun 11 21:36:10 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: dfc6f0d8_ebcc85a0
+UUID: 9fc0f8c0_0652bc95
+Bytes: 4
+Done
+
 90
 Wed Jun 11 18:58:06 2014 +0000
 Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -17,12 +25,29 @@ Bytes: 451
 I'd rather keep the policy file paths in libselinux; I know that for init property service it lives in the init code but that is only because Dima insisted.
 I'd also be inclined to be consistent with the other _contexts files and keep service_contexts in / rather than /system/etc/security.  We will also need to add it to the SELinuxPolicyInstallReceiver.java code and policy bundle format so that it can be updated with the rest of the policy files.
 
+90
+Wed Jun 11 21:36:10 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3fd0ec87_b14de286
+UUID: 7f6424c8_bdf3ebc0
+Bytes: 71
+Moving config to the root partition.
+Moving policy files to libselinux.
+
 149
 Wed Jun 11 18:58:06 2014 +0000
 Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: dfc6f0d8_aba9edb6
 Bytes: 144
 I'd prefer to keep this within libselinux too, as we do for file_contexts, unlike the init property service, unless you feel strongly otherwise.
+
+149
+Wed Jun 11 21:36:10 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: dfc6f0d8_aba9edb6
+UUID: bfc3fcc9_875fc851
+Bytes: 4
+Done
 
 160
 Wed Jun 11 18:58:06 2014 +0000
@@ -32,6 +57,14 @@ Bytes: 168
 Do you care about the bool vs int return values here?
 Will we run into any problems with the str8() conversion here or do we need a label backend that deals with str16?
 
+160
+Wed Jun 11 21:36:10 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: dfc6f0d8_0b9be193
+UUID: 9fc0f8c0_06fe3c16
+Bytes: 72
+Will replace the return with a ternary that explicitly returns a 1 or 0.
+
 376
 Wed Jun 11 18:58:06 2014 +0000
 Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -39,10 +72,26 @@ UUID: 3fd0ec87_b1c2026b
 Bytes: 154
 Take to libselinux since we now repeat it in several places (frameworks/native/cmds/installd/installd.c, frameworks/base/core/jni/android_os_SELinux.cpp)?
 
+376
+Wed Jun 11 21:36:10 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3fd0ec87_b1c2026b
+UUID: 7f6424c8_1d4f77a2
+Bytes: 97
+Moved into libselinux.  Will refactor the other places where this code appears in a future patch.
+
 380
 Wed Jun 11 18:58:06 2014 +0000
 Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: ffc9f4e9_4cd7b3cb
 Bytes: 9
 service=?
+
+380
+Wed Jun 11 21:36:10 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ffc9f4e9_4cd7b3cb
+UUID: 9fc0f8c0_a9d45956
+Bytes: 4
+Done
 
