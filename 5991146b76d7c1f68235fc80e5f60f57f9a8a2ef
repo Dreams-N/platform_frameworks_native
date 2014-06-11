@@ -1,0 +1,11 @@
+Revision: 5991146b76d7c1f68235fc80e5f60f57f9a8a2ef
+Patch-set: 2
+File: cmds/servicemanager/service_manager.c
+
+11
+Wed Jun 11 23:02:13 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: bfc3fcc9_4a2dd7c8
+Bytes: 84
+selinux/android.h also includes stdbool so I removed that include statement as well.
+
