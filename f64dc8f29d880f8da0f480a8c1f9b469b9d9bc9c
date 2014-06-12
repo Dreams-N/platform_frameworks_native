@@ -1,0 +1,18 @@
+Revision: f64dc8f29d880f8da0f480a8c1f9b469b9d9bc9c
+Patch-set: 3
+File: cmds/servicemanager/service_manager.c
+
+83
+Thu Jun 12 20:12:09 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: df74307d_a4266cda
+Bytes: 103
+I thought we were going to move this entire function to libselinux ? Or will that be a followup change?
+
+293
+Thu Jun 12 20:12:09 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: df74307d_440d9856
+Bytes: 66
+combine line 293 and 294. Declaration and assignment on same line.
+
