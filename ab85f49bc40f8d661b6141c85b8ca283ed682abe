@@ -25,3 +25,11 @@ UUID: 7f6424c8_8ed18b89
 Bytes: 106
 Even though the profiler isn't on, the files are created unconditionally. So we need to get them fixed up.
 
+1051
+Thu Jun 12 21:58:16 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7f6424c8_8ed18b89
+UUID: 9fc0f8c0_6c7eefbe
+Bytes: 41
+chown / chmod occurs unconditionally now.
+
