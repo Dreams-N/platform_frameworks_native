@@ -9,10 +9,26 @@ UUID: df74307d_a4266cda
 Bytes: 103
 I thought we were going to move this entire function to libselinux ? Or will that be a followup change?
 
+83
+Thu Jun 12 20:14:49 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: df74307d_a4266cda
+UUID: 3fd0ec87_8fed16dd
+Bytes: 91
+I'd planned for it to be a follow up change but I can do it now as part of this submission.
+
 293
 Thu Jun 12 20:12:09 2014 +0000
 Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: df74307d_440d9856
 Bytes: 66
 combine line 293 and 294. Declaration and assignment on same line.
+
+293
+Thu Jun 12 20:14:49 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: df74307d_440d9856
+UUID: 3fd0ec87_6fea62c4
+Bytes: 4
+Done
 
