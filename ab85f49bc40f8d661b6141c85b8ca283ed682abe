@@ -9,3 +9,11 @@ UUID: bf713c8e_d4c23c3a
 Bytes: 137
 this is still broken for the upgrade case. In an upgrade, the file exists, but has the old permissions. We need to fixup those files too.
 
+1051
+Thu Jun 12 13:53:51 2014 +0000
+Author: Calin Juravle <1022077@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: bf713c8e_d4c23c3a
+UUID: 1fd5e878_6d0b918c
+Bytes: 166
+I don't think we should worry about it. The profiler was never on for the public (i.e. dogfooders). (expect for a brief period of time which was caused by a mistake).
+
