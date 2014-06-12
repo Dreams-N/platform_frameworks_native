@@ -17,3 +17,11 @@ UUID: 1fd5e878_6d0b918c
 Bytes: 166
 I don't think we should worry about it. The profiler was never on for the public (i.e. dogfooders). (expect for a brief period of time which was caused by a mistake).
 
+1051
+Thu Jun 12 21:24:43 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 1fd5e878_6d0b918c
+UUID: 7f6424c8_8ed18b89
+Bytes: 106
+Even though the profiler isn't on, the files are created unconditionally. So we need to get them fixed up.
+
