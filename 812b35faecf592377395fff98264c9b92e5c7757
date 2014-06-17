@@ -16,3 +16,13 @@ UUID: e44ec981_65bec654
 Bytes: 176
 Is this actually used? SELinux would block the deletion of the /data/dalvik-cache/profiles directory, although it wouldn't block the deletion of the contents of that directory.
 
+1416
+Tue Jun 17 13:57:42 2014 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e44ec981_65bec654
+UUID: c44b8572_04cdd6f8
+Bytes: 305
+It's only needed when we're upgrading from a version of the system that didn't use ISA specific cache dirs. I.e all dex files are placed under /data/dalvik-cache.
+
+Even in that scenario, we don't attempt to remove any directories under /data/dalvik-cache, just regular files. (See the change on line 1391)
+
