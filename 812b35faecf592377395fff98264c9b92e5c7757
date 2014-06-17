@@ -1,0 +1,18 @@
+Revision: 812b35faecf592377395fff98264c9b92e5c7757
+Patch-set: 2
+File: cmds/installd/commands.c
+
+1409
+Tue Jun 17 13:06:18 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 44587541_08fba728
+Bytes: 197
+While you're here, would it be possible to check the subdir argument, to make sure ".." isn't in the path? Otherwise, this could be used to delete files outside of the /data/dalvik-cache directory.
+
+1416
+Tue Jun 17 13:06:18 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e44ec981_65bec654
+Bytes: 176
+Is this actually used? SELinux would block the deletion of the /data/dalvik-cache/profiles directory, although it wouldn't block the deletion of the contents of that directory.
+
