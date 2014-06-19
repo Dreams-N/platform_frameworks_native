@@ -1,0 +1,11 @@
+Revision: 9f1d20648c2f959b27715e89a9a463bcd1d60d88
+Patch-set: 3
+File: cmds/installd/commands.c
+
+1419
+Thu Jun 19 13:00:54 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c4ce254b_26c22a3c
+Bytes: 142
+The special case is below, not above. You've already used subdir to build full_path on line 1412. This check makes the code below unreachable.
+
