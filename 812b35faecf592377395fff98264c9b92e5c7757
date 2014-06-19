@@ -9,6 +9,14 @@ UUID: 44587541_08fba728
 Bytes: 197
 While you're here, would it be possible to check the subdir argument, to make sure ".." isn't in the path? Otherwise, this could be used to delete files outside of the /data/dalvik-cache directory.
 
+1409
+Thu Jun 19 10:18:39 2014 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 44587541_08fba728
+UUID: e47c09a6_7b54370e
+Bytes: 92
+Done. I've summarily disallowed paths that have '.' in them except for the special case ".".
+
 1416
 Tue Jun 17 13:06:18 2014 +0000
 Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
