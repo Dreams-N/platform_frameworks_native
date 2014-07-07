@@ -9,3 +9,13 @@ UUID: e474097d_442d9881
 Bytes: 609
 This likely does not matter, but just to note: the original logic here required an exact match against one of the names in the allowed[] array, whereas the SELinux check is using a label obtained using the property label backend, which uses the longest matching prefix or * if none.  So, for example, the SELinux check would permit registering nfc or nfcfoobar or nfc.foobar by the nfc domain, whereas the DAC check would only permit registering the nfc name alone.  If you want to completely match the existing logic, you would technically want a different label backend rather than reusing the property one.
 
+140
+Mon Jul 07 17:47:04 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e474097d_442d9881
+UUID: e43969b5_f3fca890
+Bytes: 222
+Thanks for pointing this out. I consider it a feature, not a bug. It will make it easier to use "namespaces" with service names, something which was more difficult to do before.
+
+I'm happy with not matching the logic 100%.
+
