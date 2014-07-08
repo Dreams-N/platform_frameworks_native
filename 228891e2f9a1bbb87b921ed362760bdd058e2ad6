@@ -15,3 +15,11 @@ For this, I'd recommend doing what you did for keystore, and basing the name off
 
 Is that doable?
 
+107
+Tue Jul 08 22:07:06 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 643739c4_b7592b70
+UUID: 643739c4_17ccb69c
+Bytes: 35
+That's a better approach than this.
+
