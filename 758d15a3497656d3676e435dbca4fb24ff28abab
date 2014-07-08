@@ -9,3 +9,11 @@ UUID: 2431c1d1_8aa32b8d
 Bytes: 93
 I guess we don't have warnings on for installd? Usually you should be warned to use snprintf.
 
+689:8-689:15
+Tue Jul 08 22:13:48 2014 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2431c1d1_8aa32b8d
+UUID: e4224989_e82aeb6c
+Bytes: 215
+maybe since it is statically verifying it is safe? :) I don't believe that. In any case, I'm following the existing bad patterns here. I rewrote the makefile to make sure -Wall -Werror is on and it is warning clean.
+
