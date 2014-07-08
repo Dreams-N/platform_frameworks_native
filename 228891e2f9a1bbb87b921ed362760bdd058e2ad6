@@ -1,0 +1,17 @@
+Revision: 228891e2f9a1bbb87b921ed362760bdd058e2ad6
+Patch-set: 3
+File: cmds/servicemanager/service_manager.c
+
+107
+Tue Jul 08 21:52:47 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 643739c4_b7592b70
+Bytes: 279
+In general, we don't want to hardcode selinux types into the code.
+
+For this, I'd recommend doing what you did for keystore, and basing the name off of getcon(). Then, the allow rule would look something like:
+
+  allow domain servicemanager:service_manager list;
+
+Is that doable?
+
