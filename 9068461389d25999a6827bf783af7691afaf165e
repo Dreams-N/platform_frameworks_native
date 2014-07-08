@@ -1,0 +1,11 @@
+Revision: 9068461389d25999a6827bf783af7691afaf165e
+Patch-set: 4
+File: cmds/servicemanager/service_manager.c
+
+80
+Tue Jul 08 22:59:28 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e43969b5_a242c473
+Bytes: 55
+The semantics and logic might be unnecessarily complex.
+
