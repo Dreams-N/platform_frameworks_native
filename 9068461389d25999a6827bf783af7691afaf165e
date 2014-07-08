@@ -9,3 +9,18 @@ UUID: e43969b5_a242c473
 Bytes: 55
 The semantics and logic might be unnecessarily complex.
 
+80
+Tue Jul 08 23:36:08 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e43969b5_a242c473
+UUID: e4224989_e8274b3c
+Bytes: 57
+I can't think of anyway to write this which is cleaner...
+
+177
+Tue Jul 08 23:36:08 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 99e73894_22e2ee37
+Bytes: 217
+Something to think about: Can we implement the allow_isolated functionality using an SELinux policy? Longer term (not this change) I'd love to see a neverallow rule which asserts that isolated_app can never do a find.
+
