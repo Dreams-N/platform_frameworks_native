@@ -71,6 +71,14 @@ UUID: 19fb4835_be6bb9b8
 Bytes: 177
 In the kernel at least, we prefer using separate functions in these cases.  If there is significant duplication of code, then you can take that part to a shared helper function.
 
+80
+Wed Jul 09 15:17:04 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 19fb4835_be6bb9b8
+UUID: f9f75445_bd94df7e
+Bytes: 33
+I will go the two function route.
+
 106
 Wed Jul 09 12:55:44 2014 +0000
 Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
