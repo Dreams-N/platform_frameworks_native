@@ -9,6 +9,14 @@ UUID: 79ec447a_8442e824
 Bytes: 24
 Can be const char *tctx.
 
+52
+Wed Jul 09 23:20:46 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 79ec447a_8442e824
+UUID: 19fb4835_81741c51
+Bytes: 4
+Done
+
 82
 Wed Jul 09 19:15:36 2014 +0000
 Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -23,12 +31,28 @@ UUID: 79ec447a_2441dc1e
 Bytes: 84
 I think I'd omit this one and just leave it in the latter function where it is used.
 
+88
+Wed Jul 09 23:20:46 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 79ec447a_2441dc1e
+UUID: 2431c1d1_dbe09361
+Bytes: 4
+Done
+
 93
 Wed Jul 09 19:15:36 2014 +0000
 Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 79ec447a_0456d8e8
 Bytes: 82
 Could do this once at initialization and just save it in a global, as in keystore.
+
+93
+Wed Jul 09 23:20:46 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 79ec447a_0456d8e8
+UUID: 19fb4835_41adf46f
+Bytes: 4
+Done
 
 107
 Wed Jul 09 19:15:36 2014 +0000
@@ -64,10 +88,26 @@ if (!svc_can_find(s, spid)) {
 <normal processing continues here>
 Makes the diff smaller FWIW.
 
+193
+Wed Jul 09 23:20:46 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 79ec447a_a44ccc54
+UUID: 79ec447a_a405ec78
+Bytes: 4
+Done
+
 329:16-329:17
 Wed Jul 09 19:15:36 2014 +0000
 Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 19fb4835_3e67a92a
 Bytes: 6
 Ditto.
+
+329:16-329:17
+Wed Jul 09 23:20:46 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 19fb4835_3e67a92a
+UUID: 79ec447a_24df9ca0
+Bytes: 4
+Done
 
