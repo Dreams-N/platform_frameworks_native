@@ -1,0 +1,11 @@
+Revision: 5d37e54c24975c6c7edf3438c0fab1690a081ea5
+Patch-set: 2
+File: cmds/installd/commands.c
+
+625:11-625:22
+Wed Jul 09 04:51:09 2014 +0000
+Author: Serguei I Katkov <1040038@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 043d9d9e_0299da62
+Bytes: 58
+I would suggest to use strtok_r function for this purpose.
+
