@@ -1,0 +1,73 @@
+Revision: 02dba7e2614854ff3cf46ee9cf889f136106e5c8
+Patch-set: 5
+File: cmds/servicemanager/service_manager.c
+
+52
+Wed Jul 09 19:15:36 2014 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 79ec447a_8442e824
+Bytes: 24
+Can be const char *tctx.
+
+82
+Wed Jul 09 19:15:36 2014 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 19fb4835_1e750dd9
+Bytes: 62
+Not sure if these are even necessary with SELinux mandatory...
+
+88
+Wed Jul 09 19:15:36 2014 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 79ec447a_2441dc1e
+Bytes: 84
+I think I'd omit this one and just leave it in the latter function where it is used.
+
+93
+Wed Jul 09 19:15:36 2014 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 79ec447a_0456d8e8
+Bytes: 82
+Could do this once at initialization and just save it in a global, as in keystore.
+
+107
+Wed Jul 09 19:15:36 2014 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 19fb4835_de86858d
+Bytes: 36
+Not sure we still need these checks.
+
+114
+Wed Jul 09 19:15:36 2014 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2431c1d1_bbc67f7e
+Bytes: 277
+I think the last argument is ignored for the property label backend and can just be zero?  Only matters when the label backend supports multiple types of objects and you only want to match a specific type, as with files/directories/block devices/etc for the file label backend.
+
+119
+Wed Jul 09 19:15:36 2014 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2431c1d1_fbd0f731
+Bytes: 61
+I don't think this is possible if selabel_lookup() returns 0.
+
+193
+Wed Jul 09 19:15:36 2014 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 79ec447a_a44ccc54
+Bytes: 193
+Just a coding style issue, but commonly we would do something like:
+if (!svc_can_find(s, spid)) {
+   ALOGE(...);
+   return ...;
+}
+<normal processing continues here>
+Makes the diff smaller FWIW.
+
+329:16-329:17
+Wed Jul 09 19:15:36 2014 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 19fb4835_3e67a92a
+Bytes: 6
+Ditto.
+
