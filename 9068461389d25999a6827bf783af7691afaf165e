@@ -63,6 +63,14 @@ UUID: f9f75445_dd0a0b42
 Bytes: 123
 I considered that but I wasn't sure about the duplicated code. It would make the semantics of the function much more clear.
 
+80
+Wed Jul 09 15:14:06 2014 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f9f75445_dd0a0b42
+UUID: 19fb4835_be6bb9b8
+Bytes: 177
+In the kernel at least, we prefer using separate functions in these cases.  If there is significant duplication of code, then you can take that part to a shared helper function.
+
 106
 Wed Jul 09 12:55:44 2014 +0000
 Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
