@@ -9,12 +9,28 @@ UUID: 2431c1d1_101a0a87
 Bytes: 29
 This is a bug, right?  Abort?
 
+65
+Wed Jul 09 14:50:28 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2431c1d1_101a0a87
+UUID: a41cd152_7766d867
+Bytes: 4
+Done
+
 70
 Wed Jul 09 12:55:44 2014 +0000
 Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 2431c1d1_f0349601
 Bytes: 21
 Maybe report the pid?
+
+70
+Wed Jul 09 14:50:28 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2431c1d1_f0349601
+UUID: 59f1404f_807c16fa
+Bytes: 4
+Done
 
 80
 Tue Jul 08 22:59:28 2014 +0000
@@ -39,12 +55,28 @@ UUID: e474097d_14fbcd28
 Bytes: 447
 Possible alternative:  Split this function into two functions, one of which takes a name argument (which then performs the selabel_lookup only) and one that does not (which uses a previously cached result of getcon done during initialization, as in the keystore).  Then it is always explicit as to which one you are using and any bug that yields a NULL name will not generate an incorrect permission check but will rather abort the servicemanager.
 
+80
+Wed Jul 09 14:50:28 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e474097d_14fbcd28
+UUID: f9f75445_dd0a0b42
+Bytes: 123
+I considered that but I wasn't sure about the duplicated code. It would make the semantics of the function much more clear.
+
 106
 Wed Jul 09 12:55:44 2014 +0000
 Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 79ec447a_a1d95e2f
 Bytes: 37
 Any reason to still pass uids around?
+
+106
+Wed Jul 09 14:50:28 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 79ec447a_a1d95e2f
+UUID: a41cd152_b7f05047
+Bytes: 16
+No there is not.
 
 112
 Wed Jul 09 12:55:44 2014 +0000
@@ -53,12 +85,28 @@ UUID: 2431c1d1_502482ce
 Bytes: 5
 ditto
 
+112
+Wed Jul 09 14:50:28 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2431c1d1_502482ce
+UUID: 59f1404f_608112a8
+Bytes: 4
+Done
+
 118
 Wed Jul 09 12:55:44 2014 +0000
 Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 2431c1d1_702186bd
 Bytes: 5
 ditto
+
+118
+Wed Jul 09 14:50:28 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2431c1d1_702186bd
+UUID: a41cd152_d7f5cc35
+Bytes: 4
+Done
 
 172
 Wed Jul 09 12:55:44 2014 +0000
@@ -67,6 +115,14 @@ UUID: 2431c1d1_30170e60
 Bytes: 354
 Any reason we can't do this check before calling find_svc(), since we are not using the svcinfo in any way for the check?  Otherwise caller can probe for the existence of a service even without permission.
 Also, should we be doing an ALOGE...PERMISSION DENIED as in the svc_can_register() error path for each of these denials or only use the avc message?
+
+172
+Wed Jul 09 14:50:28 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2431c1d1_30170e60
+UUID: d9045004_1ce2b537
+Bytes: 111
+It makes sense to call it first. I'll make all of the error logging consistent with the do_add_service logging.
 
 177
 Tue Jul 08 23:36:08 2014 +0000
