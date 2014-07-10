@@ -9,12 +9,28 @@ UUID: 59586041_88579739
 Bytes: 76
 Don't think we need this test; if getpidcon returned 0 we have a valid sctx.
 
+65
+Thu Jul 10 15:38:13 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 59586041_88579739
+UUID: d9045004_59f4c4ed
+Bytes: 4
+Done
+
 78
 Thu Jul 10 15:17:10 2014 +0000
 Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: f94e7481_65ca4631
 Bytes: 6
 unused
+
+78
+Thu Jul 10 15:38:13 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f94e7481_65ca4631
+UUID: d9045004_39f9f8e5
+Bytes: 4
+Done
 
 83
 Thu Jul 10 15:17:10 2014 +0000
@@ -23,12 +39,28 @@ UUID: 59586041_48499f98
 Bytes: 149
 If we have to retain this test, it should only be done once during initialization and cached to avoid the cost of doing it on every permission check.
 
+83
+Thu Jul 10 15:38:13 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 59586041_48499f98
+UUID: d9045004_f90a7041
+Bytes: 4
+Done
+
 86
 Thu Jul 10 15:17:10 2014 +0000
 Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 59586041_283e6bf8
 Bytes: 6
 unused
+
+86
+Thu Jul 10 15:38:13 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 59586041_283e6bf8
+UUID: 995e582a_44dd027e
+Bytes: 4
+Done
 
 87
 Thu Jul 10 15:17:10 2014 +0000
@@ -37,12 +69,28 @@ UUID: 59586041_e8373317
 Bytes: 14
 return allowed
 
+87
+Thu Jul 10 15:38:13 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 59586041_e8373317
+UUID: d9045004_d907b437
+Bytes: 4
+Done
+
 97
 Thu Jul 10 15:17:10 2014 +0000
 Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 19526823_e6fe3e15
 Bytes: 20
 Call once and cache.
+
+97
+Thu Jul 10 15:38:13 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 19526823_e6fe3e15
+UUID: d9045004_792660d7
+Bytes: 4
+Done
 
 109
 Thu Jul 10 15:17:10 2014 +0000
@@ -51,10 +99,26 @@ UUID: 59586041_c8346f15
 Bytes: 42
 Not possible if selabel_lookup returned 0.
 
+109
+Thu Jul 10 15:38:13 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 59586041_c8346f15
+UUID: f9f75445_ba1298be
+Bytes: 4
+Done
+
 318
 Thu Jul 10 15:17:10 2014 +0000
 Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 59586041_6bd33d75
 Bytes: 13
 !svc_can_list
+
+318
+Thu Jul 10 15:38:13 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 59586041_6bd33d75
+UUID: 995e582a_04e70a48
+Bytes: 4
+Done
 
