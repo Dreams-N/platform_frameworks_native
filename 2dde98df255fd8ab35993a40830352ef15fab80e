@@ -10,12 +10,28 @@ Bytes: 313
 Sorry to be pedantic, but I'd tend to reorder the arguments as: (pid_t spid, const char *tctx, const char *perm, const char *name).
 That basically matches selinux_check_access() except that we have spid instead of sctx (but they are analogous, and the latter is derived from the former) and the class is implicit.
 
+54
+Thu Jul 10 21:42:38 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 59586041_0ee28f37
+UUID: f94e7481_6818db10
+Bytes: 4
+Done
+
 58
 Thu Jul 10 20:25:16 2014 +0000
 Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: f94e7481_88b0b7dd
 Bytes: 155
 Technically we do not need these initializations (throughout).  Up to you as to whether you retain them as a safety precaution against future code changes.
+
+58
+Thu Jul 10 21:42:38 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f94e7481_88b0b7dd
+UUID: 59586041_8ebf9fe6
+Bytes: 80
+allowed is assigned before it's ever returned so I'll remove the initialization.
 
 81
 Thu Jul 10 20:25:16 2014 +0000
@@ -24,12 +40,28 @@ UUID: f94e7481_688d7b26
 Bytes: 87
 In this case we could just return check_mac_perms() itself and drop allowed altogether.
 
+81
+Thu Jul 10 21:42:38 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f94e7481_688d7b26
+UUID: 19526823_69b90168
+Bytes: 4
+Done
+
 84
 Thu Jul 10 20:25:16 2014 +0000
 Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: f94e7481_e8804beb
 Bytes: 133
 I would order these as (pid_t spid, const char *perm, const char *name) to be consistent with check_mac_perms() in relative ordering.
+
+84
+Thu Jul 10 21:42:38 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f94e7481_e8804beb
+UUID: 19526823_c9a91513
+Bytes: 4
+Done
 
 94
 Thu Jul 10 20:25:16 2014 +0000
@@ -38,12 +70,28 @@ UUID: f94e7481_c87d8f39
 Bytes: 55
 name doesn't really have anything to do with the error.
 
+94
+Thu Jul 10 21:42:38 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f94e7481_c87d8f39
+UUID: 19526823_89b31d81
+Bytes: 4
+Done
+
 99
 Thu Jul 10 20:25:16 2014 +0000
 Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 19526823_09560d92
 Bytes: 41
 Or, "No match for %s in service_contexts"
+
+99
+Thu Jul 10 21:42:38 2014 +0000
+Author: Riley Spahn <1048048@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 19526823_09560d92
+UUID: 19526823_69e0e159
+Bytes: 4
+Done
 
 363
 Thu Jul 10 20:25:16 2014 +0000
