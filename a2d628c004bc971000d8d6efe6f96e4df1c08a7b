@@ -1,0 +1,60 @@
+Revision: a2d628c004bc971000d8d6efe6f96e4df1c08a7b
+Patch-set: 6
+File: cmds/servicemanager/service_manager.c
+
+65
+Thu Jul 10 15:17:10 2014 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 59586041_88579739
+Bytes: 76
+Don't think we need this test; if getpidcon returned 0 we have a valid sctx.
+
+78
+Thu Jul 10 15:17:10 2014 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f94e7481_65ca4631
+Bytes: 6
+unused
+
+83
+Thu Jul 10 15:17:10 2014 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 59586041_48499f98
+Bytes: 149
+If we have to retain this test, it should only be done once during initialization and cached to avoid the cost of doing it on every permission check.
+
+86
+Thu Jul 10 15:17:10 2014 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 59586041_283e6bf8
+Bytes: 6
+unused
+
+87
+Thu Jul 10 15:17:10 2014 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 59586041_e8373317
+Bytes: 14
+return allowed
+
+97
+Thu Jul 10 15:17:10 2014 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 19526823_e6fe3e15
+Bytes: 20
+Call once and cache.
+
+109
+Thu Jul 10 15:17:10 2014 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 59586041_c8346f15
+Bytes: 42
+Not possible if selabel_lookup returned 0.
+
+318
+Thu Jul 10 15:17:10 2014 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 59586041_6bd33d75
+Bytes: 13
+!svc_can_list
+
