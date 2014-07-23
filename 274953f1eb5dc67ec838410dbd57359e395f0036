@@ -19,3 +19,11 @@ I know :-). There are a few hacks like this one in the tree (some are worse). I'
 
 Also, the build system, AFAIK, doesn't have any facility to create symlinks and several, though not a huge number, makefiles duplicate the echo/mkdir/ln sequence.
 
+128
+Wed Jul 23 18:54:26 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 79b2845d_69a0a0be
+UUID: 193d089f_cea543d1
+Bytes: 66
+LOCAL_POST_INSTALL_CMD is the answer to most of symlink creations.
+
