@@ -1,0 +1,11 @@
+Revision: 274953f1eb5dc67ec838410dbd57359e395f0036
+Patch-set: 1
+File: opengl/libs/Android.mk
+
+128
+Wed Jul 23 16:18:04 2014 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 39bc8c31_422c9781
+Bytes: 259
+this is assuming that BUILD_SHARED_LIBRARY always writes the 32-bit rule last, which may change in the future and silently break this again.  It is also assuming the layout on disk (lib vs lib64), which at least partially defeats using LOCAL_INSTALLED_MODULE.
+
