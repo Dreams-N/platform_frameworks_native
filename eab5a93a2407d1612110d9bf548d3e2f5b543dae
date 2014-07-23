@@ -16,6 +16,16 @@ UUID: 59b7804c_8defd68c
 Bytes: 74
 you only have read access to this directory. This is always going to fail.
 
+65
+Wed Jul 23 17:46:46 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 59b7804c_8defd68c
+UUID: 39bc8c31_3d87f28a
+Bytes: 479
+minor correction: In most cases, you won't actually see a failure here, because selinux_android_restorecon only changes the security label on the directory if it needs changing. If the security label on the directory is already correct, then this is a no-op.
+
+Regardless, this isn't needed in the dumpstate code, and if the security label was actually incorrect, the permissions granted in https://android-review.googlesource.com/102258 are insufficient to allow this to succeed.
+
 73
 Wed Jul 23 02:58:59 2014 +0000
 Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
