@@ -1,0 +1,27 @@
+Revision: f3bbd28dfb82495ccca9049253fd0f3169deeb93
+Patch-set: 3
+File: cmds/dumpstate/dumpstate.c
+
+66
+Wed Jul 23 22:21:43 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d971b08d_57dd4e19
+Bytes: 75
+isn't there another copy of this code somewhere? we should update that too.
+
+70
+Wed Jul 23 22:21:43 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d971b08d_97a526a4
+Bytes: 92
+shouldn't you close(fd) in this case? (since you haven't actually checked why fstat failed.)
+
+File: cmds/dumpstate/utils.c
+
+224
+Wed Jul 23 22:21:43 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d971b08d_37b7f2d8
+Bytes: 39
+also known as "return dump_file..." :-)
+
