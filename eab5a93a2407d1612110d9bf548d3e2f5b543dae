@@ -9,6 +9,14 @@ UUID: 59b7804c_cd171edf
 Bytes: 51
 likely not needed if line 65 is deleted (see below)
 
+32
+Wed Jul 23 22:12:00 2014 +0000
+Author: Christopher Ferris <1019050@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 59b7804c_cd171edf
+UUID: f93914b5_f3de68a1
+Bytes: 8
+Removed.
+
 65
 Wed Jul 23 02:58:59 2014 +0000
 Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -26,6 +34,14 @@ minor correction: In most cases, you won't actually see a failure here, because 
 
 Regardless, this isn't needed in the dumpstate code, and if the security label was actually incorrect, the permissions granted in https://android-review.googlesource.com/102258 are insufficient to allow this to succeed.
 
+65
+Wed Jul 23 22:12:00 2014 +0000
+Author: Christopher Ferris <1019050@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 59b7804c_8defd68c
+UUID: 193d089f_376ffac7
+Bytes: 8
+Removed.
+
 73
 Wed Jul 23 02:58:59 2014 +0000
 Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -34,6 +50,14 @@ Bytes: 262
 the stat, then open (line 76) feels redundant and racy. Why not just try the open unconditionally. I don't see what value the stat gives you.
 
 If you really want to assert it's a regular file, then do the open, fstat() the file descriptor, and then do the check.
+
+73
+Wed Jul 23 22:12:00 2014 +0000
+Author: Christopher Ferris <1019050@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 59b7804c_8d3cf64b
+UUID: 193d089f_f7d3b23f
+Bytes: 111
+Changed to an open and fstat. I don't check the fd directly since the stat will fail if the file doesn't exist.
 
 75
 Wed Jul 23 03:02:53 2014 +0000
@@ -49,6 +73,14 @@ UUID: 39bc8c31_51ad871d
 Bytes: 17
 O_NOFOLLOW please
 
+76
+Wed Jul 23 22:12:00 2014 +0000
+Author: Christopher Ferris <1019050@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 39bc8c31_51ad871d
+UUID: 193d089f_17b91e05
+Bytes: 4
+Done
+
 77
 Wed Jul 23 02:58:59 2014 +0000
 Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -58,6 +90,14 @@ if the file isn't found (line 73 returns false), data[i].name remains uninitiali
 
 Recommend explicitly zeroing out tombstone_data immediately before calling get_tombstones_fds()
 
+77
+Wed Jul 23 22:12:00 2014 +0000
+Author: Christopher Ferris <1019050@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 39bc8c31_b19313db
+UUID: f93914b5_f6aad69f
+Bytes: 77
+I changed this works so I don't think it requires zeroeing out the structure.
+
 80
 Wed Jul 23 02:58:59 2014 +0000
 Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -65,12 +105,28 @@ UUID: 79b2845d_9336d7f8
 Bytes: 168
 This feels fragile, and definitely assumes NUM_TOMBSTONES <= 10 and the tombstone file format ends with digits. It might be clearer if you were to use snprintf instead.
 
+80
+Wed Jul 23 22:12:00 2014 +0000
+Author: Christopher Ferris <1019050@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 79b2845d_9336d7f8
+UUID: f93914b5_7697c669
+Bytes: 5
+Done.
+
 465
 Wed Jul 23 02:56:11 2014 +0000
 Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 59b7804c_cd2d5e1c
 Bytes: 94
 i guess it doesn't matter if we leak all the tombstone fds since we're about to exit anyway...
+
+465
+Wed Jul 23 22:12:00 2014 +0000
+Author: Christopher Ferris <1019050@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 59b7804c_cd2d5e1c
+UUID: f93914b5_961a7260
+Bytes: 25
+That's what I'm assuming.
 
 File: cmds/dumpstate/utils.c
 
@@ -80,4 +136,12 @@ Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 39bc8c31_d175f7dc
 Bytes: 77
 why not leave the close inside dump_file_from_fd, since both callers want it?
+
+224
+Wed Jul 23 22:12:00 2014 +0000
+Author: Christopher Ferris <1019050@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 39bc8c31_d175f7dc
+UUID: f93914b5_f629f674
+Bytes: 61
+Yeah, I decided to move the close info the dump_file_from_fd.
 
