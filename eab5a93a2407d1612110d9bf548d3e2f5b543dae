@@ -1,0 +1,20 @@
+Revision: eab5a93a2407d1612110d9bf548d3e2f5b543dae
+Patch-set: 2
+File: cmds/dumpstate/dumpstate.c
+
+465
+Wed Jul 23 02:56:11 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 59b7804c_cd2d5e1c
+Bytes: 94
+i guess it doesn't matter if we leak all the tombstone fds since we're about to exit anyway...
+
+File: cmds/dumpstate/utils.c
+
+224
+Wed Jul 23 02:56:11 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 39bc8c31_d175f7dc
+Bytes: 77
+why not leave the close inside dump_file_from_fd, since both callers want it?
+
