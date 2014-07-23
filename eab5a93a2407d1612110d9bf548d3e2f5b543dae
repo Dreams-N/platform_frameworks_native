@@ -25,6 +25,13 @@ the stat, then open (line 76) feels redundant and racy. Why not just try the ope
 
 If you really want to assert it's a regular file, then do the open, fstat() the file descriptor, and then do the check.
 
+75
+Wed Jul 23 03:02:53 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 79b2845d_3388cb61
+Bytes: 96
+(this is what the stat is for. but yeah, fstat on the result of open would be better all round.)
+
 76
 Wed Jul 23 02:58:59 2014 +0000
 Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
