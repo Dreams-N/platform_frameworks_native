@@ -2,6 +2,52 @@ Revision: eab5a93a2407d1612110d9bf548d3e2f5b543dae
 Patch-set: 2
 File: cmds/dumpstate/dumpstate.c
 
+32
+Wed Jul 23 02:58:59 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 59b7804c_cd171edf
+Bytes: 51
+likely not needed if line 65 is deleted (see below)
+
+65
+Wed Jul 23 02:58:59 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 59b7804c_8defd68c
+Bytes: 74
+you only have read access to this directory. This is always going to fail.
+
+73
+Wed Jul 23 02:58:59 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 59b7804c_8d3cf64b
+Bytes: 262
+the stat, then open (line 76) feels redundant and racy. Why not just try the open unconditionally. I don't see what value the stat gives you.
+
+If you really want to assert it's a regular file, then do the open, fstat() the file descriptor, and then do the check.
+
+76
+Wed Jul 23 02:58:59 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 39bc8c31_51ad871d
+Bytes: 17
+O_NOFOLLOW please
+
+77
+Wed Jul 23 02:58:59 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 39bc8c31_b19313db
+Bytes: 214
+if the file isn't found (line 73 returns false), data[i].name remains uninitialized. This could cause problems later.
+
+Recommend explicitly zeroing out tombstone_data immediately before calling get_tombstones_fds()
+
+80
+Wed Jul 23 02:58:59 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 79b2845d_9336d7f8
+Bytes: 168
+This feels fragile, and definitely assumes NUM_TOMBSTONES <= 10 and the tombstone file format ends with digits. It might be clearer if you were to use snprintf instead.
+
 465
 Wed Jul 23 02:56:11 2014 +0000
 Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
