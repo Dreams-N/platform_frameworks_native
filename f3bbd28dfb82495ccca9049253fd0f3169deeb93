@@ -9,12 +9,32 @@ UUID: d971b08d_57dd4e19
 Bytes: 75
 isn't there another copy of this code somewhere? we should update that too.
 
+66
+Wed Jul 23 23:04:59 2014 +0000
+Author: Christopher Ferris <1019050@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d971b08d_57dd4e19
+UUID: 193d089f_42e202a7
+Bytes: 447
+Yes, I changed the other stat to an open and dump file. However, it looks like there is a race where if the file exists, there is other code causing dumps to occur at the same time so dumping this file doesn't really dump the file.
+
+I think this might be a case of needing to open it before triggering the dumps.
+
+On another note, we still have a problem that dumping the state of a bunch processes fails unless the traces.txt file already exists.
+
 70
 Wed Jul 23 22:21:43 2014 +0000
 Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: d971b08d_97a526a4
 Bytes: 92
 shouldn't you close(fd) in this case? (since you haven't actually checked why fstat failed.)
+
+70
+Wed Jul 23 23:04:59 2014 +0000
+Author: Christopher Ferris <1019050@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d971b08d_97a526a4
+UUID: f93914b5_c14c328c
+Bytes: 12
+Oops, fixed.
 
 File: cmds/dumpstate/utils.c
 
@@ -24,4 +44,12 @@ Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: d971b08d_37b7f2d8
 Bytes: 39
 also known as "return dump_file..." :-)
+
+224
+Wed Jul 23 23:04:59 2014 +0000
+Author: Christopher Ferris <1019050@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d971b08d_37b7f2d8
+UUID: f93914b5_413922eb
+Bytes: 6
+Fixed.
 
