@@ -1,5 +1,14 @@
 Revision: 8ba9601a7541aa1a00d45890b9afa7b4af9bce35
 Patch-set: 1
+File: /COMMIT_MSG
+
+9
+Tue Jul 29 22:03:06 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b6016bf5_5e25d1c8
+Bytes: 123
+DO NOT MERGE needs to be on the first line of the commit message if you don't want it to merge into Google's internal tree.
+
 File: cmds/installd/commands.c
 
 562:0-565:1
@@ -22,6 +31,20 @@ Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 7615332e_6c0d769b
 Bytes: 10
 dead code?
+
+841
+Tue Jul 29 22:03:06 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 360f3b26_bafe2d79
+Bytes: 18
+O_NOFOLLOW please.
+
+875
+Tue Jul 29 22:03:06 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 360f3b26_9afb6989
+Bytes: 23
+remove empty else block
 
 File: cmds/installd/installd.c
 
