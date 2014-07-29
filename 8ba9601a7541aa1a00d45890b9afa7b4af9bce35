@@ -1,0 +1,43 @@
+Revision: 8ba9601a7541aa1a00d45890b9afa7b4af9bce35
+Patch-set: 1
+File: cmds/installd/commands.c
+
+562:0-565:1
+Tue Jul 29 19:50:29 2014 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 560aef14_ad60355c
+Bytes: 15
+this does what?
+
+652:27-652:28
+Tue Jul 29 19:50:29 2014 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 560aef14_8d2fb112
+Bytes: 2
+WS
+
+805:0-805:5
+Tue Jul 29 19:50:29 2014 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7615332e_6c0d769b
+Bytes: 10
+dead code?
+
+File: cmds/installd/installd.c
+
+150:70-150:71
+Tue Jul 29 19:50:29 2014 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 560aef14_8d9451f6
+Bytes: 5
+bool?
+
+File: cmds/installd/installd.h
+
+218:40-218:59
+Tue Jul 29 19:50:29 2014 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 36f65b4a_fdfb70de
+Bytes: 4
+bool
+
