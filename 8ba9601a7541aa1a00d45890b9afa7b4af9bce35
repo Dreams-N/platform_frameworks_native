@@ -9,6 +9,14 @@ UUID: b6016bf5_5e25d1c8
 Bytes: 123
 DO NOT MERGE needs to be on the first line of the commit message if you don't want it to merge into Google's internal tree.
 
+9
+Wed Jul 30 00:15:23 2014 +0000
+Author: Alex Light <1047769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b6016bf5_5e25d1c8
+UUID: 560aef14_b834eeca
+Bytes: 46
+Removed. Misunderstanding about what this did.
+
 File: cmds/installd/commands.c
 
 562:0-565:1
@@ -18,12 +26,28 @@ UUID: 560aef14_ad60355c
 Bytes: 15
 this does what?
 
+562:0-565:1
+Wed Jul 30 00:15:23 2014 +0000
+Author: Alex Light <1047769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 560aef14_ad60355c
+UUID: 560aef14_42d3a342
+Bytes: 31
+Nothing. I forgot to remove it.
+
 652:27-652:28
 Tue Jul 29 19:50:29 2014 +0000
 Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 560aef14_8d2fb112
 Bytes: 2
 WS
+
+652:27-652:28
+Wed Jul 30 00:15:23 2014 +0000
+Author: Alex Light <1047769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 560aef14_8d2fb112
+UUID: 36f65b4a_4efbc423
+Bytes: 59
+Removed. That was just a note to myself I forgot to remove.
 
 805:0-805:5
 Tue Jul 29 19:50:29 2014 +0000
@@ -32,6 +56,14 @@ UUID: 7615332e_6c0d769b
 Bytes: 10
 dead code?
 
+805:0-805:5
+Wed Jul 30 00:15:23 2014 +0000
+Author: Alex Light <1047769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7615332e_6c0d769b
+UUID: 1624f7a2_5625b4c8
+Bytes: 10
+Again WIP.
+
 841
 Tue Jul 29 22:03:06 2014 +0000
 Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -39,12 +71,28 @@ UUID: 360f3b26_bafe2d79
 Bytes: 18
 O_NOFOLLOW please.
 
+841
+Wed Jul 30 00:15:23 2014 +0000
+Author: Alex Light <1047769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 360f3b26_bafe2d79
+UUID: 36f65b4a_6e27a818
+Bytes: 21
+Entire block removed.
+
 875
 Tue Jul 29 22:03:06 2014 +0000
 Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 360f3b26_9afb6989
 Bytes: 23
 remove empty else block
+
+875
+Wed Jul 30 00:15:23 2014 +0000
+Author: Alex Light <1047769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 360f3b26_9afb6989
+UUID: 36f65b4a_8e12ecbc
+Bytes: 4
+Done
 
 File: cmds/installd/installd.c
 
@@ -55,6 +103,14 @@ UUID: 560aef14_8d9451f6
 Bytes: 5
 bool?
 
+150:70-150:71
+Wed Jul 30 00:15:23 2014 +0000
+Author: Alex Light <1047769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 560aef14_8d9451f6
+UUID: 1624f7a2_162f3ca9
+Bytes: 16
+It's c. No bool.
+
 File: cmds/installd/installd.h
 
 218:40-218:59
@@ -63,4 +119,12 @@ Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 36f65b4a_fdfb70de
 Bytes: 4
 bool
+
+218:40-218:59
+Wed Jul 30 00:15:23 2014 +0000
+Author: Alex Light <1047769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 36f65b4a_fdfb70de
+UUID: 560aef14_6224679d
+Bytes: 12
+no bool in c
 
