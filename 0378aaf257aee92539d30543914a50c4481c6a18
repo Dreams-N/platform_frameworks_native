@@ -1,0 +1,13 @@
+Revision: 0378aaf257aee92539d30543914a50c4481c6a18
+Patch-set: 2
+File: cmds/installd/commands.c
+
+943
+Sat Aug 09 07:30:54 2014 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9699c785_d5846e87
+Bytes: 174
+just to be clear : does the sched_policy change survive an execv ? Logic dictates it must, but just checking.
+
+(also, it's inherited by threads spawned by this one - right ?)
+
