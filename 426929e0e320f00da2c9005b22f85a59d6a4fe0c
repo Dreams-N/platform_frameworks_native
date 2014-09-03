@@ -1,0 +1,11 @@
+Revision: 426929e0e320f00da2c9005b22f85a59d6a4fe0c
+Patch-set: 1
+File: services/surfaceflinger/DisplayHardware/HWComposer.cpp
+
+160
+Wed Sep 03 22:25:14 2014 +0000
+Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 10523f23_d57e4631
+Bytes: 54
+->query isn't optional, no need to check for presence.
+
