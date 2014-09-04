@@ -1,0 +1,18 @@
+Revision: 554d8660fcbdabe446f49cbda4a9cabf4e65f6f3
+Patch-set: 2
+File: services/surfaceflinger/DisplayHardware/HWComposer.cpp
+
+158
+Thu Sep 04 19:24:56 2014 +0000
+Author: Michael Gold <1005148@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 50dbd705_562284c6
+Bytes: 122
+probably i should be checking that query() succeeds - unless you are comfortable with the assumption it should never fail.
+
+168
+Thu Sep 04 19:24:56 2014 +0000
+Author: Michael Gold <1005148@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 50dbd705_36aee0b6
+Bytes: 121
+should this also query?  i guess it matters less with EXTERNAL since its not "present" unless hwc returns a valid config.
+
