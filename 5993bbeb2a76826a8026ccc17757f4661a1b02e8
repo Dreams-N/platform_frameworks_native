@@ -1,0 +1,11 @@
+Revision: 5993bbeb2a76826a8026ccc17757f4661a1b02e8
+Patch-set: 1
+File: services/surfaceflinger/DisplayDevice.cpp
+
+192
+Tue Sep 09 23:46:52 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 10f15fa2_c2e5b2b2
+Bytes: 68
+this will fail to compile if the macro is defined. __unused instead.
+
