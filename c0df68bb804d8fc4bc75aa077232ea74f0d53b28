@@ -1,0 +1,17 @@
+Revision: c0df68bb804d8fc4bc75aa077232ea74f0d53b28
+Patch-set: 1
+File: libs/binder/Binder.cpp
+
+174
+Thu Sep 11 22:05:01 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 702b7bc3_28e8de41
+Bytes: 478
+I think you missed some:
+
+aosp/frameworks/native$ grep -nr atomic_load
+libs/binder/Binder.cpp:143:                    atomic_load_explicit(&mExtras, memory_order_acquire));
+libs/binder/Binder.cpp:166:                    atomic_load_explicit(&mExtras, memory_order_acquire));
+libs/binder/Binder.cpp:176:                    atomic_load_explicit(&mExtras, memory_order_acquire));
+libs/binder/Binder.cpp:191:                    atomic_load_explicit(&mExtras, memory_order_relaxed));
+
