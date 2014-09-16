@@ -10,6 +10,14 @@ Bytes: 122
 - you've used a tab character
 - maybe the team would be grateful if you add a blank line before starting the enum members.
 
+26
+Tue Sep 16 20:48:09 2014 +0000
+Author: Jeff Davidson <1006780@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 10d4ff2c_96ad0cbb
+UUID: b0b1730f_4a658b95
+Bytes: 14
+Done and done.
+
 File: opengl/libs/GLES_trace/src/gltrace.pb.cpp
 
 0
@@ -34,4 +42,14 @@ Correction: by "my internal 2.3->2.5 experiment" I actually mean "my INITIAL 2.3
 Someone from the team managing this project said that this CL looks fine as long as the new proto stuff works :)
 
 Wink will probably know more about generating C++ sources from proto files. I couldn't find any rule that could invoke aprotoc for generating C++ code. If that's too troublesome, I think it's ok to keep these two generated files checked in as source.
+
+0
+Tue Sep 16 20:48:09 2014 +0000
+Author: Jeff Davidson <1006780@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 70c53b78_bcf22d00
+UUID: 90c0ef69_0fc67585
+Bytes: 119
+Updated to use the build system instead. I agree that this makes much more sense.
+
+Everything seems to build just fine.
 
