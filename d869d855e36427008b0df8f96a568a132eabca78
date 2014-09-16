@@ -23,3 +23,15 @@ I remember this is one of the files that broke my internal 2.3->2.5 experiment. 
 
 This path (opengl/libs/GLES_trace) is super low traffic. Let me try to find an owner to discuss this more.
 
+0
+Tue Sep 16 14:26:41 2014 +0000
+Author: Max Cai <1022968@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 70c53b78_79a387ce
+UUID: 70c53b78_bcf22d00
+Bytes: 464
+Correction: by "my internal 2.3->2.5 experiment" I actually mean "my INITIAL 2.3->2.5 experiment".
+
+Someone from the team managing this project said that this CL looks fine as long as the new proto stuff works :)
+
+Wink will probably know more about generating C++ sources from proto files. I couldn't find any rule that could invoke aprotoc for generating C++ code. If that's too troublesome, I think it's ok to keep these two generated files checked in as source.
+
