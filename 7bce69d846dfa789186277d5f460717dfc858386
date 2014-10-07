@@ -1,0 +1,11 @@
+Revision: 7bce69d846dfa789186277d5f460717dfc858386
+Patch-set: 1
+File: services/surfaceflinger/Android.mk
+
+110
+Tue Oct 07 22:35:40 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 30fbc487_36daf52c
+Bytes: 87
+seems like we should probably have a .mk we can $include, rather than duplicate this...
+
