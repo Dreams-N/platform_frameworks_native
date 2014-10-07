@@ -9,3 +9,11 @@ UUID: 30fbc487_36daf52c
 Bytes: 87
 seems like we should probably have a .mk we can $include, rather than duplicate this...
 
+110
+Tue Oct 07 23:59:27 2014 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30fbc487_36daf52c
+UUID: 10e6c0ff_642ea033
+Bytes: 76
+don't really want to create a separate file for the sake of LOCAL_LDFLAGS...
+
