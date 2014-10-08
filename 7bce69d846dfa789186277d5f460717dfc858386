@@ -24,10 +24,26 @@ UUID: 50c5985b_f8116dc1
 Bytes: 34
 Why gnu++11? I'd rather use c++11.
 
+112
+Wed Oct 08 20:28:03 2014 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 50c5985b_f8116dc1
+UUID: 10bfa0c3_1c58d9fb
+Bytes: 4
+Done
+
 115
 Wed Oct 08 05:37:07 2014 +0000
 Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 30e904d0_fca6be4b
 Bytes: 173
 Why did we have to change the suffix here? Does the build system only allow one C++ suffix? It's annoying to have this be different from every other file my team deals with.
+
+115
+Wed Oct 08 20:28:03 2014 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30e904d0_fca6be4b
+UUID: f0992c84_7516623f
+Bytes: 54
+yes unfortunately build system allows only one suffix.
 
