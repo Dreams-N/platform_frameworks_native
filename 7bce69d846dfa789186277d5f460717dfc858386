@@ -17,3 +17,17 @@ UUID: 10e6c0ff_642ea033
 Bytes: 76
 don't really want to create a separate file for the sake of LOCAL_LDFLAGS...
 
+112
+Wed Oct 08 05:37:07 2014 +0000
+Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 50c5985b_f8116dc1
+Bytes: 34
+Why gnu++11? I'd rather use c++11.
+
+115
+Wed Oct 08 05:37:07 2014 +0000
+Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 30e904d0_fca6be4b
+Bytes: 173
+Why did we have to change the suffix here? Does the build system only allow one C++ suffix? It's annoying to have this be different from every other file my team deals with.
+
