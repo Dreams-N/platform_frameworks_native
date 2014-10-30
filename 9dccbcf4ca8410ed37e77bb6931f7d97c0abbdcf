@@ -1,5 +1,14 @@
 Revision: 9dccbcf4ca8410ed37e77bb6931f7d97c0abbdcf
 Patch-set: 2
+File: /COMMIT_MSG
+
+7
+Thu Oct 30 21:28:18 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f5267ef7_449262be
+Bytes: 231
+This had me confused, since this is (by number of lines) not what this patch does. I'd prefer either making this line read something along the lines of "solve some clang warnings", or split the commit into two (I don't care which).
+
 File: libs/binder/IPCThreadState.cpp
 
 147
