@@ -28,3 +28,18 @@ I'm pretty sure what's actually intended here is
 
     ... << std::hex << btd->flags << std::dec << ...
 
+147
+Fri Oct 31 23:55:57 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 15f87289_d40612b8
+UUID: f582fe17_51d32368
+Bytes: 725
+Pulling in some offline notes from chh:
+
+> frameworks/native/libs/binder/IPCThreadState.cpp:197:37: error: address of function 'std::hex' will always evaluate to 'true' [-Werror,-Wpointer-bool-conversion]
+>             out << ": target=0x" << std::hex << b << " (cookie 0x" << c << std::dec
+
+The actual problem here is that std::hex only works with streams that inherit from std::ios_base (as all should). Unfortunately, since this project is (unnecessarily?) allergic to the STL, TextOutput _doesn't_ do this.
+
+I don't think rewriting TextOutput to be based on std::ios_base is something that needs to be done right now. Do we care about changing this? I'm guessing we don't, in which case (void*)(long)foo is probably fine.
+
