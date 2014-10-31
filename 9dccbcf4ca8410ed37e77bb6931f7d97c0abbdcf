@@ -9,6 +9,14 @@ UUID: f5267ef7_449262be
 Bytes: 231
 This had me confused, since this is (by number of lines) not what this patch does. I'd prefer either making this line read something along the lines of "solve some clang warnings", or split the commit into two (I don't care which).
 
+7
+Fri Oct 31 18:39:08 2014 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f5267ef7_449262be
+UUID: d587ba27_1e061910
+Bytes: 80
+yes, now two warnings were fixed. will change the comment in the next patch set.
+
 File: libs/binder/IPCThreadState.cpp
 
 147
