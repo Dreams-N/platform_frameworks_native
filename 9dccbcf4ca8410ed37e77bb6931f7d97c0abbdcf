@@ -43,3 +43,12 @@ The actual problem here is that std::hex only works with streams that inherit fr
 
 I don't think rewriting TextOutput to be based on std::ios_base is something that needs to be done right now. Do we care about changing this? I'm guessing we don't, in which case (void*)(long)foo is probably fine.
 
+147
+Mon Nov 03 18:08:24 2014 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f582fe17_51d32368
+UUID: 15b23212_d5737cda
+Bytes: 323
+I found in this and other files more cases like "<< (void*) ...".
+The other cases don't have clang warnings because the value size is correct. Rewriting TextOutput seem like another CL to me, if we really want to do that. I would rather keep this CL as a simple incremental improvement and test it again with latest source.
+
