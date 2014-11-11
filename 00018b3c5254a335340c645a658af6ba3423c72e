@@ -19,3 +19,13 @@ The code is trying to check whether 'indirect', a signed 64-bit value, is larger
 
 What warning are you getting here? Does the warning only happen in 64-bit builds (or only in 32-bit)?
 
+6:53-6:84
+Tue Nov 11 17:14:47 2014 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7ac51b23_224a1674
+UUID: 5a4f777e_e74ab11f
+Bytes: 167
+The warning is a signed-compare warning on 64b, as there UINTPTR_MAX is 64b unsigned.
+
+From your description, the right thing here will be UINT32_MAX. Would you agree?
+
