@@ -1,5 +1,14 @@
 Revision: 00018b3c5254a335340c645a658af6ba3423c72e
 Patch-set: 2
+File: opengl/tools/glgen/stubs/egl/EGL14cHeader.cpp
+
+17
+Tue Nov 11 23:55:12 2014 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5a4f777e_f9bed1a4
+Bytes: 116
+Where are these generated from? Any changes in this CL seem like they are going to get wiped out if/when we refresh.
+
 File: opengl/tools/glgen/stubs/gles11/glDrawArraysIndirect.cpp
 
 6:53-6:84
@@ -28,4 +37,12 @@ Bytes: 167
 The warning is a signed-compare warning on 64b, as there UINTPTR_MAX is 64b unsigned.
 
 From your description, the right thing here will be UINT32_MAX. Would you agree?
+
+6:53-6:84
+Tue Nov 11 23:55:12 2014 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5a4f777e_e74ab11f
+UUID: 5a4f777e_19640dbe
+Bytes: 172
+I think UINT32_MAX is a better value to use here. It is doing exactly that (making sure that you don't have a value that won't fit in 32-bits, but only on 32-bit compiles).
 
