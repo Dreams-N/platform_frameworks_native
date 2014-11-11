@@ -1,0 +1,11 @@
+Revision: 00018b3c5254a335340c645a658af6ba3423c72e
+Patch-set: 2
+File: opengl/tools/glgen/stubs/gles11/glDrawArraysIndirect.cpp
+
+6:53-6:84
+Tue Nov 11 08:34:00 2014 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7ac51b23_97aeaef6
+Bytes: 122
+I don't understand the comment above and am open for opinions. Maybe this should just be static_cast<jlong>(UINT32_MAX)...
+
