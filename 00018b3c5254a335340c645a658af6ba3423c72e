@@ -100,3 +100,13 @@ I'm just being pedantic. As written, the code is correct (I believe) regardless 
 
 But in practice that assumption is always true, and is going to be true for the foreseeable lifetime of this code. So whatever.
 
+6:53-6:84
+Wed Nov 12 18:29:12 2014 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3aa8035b_4a7897ee
+UUID: 5a405775_e026fc24
+Bytes: 333
+To be pedantic for posterity: uintptr_t is not defined to have a size equal to sizeof(void*). It is defined as being large enough to do p == (void*)((uintptr_t)p) (with void* p). It is not required to be exactly the pointer size, though it usually is.
+
+So on a 32b system, UINTPTR_MAX can well be 2^64-1, and suddenly things break...
+
