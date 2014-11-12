@@ -88,3 +88,15 @@ I am not sure what a "32bit pointer value" is. What is meant by that on a 64bit 
 
 Replacing UINTPTR_MAX with UINT32_MAX will basically ask whether indirect > 4G (>32bit). I'll wait with the submission until tomorrow in case that is not what is needed here.
 
+6:53-6:84
+Wed Nov 12 16:09:53 2014 +0000
+Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3aa8035b_474ad0a6
+UUID: 3aa8035b_4a7897ee
+Bytes: 876
+Let's just use UINT32_MAX. Like I said, it's not worth spending time on.
+
+I'm just being pedantic. As written, the code is correct (I believe) regardless of the sizes of pointer and jlong. It's just checking that, if they have different sizes, a jlong value can be cast to void* losslessly. That's why it uses UINTPTR_MAX, because that's the max value of a pointer, which is what it's going to cast to. At that point in the expression we've already established that pointers and jlongs have different size, so it doesn't matter what happens to UINTPTR_MAX when it overflows jlong. Using UINT32_MAX bakes in the assumption that if the size is different, then pointers are 32 bits; using UINTPTR_MAX does not make that assumption about pointer size.
+
+But in practice that assumption is always true, and is going to be true for the foreseeable lifetime of this code. So whatever.
+
