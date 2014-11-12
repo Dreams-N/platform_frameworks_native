@@ -74,3 +74,17 @@ UUID: 7aaefb66_2f68c964
 Bytes: 252
 For 64-bit compiles, nothing can be > UINTPTR_MAX, so that it provably false. I think that is the warning that must be firing for Andreas. It is more correct to switch to UINT32_MAX, because that is the only case that you are comparing it for actually.
 
+6:53-6:84
+Wed Nov 12 04:09:55 2014 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7aaefb66_2f68c964
+UUID: 3aa8035b_474ad0a6
+Bytes: 624
+The warning is that indirect is a jlong, which is basically int64_t, whereas UINTPTR_MAX is uint64_t. So you have a signed value on the left and an unsigned value on the right.
+
+I added the cast to ensure the same types. But that cast will have the value -1 on 64bit system, which is not what's expected, at least from what I understand from your explanation.
+
+I am not sure what a "32bit pointer value" is. What is meant by that on a 64bit system?
+
+Replacing UINTPTR_MAX with UINT32_MAX will basically ask whether indirect > 4G (>32bit). I'll wait with the submission until tomorrow in case that is not what is needed here.
+
