@@ -9,6 +9,14 @@ UUID: 5a4f777e_f9bed1a4
 Bytes: 116
 Where are these generated from? Any changes in this CL seem like they are going to get wiped out if/when we refresh.
 
+17
+Wed Nov 12 00:20:00 2014 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5a4f777e_f9bed1a4
+UUID: 5a4f777e_b97859ef
+Bytes: 131
+Nope. This is the source for the auto-generated files in frameworks/base/core/jni. This is copied verbatim into the target files...
+
 File: opengl/tools/glgen/stubs/gles11/glDrawArraysIndirect.cpp
 
 6:53-6:84
