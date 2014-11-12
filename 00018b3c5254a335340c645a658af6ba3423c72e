@@ -54,3 +54,15 @@ UUID: 5a4f777e_19640dbe
 Bytes: 172
 I think UINT32_MAX is a better value to use here. It is doing exactly that (making sure that you don't have a value that won't fit in 32-bits, but only on 32-bit compiles).
 
+6:53-6:84
+Wed Nov 12 00:31:46 2014 +0000
+Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5a4f777e_e74ab11f
+UUID: 9ab9efac_07ab766c
+Bytes: 567
+(I thought I added this comment, but apparently not. Anyway, it's not worth arguing about. Feel free to switch to UINT32_MAX).
+
+I don't get it: we cast UINTPTR_MAX to jlong, which is the same type as 'indirect'. The types in that comparison should always match, because the code forces them to.
+
+We want to compare against the maximum pointer value, if pointer is different size than the Java 'indirect' value. Using UINT32_MAX would work but it doesn't express the intent as well. Not a big deal to change it, but (as I said above) I don't understand why we need to.
+
