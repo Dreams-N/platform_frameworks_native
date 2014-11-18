@@ -1,0 +1,11 @@
+Revision: d62bc2ae2f9d33d5215cf5a0199160fb2e943376
+Patch-set: 1
+File: services/sensorservice/SensorService.cpp
+
+625:24-625:35
+Tue Nov 18 00:06:11 2014 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9a42cfda_e891e7de
+Bytes: 72
+How about just replace the call to inforMessage.appendFormat with ALOGI?
+
