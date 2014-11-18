@@ -1,0 +1,15 @@
+Revision: 50105ab9d26c73b326ee090827773f558ca63c70
+Patch-set: 1
+File: services/sensorservice/SensorService.h
+
+40:1-43:55
+Tue Nov 18 00:44:46 2014 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ba16b3da_3e84f12f
+Bytes: 291
+It would be better to wrap above lines with #if __clang__ and #endif.
+Otherwise, gcc gives another warning:
+
+frameworks/native/services/sensorservice/SensorService.h:43:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic ignored "-Woverloaded-virtual"
+
