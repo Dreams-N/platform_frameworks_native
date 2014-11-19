@@ -13,3 +13,11 @@ Otherwise, gcc gives another warning:
 frameworks/native/services/sensorservice/SensorService.h:43:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
  #pragma clang diagnostic ignored "-Woverloaded-virtual"
 
+40:1-43:55
+Wed Nov 19 20:53:01 2014 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ba16b3da_3e84f12f
+UUID: da69a7a3_9991dbe0
+Bytes: 136
+It turns out that not all AOSP projects using this header file is ignoring unknown pragma. So we will need to #if __clang__ this pragma.
+
