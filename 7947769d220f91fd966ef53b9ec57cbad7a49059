@@ -19,3 +19,11 @@ UUID: bfdb0505_b36c22a6
 Bytes: 226
 From my reading I think it's both. I was tempted to make a comment to move this to JNI - when we retrieve the class there we could force it to initialize. That would make things more obvious there and keep the Java side clean.
 
+34
+Mon Nov 24 17:57:53 2014 +0000
+Author: Michael Lentine <1049264@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: bfdb0505_b36c22a6
+UUID: 7fc50d23_d111a673
+Bytes: 61
+Could we instead make EGL_NO_SURFACE etc final in EGL14.java?
+
