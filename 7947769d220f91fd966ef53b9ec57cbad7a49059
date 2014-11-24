@@ -11,3 +11,11 @@ Why is this needed? Does it ensure EGL14's static initializer is run first? If s
 
 Or are you trying to protect against EGL14 not existing? I think we can just assume that, it's a required part of the platform.
 
+34
+Mon Nov 24 17:49:21 2014 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 9fe001b1_525b72f6
+UUID: bfdb0505_b36c22a6
+Bytes: 226
+From my reading I think it's both. I was tempted to make a comment to move this to JNI - when we retrieve the class there we could force it to initialize. That would make things more obvious there and keep the Java side clean.
+
