@@ -27,3 +27,13 @@ UUID: 7fc50d23_d111a673
 Bytes: 61
 Could we instead make EGL_NO_SURFACE etc final in EGL14.java?
 
+34
+Mon Nov 24 18:00:52 2014 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7fc50d23_d111a673
+UUID: 7fc50d23_11c40e6e
+Bytes: 173
+They are initialized in JNI code. It's technically possible to override final fields in JNI, but not good.
+
+Also, they are references, so it doesn't change the dependency...
+
