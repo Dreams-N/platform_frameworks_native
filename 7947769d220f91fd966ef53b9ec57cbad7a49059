@@ -37,3 +37,10 @@ They are initialized in JNI code. It's technically possible to override final fi
 
 Also, they are references, so it doesn't change the dependency...
 
+33:12-34:13
+Tue Nov 25 01:31:05 2014 +0000
+Author: Sangkyu Lee <1017028@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7f298d84_749320e8
+Bytes: 255
+I found this is not needed. According to VM implementation(android/art/runtime/jni_internal.cc), FindClass and GetStaticFieldID calls in _nativeClassInit() are enough to ensure EGL14 class is initialized first. So I'll remove this and submit change again.
+
