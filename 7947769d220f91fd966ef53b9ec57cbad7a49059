@@ -44,3 +44,13 @@ UUID: 7f298d84_749320e8
 Bytes: 255
 I found this is not needed. According to VM implementation(android/art/runtime/jni_internal.cc), FindClass and GetStaticFieldID calls in _nativeClassInit() are enough to ensure EGL14 class is initialized first. So I'll remove this and submit change again.
 
+33:12-34:13
+Tue Nov 25 01:57:27 2014 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7f298d84_749320e8
+UUID: ffbadd9a_50a04488
+Bytes: 314
+Just for posterity: This can be removed *not* for the reason Sangkyu is stating. If it was dependent on the ART implementation, I'd -2 it, because we should not depend on ART-specific behavior here.
+
+This can be removed because the JNI specification says that Get(Static)FieldID initializes an uninitialized class.
+
