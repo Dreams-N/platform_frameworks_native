@@ -1,0 +1,11 @@
+Revision: b10463c5d83ff94a010f2b266c27bf3b05a42c1e
+Patch-set: 1
+File: libs/binder/IPCThreadState.cpp
+
+152
+Tue Nov 25 22:03:09 2014 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1fcc1153_74045909
+Bytes: 23
+This cast is redundant.
+
