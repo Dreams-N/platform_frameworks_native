@@ -54,3 +54,10 @@ Just for posterity: This can be removed *not* for the reason Sangkyu is stating.
 
 This can be removed because the JNI specification says that Get(Static)FieldID initializes an uninitialized class.
 
+34:8-34:11
+Tue Nov 25 02:14:31 2014 +0000
+Author: Sangkyu Lee <1017028@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7f298d84_141cdcd1
+Bytes: 126
+You're right. Please refer this: https://docs.oracle.com/javase/jp/8/technotes/guides/jni/spec/functions.html#GetStaticFieldID
+
