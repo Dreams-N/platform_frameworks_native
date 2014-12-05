@@ -1,0 +1,11 @@
+Revision: 1d5d24587eaca6c307807466883eefdd22ec590b
+Patch-set: 1
+File: libs/gui/Android.mk
+
+19
+Fri Dec 05 21:59:37 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c43aaec4_b1e520de
+Bytes: 128
+btw, as of a couple days ago you can actually just use -std=c++14 (no need to change it, they're synonyms, but new changes can).
+
