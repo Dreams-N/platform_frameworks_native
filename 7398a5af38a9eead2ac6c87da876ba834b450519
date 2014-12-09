@@ -1,0 +1,11 @@
+Revision: 7398a5af38a9eead2ac6c87da876ba834b450519
+Patch-set: 1
+File: libs/gui/Surface.cpp
+
+99:4-100:46
+Tue Dec 09 04:44:56 2014 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c488eee4_39679a07
+Bytes: 50
+Please confirm that that's the intended semantics.
+
