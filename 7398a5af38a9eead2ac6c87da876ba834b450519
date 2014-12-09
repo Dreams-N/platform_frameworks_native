@@ -9,3 +9,11 @@ UUID: c488eee4_39679a07
 Bytes: 50
 Please confirm that that's the intended semantics.
 
+99:4-100:46
+Tue Dec 09 18:37:48 2014 +0000
+Author: Dan Stoza <1043625@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c488eee4_39679a07
+UUID: c488eee4_4f464ca2
+Bytes: 70
+Yeah, that's right. I bungled it when I added that method in June. :-(
+
