@@ -1,0 +1,11 @@
+Revision: bceb29c83ea54d38b38e40d66402e56364cff56b
+Base-for-patch-set: 1
+File: cmds/installd/commands.c
+
+927:23-927:76
+Mon Dec 15 19:44:39 2014 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c4370ec2_b22ea67c
+Bytes: 76
+I could leave this test in general and just abort on unexpected != libart...
+
