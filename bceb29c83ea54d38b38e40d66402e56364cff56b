@@ -17,3 +17,11 @@ UUID: 041da64d_83295e79
 Bytes: 199
 Another idea would be to replace this with a check libart vs. libartd. Then installd would actually recognize ART debug mode correctly. These checks here only work because the length of 6 is bogus...
 
+927:23-927:76
+Tue Dec 16 01:43:24 2014 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 041da64d_83295e79
+UUID: 810fc823_f75040d6
+Bytes: 158
+this check is irrelevant in this path at least? it really was just to avoid the libdvm case. looking at the rest, it seems best just the way you have done it.
+
