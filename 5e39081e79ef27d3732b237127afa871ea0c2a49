@@ -1,0 +1,11 @@
+Revision: 5e39081e79ef27d3732b237127afa871ea0c2a49
+Patch-set: 1
+File: cmds/installd/commands.c
+
+735:4-735:8
+Wed Jan 07 16:32:12 2015 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: eefdd173_32e050a3
+Bytes: 5
+const
+
