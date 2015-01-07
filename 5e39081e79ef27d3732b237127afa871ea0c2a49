@@ -9,3 +9,10 @@ UUID: eefdd173_32e050a3
 Bytes: 5
 const
 
+868
+Wed Jan 07 20:41:25 2015 +0000
+Author: Paul Lawrence <1044551@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ee26b1f7_0a6cfb26
+Bytes: 122
+You wouldn't need this (or the (char* const *) cast below) if argv was a const array, which I think would be more correct.
+
