@@ -1,0 +1,11 @@
+Revision: 86bdad08844500bc6b7ecd6105ee9569b13b05d8
+Patch-set: 2
+File: services/surfaceflinger/SurfaceFlinger.cpp
+
+2366
+Sat Jan 10 02:10:52 2015 +0000
+Author: Naveen Leekha <1060434@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2efc49c4_84ddbb74
+Bytes: 108
+nit - i never like to ask reader to think about operator precedence, so would like () around err == NO_ERROR
+
