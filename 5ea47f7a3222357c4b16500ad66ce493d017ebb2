@@ -9,3 +9,11 @@ UUID: 2efc49c4_ab8acafc
 Bytes: 79
 michaelwr: the fact that you ask for this library gets you the openssl headers.
 
+29
+Sat Jan 10 00:02:55 2015 +0000
+Author: Michael Wright <1006497@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2efc49c4_ab8acafc
+UUID: ce380d5f_8465a800
+Bytes: 4
+SGTM
+
