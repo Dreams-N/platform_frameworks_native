@@ -1,0 +1,11 @@
+Revision: bec91315aa0c2334d708c1fd285576a93cf014de
+Patch-set: 1
+File: /COMMIT_MSG
+
+9:25-9:26
+Tue Jan 13 21:57:26 2015 +0000
+Author: Arve Hjønnevåg <1000205@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 4e3a5daa_10268a54
+Bytes: 38
+... with a 64 bit driver interface ...
+
