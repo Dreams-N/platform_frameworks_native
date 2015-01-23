@@ -23,6 +23,14 @@ UUID: eb1ce3fc_3abde132
 Bytes: 24
 : %s\n", strerror(errno)
 
+42
+Fri Jan 23 04:12:55 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: eb1ce3fc_3abde132
+UUID: 2b519ba8_bcd0018d
+Bytes: 285
+actually, on second thoughts, all the fprintfs in this file would probably be better as perrors. i hadn't noticed that the printf is deliberately writing to std*out* because that's where we're copying output to. worth a comment? (at least it'll stand out if everything else is perror.)
+
 61
 Fri Jan 23 04:10:21 2015 +0000
 Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
