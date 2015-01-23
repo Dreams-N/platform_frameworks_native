@@ -16,6 +16,14 @@ UUID: eb1ce3fc_1ac01dba
 Bytes: 5
 == -1
 
+41
+Fri Jan 23 21:41:24 2015 +0000
+Author: Christopher Ferris <1019050@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: eb1ce3fc_1ac01dba
+UUID: cbe47f53_073d7adf
+Bytes: 4
+Done
+
 42
 Fri Jan 23 04:10:21 2015 +0000
 Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -31,6 +39,14 @@ UUID: 2b519ba8_bcd0018d
 Bytes: 285
 actually, on second thoughts, all the fprintfs in this file would probably be better as perrors. i hadn't noticed that the printf is deliberately writing to std*out* because that's where we're copying output to. worth a comment? (at least it'll stand out if everything else is perror.)
 
+42
+Fri Jan 23 21:41:24 2015 +0000
+Author: Christopher Ferris <1019050@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2b519ba8_bcd0018d
+UUID: abe90b2d_c354281d
+Bytes: 189
+Actually, now that I think of it, I don't think these errors should go to stderr. They should go to stdout so that anyone who captures just stdout doesn't miss this if something goes wrong.
+
 61
 Fri Jan 23 04:10:21 2015 +0000
 Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -38,10 +54,26 @@ UUID: eb1ce3fc_faef6941
 Bytes: 5
 == -1
 
+61
+Fri Jan 23 21:41:24 2015 +0000
+Author: Christopher Ferris <1019050@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: eb1ce3fc_faef6941
+UUID: 8bee0733_df319b8d
+Bytes: 4
+Done
+
 73
 Fri Jan 23 04:10:21 2015 +0000
 Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 2b519ba8_1c27b520
 Bytes: 61
 we really out to add ReadFully and WriteFully to libcutils...
+
+73
+Fri Jan 23 21:41:24 2015 +0000
+Author: Christopher Ferris <1019050@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2b519ba8_1c27b520
+UUID: cbe47f53_476942db
+Bytes: 79
+I'll do that soon. Then I can remove this code from the few places I've put it.
 
