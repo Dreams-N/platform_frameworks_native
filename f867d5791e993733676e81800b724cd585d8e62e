@@ -1,0 +1,13 @@
+Revision: f867d5791e993733676e81800b724cd585d8e62e
+Patch-set: 1
+File: libs/binder/IPCThreadState.cpp
+
+44
+Tue Jan 27 04:18:49 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 57fbd733_c4e47236
+Bytes: 158
+maybe flip this so it says if _WIN32 #include <windows.h> instead?
+
+(presumably this doesn't build for Mac OS? so defined(__linux__) would be an alternative?)
+
