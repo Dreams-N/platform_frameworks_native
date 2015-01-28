@@ -9,3 +9,11 @@ UUID: 57975702_21e8c803
 Bytes: 181
 On my volantis running internal master, this command hangs forever when run as a non-root user, but runs properly as root. So I suspect you'll need to run as root to make this work.
 
+221:42-221:46
+Wed Jan 28 05:23:08 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 57975702_21e8c803
+UUID: 57975702_216d28ed
+Bytes: 81
+shouldn't we be fixing the selinux policy rather than running everything with su?
+
