@@ -1,0 +1,11 @@
+Revision: 12e50934ea3ea3e1a274c11cd606a9391e6ec1b2
+Patch-set: 1
+File: cmds/dumpstate/dumpstate.c
+
+221:42-221:46
+Wed Jan 28 05:02:12 2015 +0000
+Author: Christopher Ferris <1019050@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 57975702_21e8c803
+Bytes: 181
+On my volantis running internal master, this command hangs forever when run as a non-root user, but runs properly as root. So I suspect you'll need to run as root to make this work.
+
