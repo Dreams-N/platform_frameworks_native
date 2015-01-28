@@ -17,3 +17,17 @@ UUID: 57975702_216d28ed
 Bytes: 81
 shouldn't we be fixing the selinux policy rather than running everything with su?
 
+221:42-221:46
+Wed Jan 28 08:41:01 2015 +0000
+Author: Lorenzo Colitti <1000835@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 57975702_216d28ed
+UUID: b7d6d3d9_31ed9014
+Bytes: 384
+I don't think selinux is to blame here.
+
+Removing the "list" (i.e., running "ip link" instead of "ip link list") fixes the problem. strace and some netlink decoding reveals that "ip link list" sends an RTM_NEWLINK message using sendto(), gets EACCES, ignores it, and hangs calling recvfrom().
+
+"ip link" sends an RTM_GETLINK, which works.
+
+This seems to be a bug in our version of ip.
+
