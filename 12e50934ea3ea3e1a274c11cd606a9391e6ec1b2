@@ -31,3 +31,13 @@ Removing the "list" (i.e., running "ip link" instead of "ip link list") fixes th
 
 This seems to be a bug in our version of ip.
 
+221:42-221:46
+Wed Jan 28 16:44:39 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b7d6d3d9_31ed9014
+UUID: 57c59722_ee1f1f57
+Bytes: 126
+that's bizarre, especially because "ip link" and "ip link list" appear to generate the same output!
+
+do we need to upgrade ip?
+
