@@ -1,0 +1,30 @@
+Revision: 8f3ade0c9ab52a1e4f13d6ff1922dd98e3ccdbcc
+Base-for-patch-set: 3
+File: opengl/libs/EGL/getProcAddress.cpp
+
+134:36-134:68
+Tue Feb 03 00:35:16 2015 +0000
+Author: Duane Sand <1010669@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f7f92bff_617ef297
+Bytes: 111
+This line is required, for mips32r1 builds.
+The rdhwr instruction then traps out but is emulated by the kernel.
+
+File: opengl/libs/GLES2/gl2.cpp
+
+133
+Tue Feb 03 00:35:16 2015 +0000
+Author: Duane Sand <1010669@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 17515fa8_e5526cac
+Bytes: 43
+This line is required, for mips32r1 builds.
+
+File: opengl/libs/GLES_CM/gl.cpp
+
+189
+Tue Feb 03 00:35:16 2015 +0000
+Author: Duane Sand <1010669@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f7f92bff_c149c678
+Bytes: 43
+This line is required, for mips32r1 builds.
+
