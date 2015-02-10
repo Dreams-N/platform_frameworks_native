@@ -1,0 +1,11 @@
+Revision: 971ecde6e4037cf5452f0b485b6fc9df77326ad9
+Patch-set: 2
+File: cmds/dumpstate/utils.c
+
+479
+Tue Feb 10 00:43:38 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 71bf0bdf_77483051
+Bytes: 20
+comment out of date.
+
