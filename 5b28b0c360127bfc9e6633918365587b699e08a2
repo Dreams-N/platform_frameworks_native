@@ -1,0 +1,18 @@
+Revision: 5b28b0c360127bfc9e6633918365587b699e08a2
+Patch-set: 2
+File: cmds/installd/commands.c
+
+992:8-992:35
+Wed Feb 18 17:13:12 2015 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6bd55878_c719be7b
+Bytes: 130
+No error checking. Just because the existing code is crap doesn't mean new contributions are allowed to forego standard practices.
+
+1103:4-1105:5
+Wed Feb 18 17:13:12 2015 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: abdbd0ab_e9e2d5d7
+Bytes: 185
+Why not unlink immediately, as a file descriptor is available? That keeps the code together and makes sure that even with something unexpected happening the tmp file will be cleaned up.
+
