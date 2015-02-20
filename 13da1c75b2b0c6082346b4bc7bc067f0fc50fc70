@@ -25,3 +25,11 @@ UUID: 0866a236_daf5a5d7
 Bytes: 140
 Is there a reason for the separate special case? Couldn't you fold this into the "if (s->cnx->egl.eglSwapBuffersWithDamageEXT)" check below?
 
+1116
+Fri Feb 20 01:13:23 2015 +0000
+Author: Dan Stoza <1043625@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 0866a236_daf5a5d7
+UUID: 28dc462f_7deab7f8
+Bytes: 277
+Michael raised this, too. I did it this way so that if there are no rects, we don't call the ANW::setDamage or whatever we end up adding. If we fold it in, we either need to pass (0, NULL) into setDamage or add another if statement to decide whether to call setDamage later on.
+
