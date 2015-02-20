@@ -9,6 +9,14 @@ UUID: 0866a236_577b2ed5
 Bytes: 150
 Have you compared this with the latest khronos version? I try to minimize diffs versus that one. https://www.khronos.org/registry/egl/api/EGL/eglext.h
 
+579
+Fri Feb 20 17:51:02 2015 +0000
+Author: Dan Stoza <1043625@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 0866a236_577b2ed5
+UUID: 48ab3a9e_3ec609ce
+Bytes: 163
+We're pretty far out of sync with that, but I at least copy-pasted these sections from that version into ours close to the nearest common prior definition we have.
+
 File: opengl/libs/EGL/eglApi.cpp
 
 104
@@ -17,6 +25,14 @@ Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 0866a236_f7699a08
 Bytes: 87
 "strongly recommended"? HWUI and surfaceflinger will (eventually) take advantage of it.
+
+104
+Fri Feb 20 17:51:02 2015 +0000
+Author: Dan Stoza <1043625@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 0866a236_f7699a08
+UUID: 88a1b2bc_e3800ce0
+Bytes: 4
+Done
 
 1116
 Fri Feb 20 01:07:40 2015 +0000
