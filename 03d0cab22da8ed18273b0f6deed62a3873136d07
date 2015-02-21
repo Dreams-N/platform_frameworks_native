@@ -1,0 +1,34 @@
+Revision: 03d0cab22da8ed18273b0f6deed62a3873136d07
+Patch-set: 2
+File: /COMMIT_MSG
+
+16
+Sat Feb 21 07:28:01 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a80d96eb_3991cf69
+Bytes: 47
+time for unit tests, or at least a test script?
+
+File: cmds/dumpstate/utils.c
+
+261
+Sat Feb 21 07:28:01 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e8f94eff_9bb8cbf4
+Bytes: 60
+you didn't TEMP_FAILURE_RETRY the other opens. why this one?
+
+292
+Sat Feb 21 07:28:01 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 880292b9_b83e7956
+Bytes: 58
+that's not really true. it's 30s each time round the loop.
+
+296
+Sat Feb 21 07:28:01 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a80d96eb_59880337
+Bytes: 161
+would it make more sense to just use SIGALRM? this seems pretty complicated, and you could just have a regular copy loop without TEMP_FAILURE_RETRY in that case.
+
