@@ -1,0 +1,11 @@
+Revision: ad0f52fc2be6161f61fd95e4f12739c65661673a
+Patch-set: 1
+File: opengl/tools/glgen/stubs/egl/eglGetDisplay.cpp
+
+17:20-17:29
+Mon Feb 23 18:56:58 2015 +0000
+Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a86916a4_1ff5ab88
+Bytes: 84
+If you use EGLNativeDisplayType here, you can avoid the cast on EGL_DEFAULT_DISPLAY.
+
