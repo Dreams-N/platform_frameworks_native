@@ -9,3 +9,20 @@ UUID: a86916a4_1ff5ab88
 Bytes: 84
 If you use EGLNativeDisplayType here, you can avoid the cast on EGL_DEFAULT_DISPLAY.
 
+17:20-17:29
+Mon Feb 23 22:08:59 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a86916a4_1ff5ab88
+UUID: e50179f4_5bdde3e4
+Bytes: 179
+This cast is actually the one that is problematic. This can't be casted to a pointer or the warning will fire (because sizeof(display_id) != sizeof(EGLNativeDisplayType) on lp64).
+
+File: opengl/tools/glgen/stubs/gles11/glDrawElementsInstanced.cpp
+
+35
+Mon Feb 23 22:08:59 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e86eaeaf_3350e89b
+Bytes: 59
+I'm a little less certain about this one. Offset from what?
+
