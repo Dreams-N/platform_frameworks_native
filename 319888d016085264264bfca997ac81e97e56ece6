@@ -1,0 +1,11 @@
+Revision: 319888d016085264264bfca997ac81e97e56ece6
+Patch-set: 4
+File: cmds/dumpstate/dumpstate.h
+
+35
+Tue Feb 24 04:50:15 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 45432581_5e74f5b2
+Bytes: 45
+do you want to check that with fcntl F_GETFD?
+
