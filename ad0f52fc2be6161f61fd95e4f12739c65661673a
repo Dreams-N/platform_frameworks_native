@@ -17,6 +17,14 @@ UUID: e50179f4_5bdde3e4
 Bytes: 179
 This cast is actually the one that is problematic. This can't be casted to a pointer or the warning will fire (because sizeof(display_id) != sizeof(EGLNativeDisplayType) on lp64).
 
+17:20-17:29
+Tue Feb 24 03:36:23 2015 +0000
+Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e50179f4_5bdde3e4
+UUID: 05a84d5a_44664eba
+Bytes: 87
+Oh, I see. I missed the point and thought the warning was about pointer/int comparison.
+
 File: opengl/tools/glgen/stubs/gles11/glDrawElementsInstanced.cpp
 
 35
@@ -25,4 +33,16 @@ Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: e86eaeaf_3350e89b
 Bytes: 59
 I'm a little less certain about this one. Offset from what?
+
+35
+Tue Feb 24 03:36:23 2015 +0000
+Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e86eaeaf_3350e89b
+UUID: 05a84d5a_4455ee94
+Bytes: 698
+This is a horrible GL-ism. It's a byte offset from the beginning of the buffer currently bound to the GL_ELEMENT_ARRAY_BUFFER binding point. If there is no element array buffer bound, then it's a real pointer to the element data.
+
+In Java the only really valid way to use this is as an offset into an element array buffer. But it's technically possible on 32-bit to pass a real pointer from native through Java and into here.
+
+I suspect we should probably check that an element array buffer is bound and throw an exception if not. We'll possibly break some apps (unlikely), but those wouldn't be 64-bit safe anyway. There's several other GL calls that use this same awful offset-or-pointer pattern.
 
