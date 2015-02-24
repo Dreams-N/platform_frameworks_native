@@ -25,6 +25,14 @@ UUID: 05a84d5a_44664eba
 Bytes: 87
 Oh, I see. I missed the point and thought the warning was about pointer/int comparison.
 
+17:20-17:29
+Tue Feb 24 04:53:01 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 05a84d5a_44664eba
+UUID: a534e107_21358ed1
+Bytes: 246
+Yeah, this is a slightly more frightening warning where an int is casted to a pointer of a different size (and is thus either zero-extended or truncated). Turning it on globally because it's found a bug in pretty much every project that fired it.
+
 File: opengl/tools/glgen/stubs/gles11/glDrawElementsInstanced.cpp
 
 35
