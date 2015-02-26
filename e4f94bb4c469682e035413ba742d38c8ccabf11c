@@ -1,0 +1,21 @@
+Revision: e4f94bb4c469682e035413ba742d38c8ccabf11c
+Patch-set: 5
+File: cmds/dumpstate/dumpstate.c
+
+217:4-217:103
+Thu Feb 26 15:33:32 2015 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c299cb84_92a83c69
+Bytes: 612
+Exceeds 100 characters :-( refactor!
+
+Do we want to add:
+
+#define PSTORE_LAST_LOGD "/sys/fs/pstore/pmsg-ramoops-0"
+. . .
+    if (!stat(PSTORE_LAST_LOGD, &st)) {
+        run_command("LAST LOGCAT", ...
+    }
+
+to suppress noisy behavior in bugreport for those systems that do not support this feature? The disadvantage is that pmsg-ramoops-0 does _not_ exist after a 'logcat -L -c' or if the pstore ramoops data is zero in size or has a checksum problem (if configured) which gives a false sense that the feature is unsupported (we want to 'bugreport' to state thus on systems that have CONFIG_PSTORE_PMSG kernels).
+
