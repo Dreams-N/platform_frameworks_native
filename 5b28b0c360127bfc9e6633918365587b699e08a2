@@ -9,10 +9,26 @@ UUID: 6bd55878_c719be7b
 Bytes: 130
 No error checking. Just because the existing code is crap doesn't mean new contributions are allowed to forego standard practices.
 
+992:8-992:35
+Thu Feb 26 05:56:44 2015 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 6bd55878_c719be7b
+UUID: 0214c386_a41b626d
+Bytes: 2
++1
+
 1103:4-1105:5
 Wed Feb 18 17:13:12 2015 +0000
 Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: abdbd0ab_e9e2d5d7
 Bytes: 185
 Why not unlink immediately, as a file descriptor is available? That keeps the code together and makes sure that even with something unexpected happening the tmp file will be cleaned up.
+
+1103:4-1105:5
+Thu Feb 26 05:56:44 2015 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: abdbd0ab_e9e2d5d7
+UUID: 2217078d_05b512aa
+Bytes: 30
+also warning on  unlink error?
 
