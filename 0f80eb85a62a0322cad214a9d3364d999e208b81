@@ -1,0 +1,18 @@
+Revision: 0f80eb85a62a0322cad214a9d3364d999e208b81
+Patch-set: 1
+File: libs/gui/BufferQueueProducer.cpp
+
+323
+Thu Feb 26 00:57:09 2015 +0000
+Author: Dan Stoza <1043625@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a234d707_e1a0c637
+Bytes: 95
+Note: I'm not sure this is exactly the correct reasoning, but it seems to give the right value.
+
+328
+Thu Feb 26 00:57:09 2015 +0000
+Author: Dan Stoza <1043625@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a234d707_a1087ea3
+Bytes: 68
+This will probably need to change to PRId64 before final submission.
+
