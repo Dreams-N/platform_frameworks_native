@@ -9,6 +9,14 @@ UUID: 3c6d71ed_9a602dbb
 Bytes: 34
 Is that property listed somewhere?
 
+822:31-822:58
+Tue Mar 10 15:20:05 2015 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3c6d71ed_9a602dbb
+UUID: fcd59900_6063f21a
+Bytes: 36
+I'm working on a documentation page.
+
 File: cmds/installd/installd.c
 
 157:7-157:17
@@ -17,4 +25,14 @@ Author: Nicolas Geoffray <1038443@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: bcf161a4_0ec24b83
 Bytes: 73
 Did you change patchoat to accept --debuggable? Why does it need to know?
+
+157:7-157:17
+Tue Mar 10 15:20:05 2015 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: bcf161a4_0ec24b83
+UUID: fcd59900_405eee4f
+Bytes: 193
+It doesn't. This is installd setup. As you can see, we use the same intermediate method for dex2oat and patchoat.
+
+Actual patchoat is done in run_patchoat, which doesn't take a debuggable flag.
 
