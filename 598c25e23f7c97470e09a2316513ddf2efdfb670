@@ -1,0 +1,20 @@
+Revision: 598c25e23f7c97470e09a2316513ddf2efdfb670
+Patch-set: 2
+File: cmds/installd/commands.c
+
+822:31-822:58
+Tue Mar 10 10:26:02 2015 +0000
+Author: Nicolas Geoffray <1038443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3c6d71ed_9a602dbb
+Bytes: 34
+Is that property listed somewhere?
+
+File: cmds/installd/installd.c
+
+157:7-157:17
+Tue Mar 10 10:26:02 2015 +0000
+Author: Nicolas Geoffray <1038443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: bcf161a4_0ec24b83
+Bytes: 73
+Did you change patchoat to accept --debuggable? Why does it need to know?
+
