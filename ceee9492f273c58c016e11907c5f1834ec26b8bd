@@ -1,0 +1,11 @@
+Revision: ceee9492f273c58c016e11907c5f1834ec26b8bd
+Patch-set: 2
+File: cmds/installd/commands.c
+
+976:66-976:68
+Wed Mar 18 20:02:49 2015 +0000
+Author: Fyodor Kupolov <1059418@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 86ce0ca2_542bec7a
+Bytes: 24
+nit: \n is not necessary
+
