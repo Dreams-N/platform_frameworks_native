@@ -1,0 +1,11 @@
+Revision: b36b4a04826569683c45c543e29ac22eca163cf7
+Patch-set: 1
+File: libs/ui/Fence.cpp
+
+144
+Mon Mar 23 21:34:52 2015 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a69cf0d8_35e262c9
+Bytes: 169
+It looks like your previous patch took this out, probably because it wasn't obvious why it was there.  Maybe a comment so someone else doesn't take it out in the future?
+
