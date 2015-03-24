@@ -1,0 +1,11 @@
+Revision: 382fe6711504bcdae99c6d7c0a289377d47137d9
+Patch-set: 3
+File: cmds/installd/commands.c
+
+962:6-962:19
+Tue Mar 24 20:44:58 2015 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c3fb9632_3246b881
+Bytes: 51
+Should we add an ALOGE here, like there is for '/'?
+
