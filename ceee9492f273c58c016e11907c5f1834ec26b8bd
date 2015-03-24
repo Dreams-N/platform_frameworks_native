@@ -9,3 +9,11 @@ UUID: 86ce0ca2_542bec7a
 Bytes: 24
 nit: \n is not necessary
 
+976:66-976:68
+Tue Mar 24 16:04:31 2015 +0000
+Author: Richard Uhler <1057373@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 86ce0ca2_542bec7a
+UUID: 666d98b3_bc084060
+Bytes: 171
+Almost every other call to ALOGE in this file has the \n at the end. Even if it's not needed, I would rather be consistent now and save the cleanup for a different change.
+
