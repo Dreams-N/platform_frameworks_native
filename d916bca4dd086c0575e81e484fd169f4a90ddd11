@@ -1,0 +1,11 @@
+Revision: d916bca4dd086c0575e81e484fd169f4a90ddd11
+Patch-set: 1
+File: services/surfaceflinger/DisplayHardware/HWComposer.cpp
+
+1027:62-1027:63
+Fri Mar 27 02:52:06 2015 +0000
+Author: Arun Kumar K.R <1069378@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c3ae3665_46e972ac
+Bytes: 27
+hwc_region_t& surfaceDamage
+
