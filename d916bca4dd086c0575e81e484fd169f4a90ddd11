@@ -9,3 +9,10 @@ UUID: c3ae3665_46e972ac
 Bytes: 27
 hwc_region_t& surfaceDamage
 
+1030
+Mon Mar 30 23:06:00 2015 +0000
+Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 83143e89_44d9cef7
+Bytes: 22
+== Rect::INVALID_RECT?
+
