@@ -1,0 +1,50 @@
+Revision: 039b72062dc0ef0a61c4aa4765d1c155c6c646ff
+Patch-set: 6
+File: libs/gui/BufferQueueProducer.cpp
+
+629
+Mon Mar 30 23:01:02 2015 +0000
+Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 630f4a79_23080a5d
+Bytes: 222
+Any reason to use {} in these two lines instead of () for the first and Rect() for the second? That seems more consistent with http://go/totw:88. Though perhaps we should have Rect::INVALID_RECT and Region::INVALID_REGION.
+
+File: libs/gui/Surface.cpp
+
+342
+Mon Mar 30 23:01:02 2015 +0000
+Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a315c284_258f6e80
+Bytes: 25
+= Region::INVALID_REGION?
+
+604
+Mon Mar 30 23:01:02 2015 +0000
+Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 630f4a79_235e4a55
+Bytes: 25
+= Region::INVALID_REGION?
+
+781
+Mon Mar 30 23:01:02 2015 +0000
+Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 630f4a79_836e1ef8
+Bytes: 25
+= Region::INVALID_REGION?
+
+File: libs/ui/Region.cpp
+
+523
+Mon Mar 30 23:01:02 2015 +0000
+Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a315c284_6557a660
+Bytes: 22
+!= Rect::INVALID_RECT?
+
+700
+Mon Mar 30 23:01:02 2015 +0000
+Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a315c284_455c2a81
+Bytes: 22
+!= Rect::INVALID_RECT?
+
