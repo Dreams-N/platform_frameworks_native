@@ -1,0 +1,29 @@
+Revision: 8f17521dd88c992b8219f9c7ee1214a0a37ecf61
+Patch-set: 13
+File: include/android/asset_manager.h
+
+65
+Tue Mar 31 18:21:09 2015 +0000
+Author: Jeff Brown <1003957@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 630f4a79_22c59b3e
+Bytes: 48
+is there any documentation for the unknown mode?
+
+File: include/android/bitmap.h
+
+39
+Tue Mar 31 18:21:09 2015 +0000
+Author: Jeff Brown <1003957@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 83143e89_ba024e08
+Bytes: 28
+These come from PixelFormat.
+
+File: include/android/sensor.h
+
+103
+Tue Mar 31 18:21:09 2015 +0000
+Author: Jeff Brown <1003957@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 630f4a79_c2dc8712
+Bytes: 43
+Wow!  This list is way way way out of date.
+
