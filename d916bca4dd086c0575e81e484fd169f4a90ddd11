@@ -9,10 +9,26 @@ UUID: c3ae3665_46e972ac
 Bytes: 27
 hwc_region_t& surfaceDamage
 
+1027:62-1027:63
+Wed Apr 01 18:51:23 2015 +0000
+Author: Dan Stoza <1043625@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c3ae3665_46e972ac
+UUID: e37fbae4_5b15033e
+Bytes: 18
+Nice catch. Fixed.
+
 1030
 Mon Mar 30 23:06:00 2015 +0000
 Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 83143e89_44d9cef7
 Bytes: 22
 == Rect::INVALID_RECT?
+
+1030
+Wed Apr 01 18:51:23 2015 +0000
+Author: Dan Stoza <1043625@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 83143e89_44d9cef7
+UUID: e37fbae4_fb0cf73c
+Bytes: 4
+Done
 
