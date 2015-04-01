@@ -9,6 +9,16 @@ UUID: 630f4a79_22c59b3e
 Bytes: 48
 is there any documentation for the unknown mode?
 
+65
+Wed Apr 01 20:19:21 2015 +0000
+Author: Johan Euphrosine <1070099@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 630f4a79_22c59b3e
+UUID: 2386322e_8ca9075c
+Bytes: 114
+Looking at the underlying impl in androidfw, I don't see mAccessMode being used anywhere.
+
+Am I missing something?
+
 File: include/android/bitmap.h
 
 39
@@ -18,6 +28,16 @@ UUID: 83143e89_ba024e08
 Bytes: 28
 These come from PixelFormat.
 
+39
+Wed Apr 01 20:19:21 2015 +0000
+Author: Johan Euphrosine <1070099@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 83143e89_ba024e08
+UUID: 4383261d_2a847fe1
+Bytes: 91
+Those looks pretty self explanatory.
+
+Marking A_8 as deprecated (it is in PixelFormat.java)
+
 File: include/android/sensor.h
 
 103
@@ -26,4 +46,12 @@ Author: Jeff Brown <1003957@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 630f4a79_c2dc8712
 Bytes: 43
 Wow!  This list is way way way out of date.
+
+103
+Wed Apr 01 20:19:21 2015 +0000
+Author: Johan Euphrosine <1070099@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 630f4a79_c2dc8712
+UUID: 6392ea67_0b417dfa
+Bytes: 78
+I took the comment from sensors.h, should we add other sensors enum there too?
 
