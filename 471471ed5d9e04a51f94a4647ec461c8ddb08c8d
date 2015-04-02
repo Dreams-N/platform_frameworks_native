@@ -23,3 +23,11 @@ https://android-review.googlesource.com/#/c/110522/1
 
 Please note that it is not complete (and it uses a nasty hack to bypass some of the pthread.join() API).
 
+24
+Thu Apr 02 21:31:25 2015 +0000
+Author: Arve Hjønnevåg <1000205@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 63de6a5c_ea1fa25d
+UUID: 63de6a5c_e89e8ae1
+Bytes: 161
+That would also be fine. My complaint was that it is comparing this to the wrong union member (which is a different size in the 64 bit interface) in the handler.
+
