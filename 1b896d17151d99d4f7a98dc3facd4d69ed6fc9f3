@@ -11,10 +11,26 @@ Make this a test for DEXOPT_NEEDED, and have an else branch that bails with an e
 
 (I'd normally suggest enums with a switch statement, to let the compiler check that we handle all known cases, alas, integral values from Java, so I understand why not.)
 
+1012:5-1014:5
+Thu Apr 02 23:23:56 2015 +0000
+Author: Richard Uhler <1057373@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8370be19_8dcd89b4
+UUID: 63de6a5c_990cf6ee
+Bytes: 4
+Done
+
 1113:9-1116:9
 Wed Apr 01 18:07:34 2015 +0000
 Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: a371421d_2ec56b3e
 Bytes: 46
 This should be up top, see my earlier comment.
+
+1113:9-1116:9
+Thu Apr 02 23:23:56 2015 +0000
+Author: Richard Uhler <1057373@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a371421d_2ec56b3e
+UUID: 23c4727c_76aa607e
+Bytes: 4
+Done
 
