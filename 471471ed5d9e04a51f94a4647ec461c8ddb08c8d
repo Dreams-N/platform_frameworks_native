@@ -9,3 +9,17 @@ UUID: 63de6a5c_ea1fa25d
 Bytes: 188
 why does this even exist? it's only assigned to in one place, and it's assigned a constant value. it's only read in one place. so shouldn't we just replace that one read with the constant?
 
+24
+Thu Apr 02 21:26:41 2015 +0000
+Author: Serban Constantinescu <1030338@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 63de6a5c_ea1fa25d
+UUID: 2312b2d8_0cfe9731
+Bytes: 449
+You are right Elliott. We could! At the time I tried modifying this as less as possible.
+
+In my opinion servicemanager could reuse most of the code in libbinder. There is no point in rewriting the message parsing. I had a go at doing this some time back and here is the link to the result:
+
+https://android-review.googlesource.com/#/c/110522/1
+
+Please note that it is not complete (and it uses a nasty hack to bypass some of the pthread.join() API).
+
