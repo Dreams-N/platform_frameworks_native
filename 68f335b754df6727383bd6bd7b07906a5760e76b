@@ -19,3 +19,19 @@ UUID: e3197a0f_97672421
 Bytes: 64
 I hope these directories don't end up writable to the app GID...
 
+1714:0-1714:92
+Tue Apr 07 17:12:55 2015 +0000
+Author: Fyodor Kupolov <1059418@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e3197a0f_97672421
+UUID: 63258a42_59dd430a
+Bytes: 70
+Acknowledged. Apps shouldn't be able to write to dalvikcache_data_file
+
+1714:0-1714:92
+Tue Apr 07 17:12:55 2015 +0000
+Author: Fyodor Kupolov <1059418@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2320f22c_42bea3a3
+UUID: 832a7e12_5dc44fbe
+Bytes: 4
+Done
+
