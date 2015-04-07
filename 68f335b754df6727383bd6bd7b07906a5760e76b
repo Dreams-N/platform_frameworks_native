@@ -11,3 +11,11 @@ Hmm, I'd rather not leave wide open for everyone to read.
 
 Can we consider chown'ing these directories to the system UID and installd GID instead?  (From a brief glance at a device, they'll end up as system UID, app GID anyway when the install is finished.)
 
+1714:0-1714:92
+Tue Apr 07 04:15:51 2015 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2320f22c_42bea3a3
+UUID: e3197a0f_97672421
+Bytes: 64
+I hope these directories don't end up writable to the app GID...
+
