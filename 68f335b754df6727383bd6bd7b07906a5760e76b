@@ -1,0 +1,13 @@
+Revision: 68f335b754df6727383bd6bd7b07906a5760e76b
+Patch-set: 1
+File: cmds/installd/commands.c
+
+1714:0-1714:92
+Tue Apr 07 02:56:32 2015 +0000
+Author: Jeff Sharkey <1006166@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2320f22c_42bea3a3
+Bytes: 257
+Hmm, I'd rather not leave wide open for everyone to read.
+
+Can we consider chown'ing these directories to the system UID and installd GID instead?  (From a brief glance at a device, they'll end up as system UID, app GID anyway when the install is finished.)
+
