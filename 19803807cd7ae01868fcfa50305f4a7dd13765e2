@@ -1,0 +1,11 @@
+Revision: 19803807cd7ae01868fcfa50305f4a7dd13765e2
+Patch-set: 2
+File: cmds/installd/installd.h
+
+230
+Tue Apr 07 21:04:29 2015 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 23e3924b_a11c7e23
+Bytes: 38
+eh? ... how was this compiling before?
+
