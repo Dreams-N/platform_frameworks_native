@@ -1,0 +1,11 @@
+Revision: 2212c10beb2804e42a4f42a7fa22ac58e9b8c032
+Patch-set: 2
+File: cmds/installd/commands.c
+
+1706:0-1707:1
+Tue Apr 07 18:11:10 2015 +0000
+Author: Jeff Sharkey <1006166@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a32b0216_e9bf9da2
+Bytes: 132
+Actually, could you switch to using fs_prepare_dir instead()?  It essentially does what you're doing here, but is a bit more robust.
+
