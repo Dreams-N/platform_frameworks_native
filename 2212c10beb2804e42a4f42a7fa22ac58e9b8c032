@@ -9,3 +9,11 @@ UUID: a32b0216_e9bf9da2
 Bytes: 132
 Actually, could you switch to using fs_prepare_dir instead()?  It essentially does what you're doing here, but is a bit more robust.
 
+1706:0-1707:1
+Tue Apr 07 18:24:24 2015 +0000
+Author: Fyodor Kupolov <1059418@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a32b0216_e9bf9da2
+UUID: a32b0216_091d391e
+Bytes: 62
+Done. Thank you for pointing that out. No code is best code ;)
+
