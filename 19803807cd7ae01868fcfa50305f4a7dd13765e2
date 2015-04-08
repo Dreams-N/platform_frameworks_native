@@ -9,12 +9,28 @@ UUID: 83fd1eeb_9cc44543
 Bytes: 96
 would've been nice if we had used C++ style casts (reinterpret_cast<char*>(buf)) here and below.
 
+208
+Wed Apr 08 12:58:00 2015 +0000
+Author: Jeff Sharkey <1006166@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 83fd1eeb_9cc44543
+UUID: 63f82afb_21a7ca87
+Bytes: 46
+Good point, I'll be sure to do that in future.
+
 356
 Wed Apr 08 09:11:44 2015 +0000
 Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: c3f39619_9e1f1d5f
 Bytes: 75
 this change looks unrelated to the move to C++ . why did you make it here ?
+
+356
+Wed Apr 08 12:58:00 2015 +0000
+Author: Jeff Sharkey <1006166@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c3f39619_9e1f1d5f
+UUID: e3ec1a3e_455bfe58
+Bytes: 68
+Yeah you caught me  :)  It was needed to get the unit tests to pass.
 
 File: cmds/installd/installd.h
 
@@ -25,6 +41,14 @@ UUID: 23e3924b_a11c7e23
 Bytes: 38
 eh? ... how was this compiling before?
 
+230
+Wed Apr 08 12:58:00 2015 +0000
+Author: Jeff Sharkey <1006166@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 23e3924b_a11c7e23
+UUID: a3eea234_632c363f
+Bytes: 14
+crazy, idk  :(
+
 File: cmds/installd/tests/installd_utils_test.cpp
 
 51
@@ -33,4 +57,12 @@ Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 83fd1eeb_3cb411c4
 Bytes: 55
 you use strdup elsewhere when assigning to .path, why ?
+
+51
+Wed Apr 08 12:58:00 2015 +0000
+Author: Jeff Sharkey <1006166@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 83fd1eeb_3cb411c4
+UUID: a3eea234_e37cc636
+Bytes: 48
+You're right, I could just strdup them here too.
 
