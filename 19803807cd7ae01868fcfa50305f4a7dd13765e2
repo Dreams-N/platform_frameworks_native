@@ -66,3 +66,11 @@ UUID: a3eea234_e37cc636
 Bytes: 48
 You're right, I could just strdup them here too.
 
+51
+Wed Apr 08 15:16:43 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a3eea234_e37cc636
+UUID: e3ec1a3e_25b7da39
+Bytes: 169
+(i didn't comment on the assumption that a later patch will move to std::string anyway, and all this cruft just disappears. [and the missing free(3)s magically appear!])
+
