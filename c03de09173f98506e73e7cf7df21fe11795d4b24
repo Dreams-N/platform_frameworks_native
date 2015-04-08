@@ -1,0 +1,11 @@
+Revision: c03de09173f98506e73e7cf7df21fe11795d4b24
+Patch-set: 4
+File: cmds/installd/utils.cpp
+
+47:0-47:52
+Wed Apr 08 03:18:49 2015 +0000
+Author: Jeff Sharkey <1006166@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e3ec1a3e_9f5b93db
+Bytes: 233
+CHECK triggers abort() internally when matched, which might be a bit too aggressive.  I just verified that all inputs on framework side are coming from internal sources, so we might be okay with the daemon being kicked and restarted.
+
