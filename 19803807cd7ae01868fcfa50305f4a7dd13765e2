@@ -1,5 +1,21 @@
 Revision: 19803807cd7ae01868fcfa50305f4a7dd13765e2
 Patch-set: 2
+File: cmds/installd/installd.cpp
+
+208
+Wed Apr 08 09:11:44 2015 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 83fd1eeb_9cc44543
+Bytes: 96
+would've been nice if we had used C++ style casts (reinterpret_cast<char*>(buf)) here and below.
+
+356
+Wed Apr 08 09:11:44 2015 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c3f39619_9e1f1d5f
+Bytes: 75
+this change looks unrelated to the move to C++ . why did you make it here ?
+
 File: cmds/installd/installd.h
 
 230
@@ -8,4 +24,13 @@ Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 23e3924b_a11c7e23
 Bytes: 38
 eh? ... how was this compiling before?
+
+File: cmds/installd/tests/installd_utils_test.cpp
+
+51
+Wed Apr 08 09:11:44 2015 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 83fd1eeb_3cb411c4
+Bytes: 55
+you use strdup elsewhere when assigning to .path, why ?
 
