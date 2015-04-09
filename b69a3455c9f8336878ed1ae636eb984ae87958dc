@@ -28,3 +28,11 @@ Bytes: 193
 The configuration sounds flexible.
 I am still wondering the meaning of "create rules as needed": if the library is never referenced by anyone, will the rule be created when you do a checkbuild?
 
+40:0-40:10
+Thu Apr 09 23:15:10 2015 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e356daec_bef665a6
+UUID: 234d525a_464e90c6
+Bytes: 103
+Yes, the build.ninja file will have rules for both, and the checkbuild target has dependencies on both.
+
