@@ -36,3 +36,11 @@ UUID: 234d525a_464e90c6
 Bytes: 103
 Yes, the build.ninja file will have rules for both, and the checkbuild target has dependencies on both.
 
+40:0-40:10
+Thu Apr 09 23:21:21 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 234d525a_464e90c6
+UUID: e356daec_fecaadea
+Bytes: 184
+Ah, got it. So the rules will be always defined in the ninja file; whereas the module will be built or not is as needed, similar to how the current build system handles multilib build.
+
