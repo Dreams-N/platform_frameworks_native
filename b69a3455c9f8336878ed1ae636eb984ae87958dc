@@ -11,3 +11,11 @@ Sorry I didn't dig into the soong source files yet, but I am wondering:
 So this builds both static and shared library?
 Will each of .cpp files be compiled only once? or we just define two separate modules they happen to have the same source and flags?
 
+40:0-40:10
+Thu Apr 09 22:52:42 2015 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 234d525a_6b4b5db5
+UUID: 234d525a_66aab47e
+Bytes: 304
+It will create rules to build static and shared libraries as needed.  The shared library will link in the .o files produced by the static library, and the static and shared libraries can also add .o files and cflags that only affect those .o files using static: { srcs: ["file.c"], cflags: ["-DSTATIC"] }
+
