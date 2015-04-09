@@ -1,5 +1,14 @@
 Revision: c03de09173f98506e73e7cf7df21fe11795d4b24
 Patch-set: 4
+File: cmds/installd/installd.h
+
+203:3-203:14
+Thu Apr 09 01:23:09 2015 +0000
+Author: Chris Tate <1000322@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 237f124e_3ea4202b
+Bytes: 29
+it's commands.cpp now, right?
+
 File: cmds/installd/utils.cpp
 
 47:0-47:52
