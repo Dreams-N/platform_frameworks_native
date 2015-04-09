@@ -19,3 +19,12 @@ UUID: 234d525a_66aab47e
 Bytes: 304
 It will create rules to build static and shared libraries as needed.  The shared library will link in the .o files produced by the static library, and the static and shared libraries can also add .o files and cflags that only affect those .o files using static: { srcs: ["file.c"], cflags: ["-DSTATIC"] }
 
+40:0-40:10
+Thu Apr 09 23:04:01 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 234d525a_66aab47e
+UUID: e356daec_bef665a6
+Bytes: 193
+The configuration sounds flexible.
+I am still wondering the meaning of "create rules as needed": if the library is never referenced by anyone, will the rule be created when you do a checkbuild?
+
