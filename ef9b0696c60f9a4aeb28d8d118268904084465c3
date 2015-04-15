@@ -1,0 +1,77 @@
+Revision: ef9b0696c60f9a4aeb28d8d118268904084465c3
+Patch-set: 33
+File: include/android/asset_manager.h
+
+65
+Wed Apr 15 20:40:38 2015 +0000
+Author: Jeff Brown <1003957@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b07b4aac_f757f328
+Bytes: 25
+This one is undocumented?
+
+66
+Wed Apr 15 20:40:38 2015 +0000
+Author: Jeff Brown <1003957@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b07b4aac_7744437c
+Bytes: 65
+Summary should start with a capital letter and end with a period.
+
+File: include/android/bitmap.h
+
+31
+Wed Apr 15 20:40:38 2015 +0000
+Author: Jeff Brown <1003957@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d080bec6_cb1c9596
+Bytes: 59
+/** AndroidBitmap result code: Operation was successful. */
+
+32
+Wed Apr 15 20:40:38 2015 +0000
+Author: Jeff Brown <1003957@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b07b4aac_d780b7fa
+Bytes: 54
+You can make these into an anonymous enum if you like.
+
+64
+Wed Apr 15 20:40:38 2015 +0000
+Author: Jeff Brown <1003957@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b07b4aac_979b1f72
+Bytes: 33
+The bitmap pixel format.  See ...
+
+File: include/android/configuration.h
+
+46
+Wed Apr 15 20:40:38 2015 +0000
+Author: Jeff Brown <1003957@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d080bec6_2b3e69de
+Bytes: 29
+Orientation: any orientation.
+
+File: include/android/input.h
+
+378
+Wed Apr 15 20:40:38 2015 +0000
+Author: Jeff Brown <1003957@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 907ac6a8_1ba65c8c
+Bytes: 52
+you can find docs for this stuff in MotionEvent.java
+
+File: include/android/keycodes.h
+
+50
+Wed Apr 15 20:40:38 2015 +0000
+Author: Jeff Brown <1003957@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 907ac6a8_bbb2c8c2
+Bytes: 50
+You can find docs for this stuff on KeyEvent.java.
+
+File: include/android/window.h
+
+32
+Wed Apr 15 20:40:38 2015 +0000
+Author: Jeff Brown <1003957@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b07b4aac_b725fba7
+Bytes: 40
+These are defined in WindowManager.java.
+
