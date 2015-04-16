@@ -1,0 +1,17 @@
+Revision: 0c33081a4ffd8453536011e056169d6a6616d352
+Patch-set: 2
+File: libs/gui/BufferQueueProducer.cpp
+
+328
+Thu Apr 16 05:19:01 2015 +0000
+Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 30d59acf_a625bca7
+Bytes: 850
+It might just be me, but I found the parenthetical a bit confusing -- it's right, but made me take longer to understand what was going on.
+
+The core reason is the first part: mFrameCounter counts number of completed frames, but here we want the number of the frame we're just starting.
+
+I think the whole concept of buffer age gets a bit ill-defined when you have multiple buffers dequeued at a time, since you don't need to queue them in the same order they were dequeued (i.e. age is not defined until you queue it). I think we'll need to come up with a new query and internal state if we ever want to support that. I don't think the current query is incompatible with that though, so we should leave it for another time.
+
+I'm not sure I'm asking for any change here... Except maybe make the comment shorter (remove the parenthetical) or longer :).
+
