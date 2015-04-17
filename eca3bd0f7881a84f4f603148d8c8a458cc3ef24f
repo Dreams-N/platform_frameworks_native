@@ -18,6 +18,14 @@ UUID: 904c868c_33a01219
 Bytes: 423
 There may be a subtlety I'm missing, but it looks like the old code would use FREE slots with buffers in them before FREE slots without buffers (since the ones with buffers would usually be in lower-numbered slots); the new code does the opposite. That's going to use more slots / higher-numbered slots. Which is all fine and should work in theory, but I'd be prepared to hit bugs in code that's making invalid assumptions.
 
+239
+Fri Apr 17 16:11:01 2015 +0000
+Author: Dan Stoza <1043625@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 904c868c_33a01219
+UUID: 10597645_4f762f85
+Bytes: 360
+My thinking here was that if we're configured such that dequeue can't allocate (which this change is laying the groundwork for), clobbering existing buffers is bad, since it reduces the number of available buffers in the system. This will use more slots, but I'm prepared to break existing code, especially since there aren't many clients of attach/detach yet.
+
 File: libs/gui/BufferQueueCore.cpp
 
 255:30-255:32
@@ -38,4 +46,12 @@ bool slotInFreeSlots = mFreeSlots.count(slot) >= 1;
 bool slotInFreeBufs = std::find(...) != mFreeBuffers.cend();
 
 and then express all the subsequent checks in terms of those. Reading the individual checks then expresses what it's looking for, rather than how it's looking for it. And the positive/negative sense ("is in .." vs. "is not in") would be easier to see.
+
+256
+Fri Apr 17 16:11:01 2015 +0000
+Author: Dan Stoza <1043625@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 506daeeb_b483c005
+UUID: d080bec6_7ff40a04
+Bytes: 287
+Yeah, that's a good point. I had looked at this code as somewhat temporary, since once we're reasonably sure that we're keeping things in sync, we could strip out the validation, but temporary code has a way of becoming at least semi-permanent, so it should all be clean. I'll fix it up.
 
