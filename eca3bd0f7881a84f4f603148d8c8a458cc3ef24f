@@ -9,6 +9,14 @@ UUID: 904c868c_f3b27a75
 Bytes: 12
 mFreeBuffers
 
+191:7-191:17
+Fri Apr 17 16:33:54 2015 +0000
+Author: Dan Stoza <1043625@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 904c868c_f3b27a75
+UUID: d0c51e25_942f8c37
+Bytes: 4
+Done
+
 File: libs/gui/BufferQueueConsumer.cpp
 
 239
@@ -35,6 +43,14 @@ UUID: 506daeeb_949b1c72
 Bytes: 33
 BufferQueueDefs::NUM_BUFFER_SLOTS
 
+255:30-255:32
+Fri Apr 17 16:33:54 2015 +0000
+Author: Dan Stoza <1043625@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 506daeeb_949b1c72
+UUID: 907ac6a8_8c369b91
+Bytes: 4
+Done
+
 256
 Fri Apr 17 04:26:42 2015 +0000
 Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -54,4 +70,12 @@ Parent: 506daeeb_b483c005
 UUID: d080bec6_7ff40a04
 Bytes: 287
 Yeah, that's a good point. I had looked at this code as somewhat temporary, since once we're reasonably sure that we're keeping things in sync, we could strip out the validation, but temporary code has a way of becoming at least semi-permanent, so it should all be clean. I'll fix it up.
+
+256
+Fri Apr 17 16:33:54 2015 +0000
+Author: Dan Stoza <1043625@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d080bec6_7ff40a04
+UUID: d0c51e25_14771c52
+Bytes: 4
+Done
 
