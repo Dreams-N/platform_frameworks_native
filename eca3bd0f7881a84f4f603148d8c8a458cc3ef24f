@@ -1,0 +1,41 @@
+Revision: eca3bd0f7881a84f4f603148d8c8a458cc3ef24f
+Patch-set: 4
+File: include/gui/BufferQueueCore.h
+
+191:7-191:17
+Fri Apr 17 04:26:42 2015 +0000
+Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 904c868c_f3b27a75
+Bytes: 12
+mFreeBuffers
+
+File: libs/gui/BufferQueueConsumer.cpp
+
+239
+Fri Apr 17 04:26:42 2015 +0000
+Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 904c868c_33a01219
+Bytes: 423
+There may be a subtlety I'm missing, but it looks like the old code would use FREE slots with buffers in them before FREE slots without buffers (since the ones with buffers would usually be in lower-numbered slots); the new code does the opposite. That's going to use more slots / higher-numbered slots. Which is all fine and should work in theory, but I'd be prepared to hit bugs in code that's making invalid assumptions.
+
+File: libs/gui/BufferQueueCore.cpp
+
+255:30-255:32
+Fri Apr 17 04:26:42 2015 +0000
+Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 506daeeb_949b1c72
+Bytes: 33
+BufferQueueDefs::NUM_BUFFER_SLOTS
+
+256
+Fri Apr 17 04:26:42 2015 +0000
+Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 506daeeb_b483c005
+Bytes: 568
+Just a stylistic suggestion, feel free to disagree. There's a lot of duplication of "is it in mFreeSlots?" and "is it in mFreeBuffers?". I'd probably just do those once and store the answer at the top:
+
+bool slotInFreeSlots = mFreeSlots.count(slot) >= 1;
+bool slotInFreeBufs = std::find(...) != mFreeBuffers.cend();
+
+and then express all the subsequent checks in terms of those. Reading the individual checks then expresses what it's looking for, rather than how it's looking for it. And the positive/negative sense ("is in .." vs. "is not in") would be easier to see.
+
