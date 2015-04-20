@@ -1,0 +1,11 @@
+Revision: 6b1ee327abf749644a60f85f037c08dae11ddcc8
+Patch-set: 3
+File: libs/gui/tests/BufferQueue_test.cpp
+
+391
+Mon Apr 20 21:33:37 2015 +0000
+Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 30cf5a74_61da1667
+Bytes: 119
+Might also be good to test that it correctly denies allocation if there is a buffer free that has the wrong properties.
+
