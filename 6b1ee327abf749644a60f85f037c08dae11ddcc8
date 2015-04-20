@@ -9,3 +9,11 @@ UUID: 30cf5a74_61da1667
 Bytes: 119
 Might also be good to test that it correctly denies allocation if there is a buffer free that has the wrong properties.
 
+391
+Mon Apr 20 22:09:42 2015 +0000
+Author: Dan Stoza <1043625@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30cf5a74_61da1667
+UUID: 302afabf_8f9c79b7
+Bytes: 16
+Good idea. Done.
+
