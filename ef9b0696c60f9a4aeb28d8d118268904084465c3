@@ -9,12 +9,28 @@ UUID: b07b4aac_f757f328
 Bytes: 25
 This one is undocumented?
 
+65
+Mon Apr 20 22:18:34 2015 +0000
+Author: Johan Euphrosine <1070099@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b07b4aac_f757f328
+UUID: 506daeeb_895305f1
+Bytes: 4
+Done
+
 66
 Wed Apr 15 20:40:38 2015 +0000
 Author: Jeff Brown <1003957@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: b07b4aac_7744437c
 Bytes: 65
 Summary should start with a capital letter and end with a period.
+
+66
+Mon Apr 20 22:18:34 2015 +0000
+Author: Johan Euphrosine <1070099@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b07b4aac_7744437c
+UUID: 10597645_43de0e09
+Bytes: 4
+Done
 
 File: include/android/bitmap.h
 
@@ -25,6 +41,14 @@ UUID: d080bec6_cb1c9596
 Bytes: 59
 /** AndroidBitmap result code: Operation was successful. */
 
+31
+Mon Apr 20 22:18:34 2015 +0000
+Author: Johan Euphrosine <1070099@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d080bec6_cb1c9596
+UUID: 904c868c_188bf573
+Bytes: 4
+Done
+
 32
 Wed Apr 15 20:40:38 2015 +0000
 Author: Jeff Brown <1003957@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -32,12 +56,28 @@ UUID: b07b4aac_d780b7fa
 Bytes: 54
 You can make these into an anonymous enum if you like.
 
+32
+Mon Apr 20 22:18:34 2015 +0000
+Author: Johan Euphrosine <1070099@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b07b4aac_d780b7fa
+UUID: 506daeeb_093ff587
+Bytes: 4
+Done
+
 64
 Wed Apr 15 20:40:38 2015 +0000
 Author: Jeff Brown <1003957@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: b07b4aac_979b1f72
 Bytes: 33
 The bitmap pixel format.  See ...
+
+64
+Mon Apr 20 22:18:34 2015 +0000
+Author: Johan Euphrosine <1070099@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b07b4aac_979b1f72
+UUID: 904c868c_f89ff9a9
+Bytes: 4
+Done
 
 File: include/android/configuration.h
 
@@ -48,6 +88,14 @@ UUID: d080bec6_2b3e69de
 Bytes: 29
 Orientation: any orientation.
 
+46
+Mon Apr 20 22:18:34 2015 +0000
+Author: Johan Euphrosine <1070099@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d080bec6_2b3e69de
+UUID: 10597645_a9180b77
+Bytes: 4
+Done
+
 File: include/android/input.h
 
 378
@@ -56,6 +104,14 @@ Author: Jeff Brown <1003957@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 907ac6a8_1ba65c8c
 Bytes: 52
 you can find docs for this stuff in MotionEvent.java
+
+378
+Mon Apr 20 22:18:34 2015 +0000
+Author: Johan Euphrosine <1070099@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 907ac6a8_1ba65c8c
+UUID: 302afabf_0c9a5746
+Bytes: 4
+Done
 
 File: include/android/keycodes.h
 
@@ -66,6 +122,14 @@ UUID: 907ac6a8_bbb2c8c2
 Bytes: 50
 You can find docs for this stuff on KeyEvent.java.
 
+50
+Mon Apr 20 22:18:34 2015 +0000
+Author: Johan Euphrosine <1070099@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 907ac6a8_bbb2c8c2
+UUID: f02302ea_ed18a12a
+Bytes: 4
+Done
+
 File: include/android/window.h
 
 32
@@ -74,4 +138,12 @@ Author: Jeff Brown <1003957@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: b07b4aac_b725fba7
 Bytes: 40
 These are defined in WindowManager.java.
+
+32
+Mon Apr 20 22:18:34 2015 +0000
+Author: Johan Euphrosine <1070099@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b07b4aac_b725fba7
+UUID: d01a7eb3_556cd605
+Bytes: 4
+Done
 
