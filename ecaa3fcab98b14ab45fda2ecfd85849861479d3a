@@ -17,3 +17,11 @@ UUID: 302afabf_98fb21ba
 Bytes: 18
 I mean reducing...
 
+161:8-161:59
+Tue Apr 21 00:23:45 2015 +0000
+Author: Dan Stoza <1043625@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 302afabf_98fb21ba
+UUID: b0150a85_c5865ae5
+Bytes: 199
+The intention is that every bit set in the requested usage must also be set in the buffer's usage, but the buffer may have usage bits beyond what is requested. Hopefully that's what's reflected here.
+
