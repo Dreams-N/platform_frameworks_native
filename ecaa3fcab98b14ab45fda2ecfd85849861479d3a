@@ -1,0 +1,11 @@
+Revision: ecaa3fcab98b14ab45fda2ecfd85849861479d3a
+Patch-set: 4
+File: libs/ui/GraphicBuffer.cpp
+
+161:8-161:59
+Tue Apr 21 00:09:49 2015 +0000
+Author: Lajos Molnar <1021605@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f02302ea_3c6dc585
+Bytes: 43
+does this allow extending usage on purpose?
+
