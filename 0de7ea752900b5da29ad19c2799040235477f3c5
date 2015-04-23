@@ -1,0 +1,11 @@
+Revision: 0de7ea752900b5da29ad19c2799040235477f3c5
+Patch-set: 2
+File: libs/gui/BufferQueueProducer.cpp
+
+224:0-228:17
+Thu Apr 23 20:39:19 2015 +0000
+Author: Dan Stoza <1043625@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 10a416b9_2ca63e8c
+Bytes: 195
+This is the difference from the original change. We were allocating all slots instead of only slots up to the max buffer count, which had the effect of preventing dequeue from blocking correctly.
+
