@@ -10,3 +10,11 @@ Bytes: 112
 Please, considering when the mQueueItems size is 0.
 The infinity loop occur when the video play 120fps contents.
 
+1277:12-1277:71
+Sat Apr 25 16:13:34 2015 +0000
+Author: Dan Stoza <1043625@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 70de325c_8bc70d95
+UUID: f00b02a7_0762f6bd
+Bytes: 325
+Checking the size of mQueueItems is not a valid fix. It means that the invariant that mQueueItems shadows the incoming BufferQueue has been broken and behavior is going to be incorrect moving forward. Can you provide a test clip and/or a reproduction case so I can figure out why we're getting out of sync in the first place?
+
