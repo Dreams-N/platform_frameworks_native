@@ -1,0 +1,12 @@
+Revision: 18272218beebfbe8300f0a1c8d524a7e04d070af
+Patch-set: 3
+File: services/surfaceflinger/Layer.cpp
+
+1277:12-1277:71
+Sat Apr 25 08:48:53 2015 +0000
+Author: Byung Kyu Bae <1015153@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 70de325c_8bc70d95
+Bytes: 112
+Please, considering when the mQueueItems size is 0.
+The infinity loop occur when the video play 120fps contents.
+
