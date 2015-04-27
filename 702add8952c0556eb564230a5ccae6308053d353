@@ -9,3 +9,11 @@ UUID: 30375a6d_e1a5862c
 Bytes: 71
 move this inside run_dex2oat like all its other "static const char*"s ?
 
+687
+Mon Apr 27 15:10:52 2015 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30375a6d_e1a5862c
+UUID: f0f222e5_5e879913
+Bytes: 148
+I think a style guide would be good. In ART we usually prefer to put constants outside the functions, though strings aren't clear-cut. I'll move it.
+
