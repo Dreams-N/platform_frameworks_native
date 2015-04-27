@@ -1,0 +1,11 @@
+Revision: 745ac038b986d826a767ddc891a224b59165e9fb
+Patch-set: 2
+File: libs/gui/Surface.cpp
+
+665:3-665:35
+Mon Apr 27 18:20:08 2015 +0000
+Author: Eino-Ville Talvala <1010050@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b0d42a38_4cc372a7
+Bytes: 157
+nitpicking, but since you've verified outBuffer is not null, why not just pass it into mGBP->detachNextBuffer instead of creating another sp<> just for that?
+
