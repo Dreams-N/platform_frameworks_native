@@ -9,3 +9,11 @@ UUID: b0d42a38_4cc372a7
 Bytes: 157
 nitpicking, but since you've verified outBuffer is not null, why not just pass it into mGBP->detachNextBuffer instead of creating another sp<> just for that?
 
+665:3-665:35
+Mon Apr 27 18:24:57 2015 +0000
+Author: Dan Stoza <1043625@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b0d42a38_4cc372a7
+UUID: b0d42a38_4feec404
+Bytes: 93
+It avoids potentially modifying outBuffer (or outFence) if detachNextBuffer returns an error.
+
