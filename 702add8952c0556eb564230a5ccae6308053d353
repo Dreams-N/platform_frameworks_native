@@ -17,3 +17,11 @@ UUID: f0f222e5_5e879913
 Bytes: 148
 I think a style guide would be good. In ART we usually prefer to put constants outside the functions, though strings aren't clear-cut. I'll move it.
 
+687
+Mon Apr 27 15:14:26 2015 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f0f222e5_5e879913
+UUID: f0f222e5_1e8111fd
+Bytes: 4
+Done
+
