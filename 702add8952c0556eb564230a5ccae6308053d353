@@ -1,0 +1,11 @@
+Revision: 702add8952c0556eb564230a5ccae6308053d353
+Patch-set: 1
+File: cmds/installd/commands.cpp
+
+687
+Mon Apr 27 09:20:37 2015 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 30375a6d_e1a5862c
+Bytes: 71
+move this inside run_dex2oat like all its other "static const char*"s ?
+
