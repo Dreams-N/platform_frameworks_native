@@ -1,0 +1,11 @@
+Revision: bd543d4ab106286527007863d95662b569368542
+Patch-set: 1
+File: libs/gui/IGraphicBufferConsumer.cpp
+
+421
+Tue Apr 28 20:23:31 2015 +0000
+Author: Michael Lentine <1049264@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f0f222e5_95a6f289
+Bytes: 26
+maybe store stream != NULL
+
