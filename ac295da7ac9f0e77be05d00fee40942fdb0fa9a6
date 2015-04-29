@@ -1,0 +1,14 @@
+Revision: ac295da7ac9f0e77be05d00fee40942fdb0fa9a6
+Patch-set: 1
+File: services/surfaceflinger/RenderEngine/Mesh.cpp
+
+29
+Wed Apr 29 20:39:28 2015 +0000
+Author: Zach Riggle <1059554@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 300cbaed_5cebd1f2
+Bytes: 58
+This does not handle:
+
+stride = 0x80000000
+vertexCount = 3
+
