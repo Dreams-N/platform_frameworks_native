@@ -20,3 +20,17 @@ UUID: 90fd66eb_bf95b33f
 Bytes: 108
 Yeah. I realized that when I started looking into the second one. Sorry. I'll have a revised change up soon.
 
+29
+Wed Apr 29 21:06:01 2015 +0000
+Author: Zach Riggle <1059554@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 90fd66eb_bf95b33f
+UUID: 300cbaed_5c97518f
+Bytes: 259
+Generally the way these are checked is like below.
+
+size_t maxFloats = (SIZE_MAX / sizeof(float));
+size_t maxVertices = maxFloats / stride;
+if(maxVertices >= vertexCount) error
+
+Alternately, you can use Chromium's SafeInt library for overflow-safe arithmetic.
+
