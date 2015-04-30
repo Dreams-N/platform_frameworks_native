@@ -1,0 +1,20 @@
+Revision: 159bb81e25a627528f79e455bdabaca68d9380a3
+Patch-set: 4
+File: services/surfaceflinger/RenderEngine/Mesh.cpp
+
+29
+Thu Apr 30 04:48:06 2015 +0000
+Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d01c3e21_f6c800f9
+Bytes: 12
+mVertices[0]
+
+35:1-36:57
+Thu Apr 30 04:48:06 2015 +0000
+Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 100336c0_fbd90b72
+Bytes: 534
+I'm having trouble figuring out what exactly is being checked by these two lines. remainder and the remainder != stride check is for stride*vertexCount overflowing, but why are you checking stride<vertexSize rather than vertexSize+texCoordSize? Are these two checks in one condition because it might be valid for remainder!=stride if the first condition is true, or are they unrelated to each other and just two kinds of overflow?
+
+I feel like either one of the expressions must be wrong somehow, or a comment would be really helpful.
+
