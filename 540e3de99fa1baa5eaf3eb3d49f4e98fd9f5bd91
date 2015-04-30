@@ -1,0 +1,11 @@
+Revision: 540e3de99fa1baa5eaf3eb3d49f4e98fd9f5bd91
+Patch-set: 1
+File: cmds/dumpstate/dumpstate.c
+
+195:4-195:19
+Thu Apr 30 20:04:34 2015 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 300cbaed_3676e88c
+Bytes: 215
+dump_files is _almost_ a superset of dump_dev_files, except for dealing with links. A followup to this would be to remove dump_dev_files in favour of this new util function with the enhancement for DT_LNK detection.
+
