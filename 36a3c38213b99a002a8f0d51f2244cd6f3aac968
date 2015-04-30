@@ -1,0 +1,11 @@
+Revision: 36a3c38213b99a002a8f0d51f2244cd6f3aac968
+Patch-set: 3
+File: services/surfaceflinger/Layer.cpp
+
+1272
+Thu Apr 30 21:48:30 2015 +0000
+Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 300cbaed_93554123
+Bytes: 59
+Need to update shadow queue size after this one too, right?
+
