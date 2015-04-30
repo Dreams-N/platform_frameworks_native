@@ -9,6 +9,14 @@ UUID: d01c3e21_f6c800f9
 Bytes: 12
 mVertices[0]
 
+29
+Thu Apr 30 19:45:52 2015 +0000
+Author: Dan Stoza <1043625@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d01c3e21_f6c800f9
+UUID: 90fd66eb_dc7b6276
+Bytes: 4
+Done
+
 35:1-36:57
 Thu Apr 30 04:48:06 2015 +0000
 Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -17,4 +25,12 @@ Bytes: 534
 I'm having trouble figuring out what exactly is being checked by these two lines. remainder and the remainder != stride check is for stride*vertexCount overflowing, but why are you checking stride<vertexSize rather than vertexSize+texCoordSize? Are these two checks in one condition because it might be valid for remainder!=stride if the first condition is true, or are they unrelated to each other and just two kinds of overflow?
 
 I feel like either one of the expressions must be wrong somehow, or a comment would be really helpful.
+
+35:1-36:57
+Thu Apr 30 19:45:52 2015 +0000
+Author: Dan Stoza <1043625@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 100336c0_fbd90b72
+UUID: 90fd66eb_fc7a9e6f
+Bytes: 44
+Let me know if that comment is still unclear
 
