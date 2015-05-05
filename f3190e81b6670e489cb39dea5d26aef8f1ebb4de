@@ -1,0 +1,11 @@
+Revision: f3190e81b6670e489cb39dea5d26aef8f1ebb4de
+Patch-set: 40
+File: include/android/keycodes.h
+
+116
+Tue May 05 21:17:40 2015 +0000
+Author: Jeff Brown <1003957@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d026fe9b_5aee5736
+Bytes: 30
+Watch out for trailing spaces.
+
