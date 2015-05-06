@@ -1,0 +1,11 @@
+Revision: 98aac490fd3e8efd56a4a3749c764fe3c1556b26
+Patch-set: 1
+File: libs/gui/BufferQueueProducer.cpp
+
+900:0-900:67
+Wed May 06 05:51:47 2015 +0000
+Author: Sangkyu Lee <1017028@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6d2e5992_cbd8f5f2
+Bytes: 72
+This line may not be needed because queued buffers are not cleared here.
+
