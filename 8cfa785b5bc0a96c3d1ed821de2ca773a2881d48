@@ -1,0 +1,43 @@
+Revision: 8cfa785b5bc0a96c3d1ed821de2ca773a2881d48
+Patch-set: 1
+File: include/android/asset_manager.h
+
+98
+Tue May 26 17:52:44 2015 +0000
+Author: Johan Euphrosine <1070099@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6d11f908_bca66537
+Bytes: 82
+Any specific reason you're using html instead of doxygen syntax here (@code \code)
+
+104
+Tue May 26 17:52:44 2015 +0000
+Author: Johan Euphrosine <1070099@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8d162dff_63d38c55
+Bytes: 9
+AAssetDir
+
+File: include/android/bitmap.h
+
+94
+Tue May 26 17:52:44 2015 +0000
+Author: Johan Euphrosine <1070099@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6d11f908_3c9b75f0
+Bytes: 4
+yes.
+
+File: include/android/configuration.h
+
+48
+Tue May 26 17:52:44 2015 +0000
+Author: Johan Euphrosine <1070099@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8d162dff_c3e0a017
+Bytes: 60
+I think it's "enumeration", not enumerator, or just "enums".
+
+54
+Tue May 26 17:52:44 2015 +0000
+Author: Johan Euphrosine <1070099@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6d11f908_fc09fdb2
+Bytes: 87
+"The value of this enum" reads weird, technically an enumeration holds multiple values.
+
