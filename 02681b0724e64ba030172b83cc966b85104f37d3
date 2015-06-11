@@ -1,0 +1,11 @@
+Revision: 02681b0724e64ba030172b83cc966b85104f37d3
+Patch-set: 1
+File: services/surfaceflinger/DisplayHardware/HWComposer.h
+
+372
+Thu Jun 11 17:12:07 2015 +0000
+Author: Dan Stoza <1043625@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 79254042_6dc15921
+Bytes: 245
+I think I'd call this mDisplayLock, since I think it's actually trying to protect mDisplayData. I'd also move this line up right above mDisplayData and explain in the comment that it's protecting mDisplayData from races between prepare and dump.
+
