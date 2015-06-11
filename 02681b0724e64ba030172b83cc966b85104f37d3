@@ -9,3 +9,11 @@ UUID: 79254042_6dc15921
 Bytes: 245
 I think I'd call this mDisplayLock, since I think it's actually trying to protect mDisplayData. I'd also move this line up right above mDisplayData and explain in the comment that it's protecting mDisplayData from races between prepare and dump.
 
+372
+Thu Jun 11 22:17:15 2015 +0000
+Author: Naseer Ahmed <1004371@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 79254042_6dc15921
+UUID: 596b1c6a_303bd0a8
+Bytes: 4
+Done
+
