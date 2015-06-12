@@ -1,0 +1,11 @@
+Revision: fe6e89f0c28f40b87309e06999c2ce440a7e4ac6
+Patch-set: 1
+File: cmds/dumpstate/utils.c
+
+451:20-451:37
+Fri Jun 12 02:21:29 2015 +0000
+Author: Todd Kjos <1069543@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 19652496_7c6a8114
+Bytes: 46
+must we use goto?  A while loop seems cleaner.
+
