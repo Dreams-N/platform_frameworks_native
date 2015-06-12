@@ -2,10 +2,29 @@ Revision: fe6e89f0c28f40b87309e06999c2ce440a7e4ac6
 Patch-set: 1
 File: cmds/dumpstate/utils.c
 
+424:0-424:31
+Fri Jun 12 16:12:35 2015 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 390ca8ed_39e8afa2
+Bytes: 283
+As indicated, untested (logcat is typically _done_ in 40ms, I need to to run longer, can only happen with a bad eMMC), and at this stage a prototype. I have to prove that fstat works in all cases.
+
+I am hoping to come up with other ideas that can address storage device sluggishness?
+
 451:20-451:37
 Fri Jun 12 02:21:29 2015 +0000
 Author: Todd Kjos <1069543@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 19652496_7c6a8114
 Bytes: 46
 must we use goto?  A while loop seems cleaner.
+
+451:20-451:37
+Fri Jun 12 16:12:35 2015 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 19652496_7c6a8114
+UUID: 79254042_06f43f82
+Bytes: 299
+Yes. At this stage still a prototype to show an idea and test it. I was looking for low-impact rather than a rewrite. Alas, a point well taken when time comes to harden the code.
+
+NB: This is the fourth prototype in a year using Gerrit, each time I got spanked. I should probably learn my lesson ;-}
 
