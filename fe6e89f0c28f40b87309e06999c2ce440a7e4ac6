@@ -11,6 +11,17 @@ As indicated, untested (logcat is typically _done_ in 40ms, I need to to run lon
 
 I am hoping to come up with other ideas that can address storage device sluggishness?
 
+446:16-446:47
+Fri Jun 12 18:42:03 2015 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 992af412_eabf884c
+Bytes: 254
+Does not work on stdout or on a pipeline
+
+Since our kernels do not have TASKSTATS set, we can not measure the resulting (block) io activity.
+
+fork/exec does not allow us to measure the output of the executed function without an additional wrapper thread.
+
 448:24-448:26
 Fri Jun 12 18:20:51 2015 +0000
 Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
