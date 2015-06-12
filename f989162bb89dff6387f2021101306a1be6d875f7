@@ -9,3 +9,11 @@ UUID: 390ca8ed_739d20b5
 Bytes: 223
 Not worried about race conditions modifying this global? I suppose the only consequence would be the possibility of missing the actual worst case if two threads are writing, but this seems like something we could live with.
 
+163
+Fri Jun 12 22:59:23 2015 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 390ca8ed_739d20b5
+UUID: 390ca8ed_4e95cf46
+Bytes: 78
+dumpstate is single-threaded, and all activities are sequential 'dumpstate()'.
+
