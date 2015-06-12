@@ -1,0 +1,11 @@
+Revision: f989162bb89dff6387f2021101306a1be6d875f7
+Patch-set: 2
+File: cmds/dumpstate/dumpstate.c
+
+163
+Fri Jun 12 22:51:22 2015 +0000
+Author: Todd Kjos <1069543@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 390ca8ed_739d20b5
+Bytes: 223
+Not worried about race conditions modifying this global? I suppose the only consequence would be the possibility of missing the actual worst case if two threads are writing, but this seems like something we could live with.
+
