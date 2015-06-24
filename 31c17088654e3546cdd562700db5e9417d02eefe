@@ -1,0 +1,11 @@
+Revision: 31c17088654e3546cdd562700db5e9417d02eefe
+Patch-set: 1
+File: services/surfaceflinger/RenderEngine/RenderEngine.cpp
+
+86
+Wed Jun 24 21:32:08 2015 +0000
+Author: Jesse Hall <1010672@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1e098aaf_71660a21
+Bytes: 149
+You can't just do this unconditionally if the eglext.h defines the extension, you need a runtime check for whether the driver supports the extension.
+
