@@ -1,0 +1,18 @@
+Revision: ef5749f7fb803570c478a661e6a1a17d411773cc
+Patch-set: 4
+File: cmds/atrace/atrace.cpp
+
+364
+Wed Jun 24 23:57:24 2015 +0000
+Author: Riley Andrews <1048235@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9efd7aeb_5fe0efb7
+Bytes: 35
+Remove this diff - it's not needed.
+
+583
+Wed Jun 24 23:57:24 2015 +0000
+Author: Riley Andrews <1048235@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9efd7aeb_bf99335a
+Bytes: 23
+Remove whitespace diff.
+
