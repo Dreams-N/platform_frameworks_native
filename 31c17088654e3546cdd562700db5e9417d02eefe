@@ -9,3 +9,11 @@ UUID: 1e098aaf_71660a21
 Bytes: 149
 You can't just do this unconditionally if the eglext.h defines the extension, you need a runtime check for whether the driver supports the extension.
 
+86
+Fri Jun 26 20:42:33 2015 +0000
+Author: Saurabh Shah <1047548@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 1e098aaf_71660a21
+UUID: 338769d3_21d68e35
+Bytes: 150
+Will add. Is it ok to remove the HAS_CONTEXT_PRIORITY completely then? It seems to be set for specific targets and used in SurfaceFlinger.cpp as well.
+
