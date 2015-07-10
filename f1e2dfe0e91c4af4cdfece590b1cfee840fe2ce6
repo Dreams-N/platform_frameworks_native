@@ -21,6 +21,14 @@ For 64p and 64a, we need to make this data structure as large as 64bit only ones
 
 Maybe I can use TARGET_ARCH and TARGET_2ND_ARCH to determine if the target is a 32bit only system?
 
+88:27-88:55
+Fri Jul 10 18:54:14 2015 +0000
+Author: Andy Hung <1040213@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 731ba15b_1275b241
+UUID: 38d586cf_710c78af
+Bytes: 76
+I believe the makefile can use TARGET_IS_64_BIT. Check build/core/config.mk.
+
 90:0-90:49
 Thu Jul 09 21:53:48 2015 +0000
 Author: Andy Hung <1040213@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -41,4 +49,16 @@ In 32/64 libs, sizeof(VideoDecoderOutputMetaData) is always 16 bytes.
 
 Do you mean this coding style?
 #define OMX_END_ALIGN(8) OMX_U32 padding[0] __attribute__((aligned(8)))
+
+90:0-90:49
+Fri Jul 10 18:54:14 2015 +0000
+Author: Andy Hung <1040213@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d3260d9c_ec8e7f85
+UUID: 58d23ae8_f50cd244
+Bytes: 572
+I was just pointing out the choice of type for the end padding variable might be able to alleviate the explicit alignment directive.
+
+Thinking some more, I don't think end padding is necessary. The structure size sizeof(VideoDecoderOutputMetaData) due to array construction must be a multiple of the largest alignment of any element. Since the element is aligned to 8 bytes, the size of the struct must be a multiple of 8 bytes; so technically speaking, explicit end padding is not needed here, or elsewhere :-).
+
+See https://en.wikipedia.org/wiki/Data_structure_alignment
 
