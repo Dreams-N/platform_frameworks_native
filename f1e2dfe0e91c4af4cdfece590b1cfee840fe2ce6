@@ -9,10 +9,36 @@ UUID: 789c5e2a_8fb9c51a
 Bytes: 74
 What do you think of a macro OMX_ALIGN(8)? so it can be turned on and off?
 
+88:27-88:55
+Fri Jul 10 03:31:59 2015 +0000
+Author: Dan Liang <1004496@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 789c5e2a_8fb9c51a
+UUID: 731ba15b_1275b241
+Bytes: 340
+For 32bit only env, this alignment could be turned off to save memory.
+
+For 64p and 64a, we need to make this data structure as large as 64bit only ones, so that 32bit client <--> 64bit mediaserver and 64bit <--> 32bit mediaserver can talk.
+
+Maybe I can use TARGET_ARCH and TARGET_2ND_ARCH to determine if the target is a 32bit only system?
+
 90:0-90:49
 Thu Jul 09 21:53:48 2015 +0000
 Author: Andy Hung <1040213@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 98a11261_70353866
 Bytes: 110
 maybe make a macro of this, too?  OMX_END_ALIGN(8)?  Would OMX_U64 padding[0] avoid the attribute requirement?
+
+90:0-90:49
+Fri Jul 10 03:31:59 2015 +0000
+Author: Dan Liang <1004496@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 98a11261_70353866
+UUID: d3260d9c_ec8e7f85
+Bytes: 461
+In a 32bit lib, the pHandle occupies 32bit.
+As the pHandle is the last variable and starts at an 8 bytes aligned address, the outside data structure which wraps VideoDecoderOutputMetaData may put the next variable closely.
+OMX_U32 padding[0] __attribute__((aligned(8))) is to avoid this.
+In 32/64 libs, sizeof(VideoDecoderOutputMetaData) is always 16 bytes.
+
+Do you mean this coding style?
+#define OMX_END_ALIGN(8) OMX_U32 padding[0] __attribute__((aligned(8)))
 
