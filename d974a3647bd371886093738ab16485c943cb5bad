@@ -1,0 +1,17 @@
+Revision: d974a3647bd371886093738ab16485c943cb5bad
+Base-for-patch-set: 3
+File: libs/binder/Binder.cpp
+
+264:4-264:48
+Wed Aug 19 18:29:14 2015 +0000
+Author: Bailey Forrest <1078104@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a4fb1585_4793862d
+Bytes: 554
+So this function is just an or with a memory_order_release:
+
+https://cs.corp.google.com/#aosp-master/system/core/include/cutils/atomic.h&q=android_atomic_or&type=cs&l=111.
+
+I changed the updated version to use memory_order_release rather than the default sequential consistency.
+
+Correct me if I'm wrong, but it seems that in this old version the atomic operation doesn't actually mean anything because in the destructor (line 255), mState is accessed without an atomic operation. My newest PS adds memory_order_acquire to match the memory_order_release.
+
