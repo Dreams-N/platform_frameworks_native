@@ -1,0 +1,26 @@
+Revision: ccda192fbc8cdc14b77d03d714689ecc55d23862
+Patch-set: 3
+File: libs/binder/Binder.cpp
+
+240:8-240:72
+Wed Aug 19 21:31:49 2015 +0000
+Author: Hans Boehm <1042828@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c471e91c_11c7efab
+Bytes: 307
+Presumably the destructor has to happen after all other updates, and hence this cannot actually race with the mState update below?  Otherwise this code would make no sense, because its value could change after the test.
+
+I would leave this as memory_order_relaxed, which is approximately what it was before.
+
+249:3-249:63
+Wed Aug 19 21:31:49 2015 +0000
+Author: Hans Boehm <1042828@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e4434d7f_d6cf3324
+Bytes: 494
+That indeed seems to be what it was before.  But a release without a corresponding acquire makes no sense.  And there seems to be no use of mState except in this file, meaning this can only happen concurrently with itself.  I would change this to relaxed as well.
+
+It's unclear to me why mState is not replaced by
+
+atomic<bool> mRemoteAcquired;
+
+Only one bit seems to be used?  But that may be a more major change than you want to make, and I don't understand the design enough to recommend it.
+
