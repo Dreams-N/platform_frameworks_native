@@ -9,3 +9,11 @@ UUID: c4a9e95f_792a01b3
 Bytes: 135
 I would write all of these using member functions.  mExtras.load(std::memory_order_acquire) looks cleaner, now that we have the option.
 
+162:16-162:79
+Wed Aug 19 01:33:39 2015 +0000
+Author: Bailey Forrest <1078104@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c4a9e95f_792a01b3
+UUID: c4a9e95f_79f20192
+Bytes: 4
+Done
+
