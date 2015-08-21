@@ -1,0 +1,18 @@
+Revision: f190c236ba13b4f192b53d936a7f2c8e6f51efaa
+Patch-set: 2
+File: include/android/sensor.h
+
+62
+Fri Aug 21 03:38:24 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 84253145_02fd1478
+Bytes: 9
+sensors.h
+
+70
+Fri Aug 21 03:38:24 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a47f9520_408a3ea3
+Bytes: 39
+correct this in hardware/sensors.h too?
+
