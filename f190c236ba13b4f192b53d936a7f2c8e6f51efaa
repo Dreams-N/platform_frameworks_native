@@ -9,10 +9,26 @@ UUID: 84253145_02fd1478
 Bytes: 9
 sensors.h
 
+62
+Mon Aug 24 20:47:27 2015 +0000
+Author: Johan Euphrosine <1070099@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 84253145_02fd1478
+UUID: a42a3512_8aaa9407
+Bytes: 4
+Done
+
 70
 Fri Aug 21 03:38:24 2015 +0000
 Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: a47f9520_408a3ea3
 Bytes: 39
 correct this in hardware/sensors.h too?
+
+70
+Mon Aug 24 20:47:27 2015 +0000
+Author: Johan Euphrosine <1070099@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a47f9520_408a3ea3
+UUID: c42ba915_32b5f919
+Bytes: 130
+I think the original sentence was correct (acc - (-9.81)) is acc + 9.81, I just found that formulation clearer for the public API.
 
