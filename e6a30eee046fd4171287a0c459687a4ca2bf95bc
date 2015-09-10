@@ -9,6 +9,14 @@ UUID: 24c9e69c_1fb34646
 Bytes: 15
 spaces not tabs
 
+1553
+Thu Sep 10 21:12:47 2015 +0000
+Author: Marco Nelissen <1001525@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 24c9e69c_1fb34646
+UUID: 84d4522f_b3524fd8
+Bytes: 178
+Fwiw, the crash I saw was supposedly on this line (well, its internal-master equivalent), not the one below. Possible the stack trace was wrong though, I didn't check it further.
+
 1555:0-1555:33
 Thu Sep 10 21:08:26 2015 +0000
 Author: Chad Brubaker <1022895@85c56323-6fa9-3386-8a01-6480fb634889>
