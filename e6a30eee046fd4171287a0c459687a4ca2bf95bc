@@ -1,0 +1,18 @@
+Revision: e6a30eee046fd4171287a0c459687a4ca2bf95bc
+Patch-set: 1
+File: libs/binder/Parcel.cpp
+
+1553
+Thu Sep 10 21:08:26 2015 +0000
+Author: Chad Brubaker <1022895@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 24c9e69c_1fb34646
+Bytes: 15
+spaces not tabs
+
+1555:0-1555:33
+Thu Sep 10 21:08:26 2015 +0000
+Author: Chad Brubaker <1022895@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c4ef2afe_c8d6f784
+Bytes: 80
+Any idea why this wraps around? Is it not incremented every time one is alloced?
+
