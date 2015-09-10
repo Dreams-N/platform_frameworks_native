@@ -17,6 +17,14 @@ UUID: 84d4522f_b3524fd8
 Bytes: 178
 Fwiw, the crash I saw was supposedly on this line (well, its internal-master equivalent), not the one below. Possible the stack trace was wrong though, I didn't check it further.
 
+1553
+Thu Sep 10 21:14:17 2015 +0000
+Author: Chad Brubaker <1022895@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 84d4522f_b3524fd8
+UUID: 04c1426c_b7223fe2
+Bytes: 229
+They are, When compiled without -O0 only one abort call is generated per function and all the overflow aborts jump there, the stack tool seems to always just report the first possible jump to abort as the source in that function.
+
 1555:0-1555:33
 Thu Sep 10 21:08:26 2015 +0000
 Author: Chad Brubaker <1022895@85c56323-6fa9-3386-8a01-6480fb634889>
