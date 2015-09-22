@@ -1,0 +1,25 @@
+Revision: a31db1b5cfae06551e9b12ed69fe0bcbd0a776b2
+Patch-set: 1
+File: libs/input/InputTransport.cpp
+
+514
+Tue Sep 22 23:38:20 2015 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a905afc4_17ef747a
+Bytes: 221
+Instead of using "i - 1" everywhere, can you please modify the loop to be:
+
+  for (size_t i = mBatches.size(); i > 0; ) {
+    i--;
+    ...
+  }
+
+This will result in fewer lines touched, and be closer to the intended logic.
+
+819
+Tue Sep 22 23:38:20 2015 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c9b7434b_3019e8b4
+Bytes: 39
+same here. Move i-- into the for block.
+
