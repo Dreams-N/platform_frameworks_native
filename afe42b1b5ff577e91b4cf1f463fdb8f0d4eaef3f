@@ -1,0 +1,11 @@
+Revision: afe42b1b5ff577e91b4cf1f463fdb8f0d4eaef3f
+Patch-set: 3
+File: libs/input/InputTransport.cpp
+
+840:18-840:19
+Wed Sep 23 00:29:45 2015 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a905afc4_17d5b457
+Bytes: 26
+space between "if" and "("
+
