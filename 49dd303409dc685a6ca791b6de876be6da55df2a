@@ -1,0 +1,13 @@
+Revision: 49dd303409dc685a6ca791b6de876be6da55df2a
+Patch-set: 2
+File: libs/input/VelocityTracker.cpp
+
+61
+Wed Sep 23 00:06:57 2015 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a9ba0f35_2f8ce928
+Bytes: 306
+Sorry to nitpick, but I'd really prefer if "m--" went between lines 58 and 59. I'd like to mimic the existing code as closely as possible. While it doesn't occur in this case, putting it at the top of the block is useful in case the variable is used somewhere else in the block.
+
+(same comment for line 51)
+
