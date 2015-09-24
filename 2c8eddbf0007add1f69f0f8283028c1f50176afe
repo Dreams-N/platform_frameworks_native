@@ -1,0 +1,11 @@
+Revision: 2c8eddbf0007add1f69f0f8283028c1f50176afe
+Patch-set: 1
+File: cmds/installd/commands.cpp
+
+1056:4-1060:55
+Thu Sep 24 21:52:30 2015 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8e52b121_4fe3e5c3
+Bytes: 84
+Check that no other unknown bits are set, to make sure things stay somewhat in sync.
+
