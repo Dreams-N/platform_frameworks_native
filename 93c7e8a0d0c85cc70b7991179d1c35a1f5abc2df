@@ -1,0 +1,11 @@
+Revision: 93c7e8a0d0c85cc70b7991179d1c35a1f5abc2df
+Patch-set: 3
+File: cmds/installd/installd.h
+
+98:0-101:9
+Fri Sep 25 22:44:42 2015 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6e4d7d85_a724b98d
+Bytes: 6
+Typos.
+
