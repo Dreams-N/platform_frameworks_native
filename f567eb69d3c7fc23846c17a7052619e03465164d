@@ -1,0 +1,13 @@
+Revision: f567eb69d3c7fc23846c17a7052619e03465164d
+Patch-set: 1
+File: cmds/installd/commands.cpp
+
+1062:8-1062:56
+Fri Sep 25 17:30:31 2015 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ee86cdd4_b0a506ec
+Bytes: 248
+I'd be stronger, this is at least ALOGE. Somebody isn't playing by the rules...
+
+(E.g., if the framework passes unknown flags to the runtime after fork, we do LOG(ERROR) - and I believe we should be doing LOG(FATAL), otherwise people won't notice).
+
