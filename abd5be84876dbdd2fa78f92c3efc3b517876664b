@@ -1,5 +1,21 @@
 Revision: abd5be84876dbdd2fa78f92c3efc3b517876664b
 Patch-set: 1
+File: cmds/installd/commands.cpp
+
+825:4-825:64
+Fri Sep 25 21:59:13 2015 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ee616dea_cbb45cb6
+Bytes: 26
+Please put a comment here.
+
+1205:24-1205:33
+Fri Sep 25 21:59:13 2015 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ce582944_12c50998
+Bytes: 102
+It does seem that installd uses 100-column line wrap, which means use_jit fits on the previous line...
+
 File: cmds/installd/installd.h
 
 97:0-102:111
