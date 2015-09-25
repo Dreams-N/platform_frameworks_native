@@ -11,3 +11,11 @@ I'd be stronger, this is at least ALOGE. Somebody isn't playing by the rules...
 
 (E.g., if the framework passes unknown flags to the runtime after fork, we do LOG(ERROR) - and I believe we should be doing LOG(FATAL), otherwise people won't notice).
 
+1062:8-1062:56
+Fri Sep 25 17:44:12 2015 +0000
+Author: Todd Kennedy <1060678@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ee86cdd4_b0a506ec
+UUID: ee86cdd4_3b09d76e
+Bytes: 4
+Done
+
