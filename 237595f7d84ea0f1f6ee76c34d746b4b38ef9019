@@ -1,0 +1,14 @@
+Revision: 237595f7d84ea0f1f6ee76c34d746b4b38ef9019
+Patch-set: 1
+File: opengl/tests/gl2_jni/Android.mk
+
+33:0-33:36
+Sat Sep 26 00:06:40 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 4e4c398b_04acabd7
+Bytes: 134
+The build system adds automatically in binary.mk (I don't know why):
+  my_c_includes += $(JNI_H_INCLUDE)
+
+Are we going to remove that?
+
