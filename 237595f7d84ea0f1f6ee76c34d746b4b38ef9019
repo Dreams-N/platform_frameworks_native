@@ -20,3 +20,13 @@ UUID: 8e52b121_a3402dfd
 Bytes: 160
 Hmm, good question. There are several hundred files that use <jni.h>, but less than a hundred makefile that use JNI_H_INCLUDE. I'm not sure what the overlap is.
 
+33:0-33:36
+Mon Sep 28 21:29:24 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8e52b121_a3402dfd
+UUID: 0e5fa128_96532906
+Bytes: 303
+yeah, this is what i meant about <jni.h> being the hard one to fix :-(
+
+personally, i actually think it's reasonable for this particular header file to be on the default path. (in the same way you don't have to explicitly include the libc header files.) maybe just move jni.h into a directory by itself?
+
