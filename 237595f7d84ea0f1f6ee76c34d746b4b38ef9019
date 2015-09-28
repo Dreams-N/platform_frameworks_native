@@ -12,3 +12,11 @@ The build system adds automatically in binary.mk (I don't know why):
 
 Are we going to remove that?
 
+33:0-33:36
+Mon Sep 28 21:06:53 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 4e4c398b_04acabd7
+UUID: 8e52b121_a3402dfd
+Bytes: 160
+Hmm, good question. There are several hundred files that use <jni.h>, but less than a hundred makefile that use JNI_H_INCLUDE. I'm not sure what the overlap is.
+
