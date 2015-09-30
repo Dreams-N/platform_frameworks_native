@@ -1,0 +1,11 @@
+Revision: 3f50a39b1ede67eb5846f38a486780efd35ebc30
+Patch-set: 1
+File: include/powermanager/IPowerManager.h
+
+50
+Wed Sep 30 21:08:58 2015 +0000
+Author: Daniel Erat <1074340@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 95d8063c_df101b1d
+Bytes: 179
+i didn't bother with the ids after this one, as i think i'm unlikely to need them anytime soon (or at all). let me know if you'd prefer that i added them for completeness, though.
+
