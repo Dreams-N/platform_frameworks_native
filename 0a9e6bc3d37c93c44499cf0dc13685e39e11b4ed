@@ -1,0 +1,12 @@
+Revision: 0a9e6bc3d37c93c44499cf0dc13685e39e11b4ed
+Patch-set: 2
+File: cmds/servicemanager/service_manager.c
+
+354:3-357:5
+Sun Oct 04 17:56:29 2015 +0000
+Author: Richard Haines <1021859@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 35e91ad0_22548af4
+Bytes: 231
+Does this need a similar change from init.cpp in patch set 5 at https://android-review.googlesource.com/#/c/174062/5
+I used: "if (!ad || !ad->name || !ad->pid) return 0;" as the denial is logged anyway, just without the other info.
+
