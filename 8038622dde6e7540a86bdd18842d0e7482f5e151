@@ -1,0 +1,11 @@
+Revision: 8038622dde6e7540a86bdd18842d0e7482f5e151
+Patch-set: 3
+File: cmds/servicemanager/service_manager.c
+
+357
+Mon Oct 05 18:26:44 2015 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: cb90200c_e2e8a8dc
+Bytes: 19
+This has got to go.
+
