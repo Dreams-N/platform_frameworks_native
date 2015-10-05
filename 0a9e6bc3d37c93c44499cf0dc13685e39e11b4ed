@@ -10,3 +10,11 @@ Bytes: 231
 Does this need a similar change from init.cpp in patch set 5 at https://android-review.googlesource.com/#/c/174062/5
 I used: "if (!ad || !ad->name || !ad->pid) return 0;" as the denial is logged anyway, just without the other info.
 
+354:3-357:5
+Mon Oct 05 15:07:44 2015 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 35e91ad0_22548af4
+UUID: 9555663b_6ad91a13
+Bytes: 171
+Yeah this is not ready to go yet based on our decisions on property service. Ill mark with a -1 just to make that explicit. Also we need to log uid from the binder header.
+
