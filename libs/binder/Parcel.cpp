@@ -1078,6 +1078,12 @@ status_t Parcel::writeString16(const String16& str)
     return writeString16(str.string(), str.size());
 }
 
+extern "C" status_t _ZN7android6Parcel13writeString16EPKDsj(void *parcel, const char16_t* str, size_t len);
+
+extern "C" status_t _ZN7android6Parcel13writeString16EPKtj(void *parcel, const char16_t* str, size_t len) {
+    return _ZN7android6Parcel13writeString16EPKDsj(parcel, str, len);
+}
+
 status_t Parcel::writeString16(const char16_t* str, size_t len)
 {
     if (str == NULL) return writeInt32(-1);
