@@ -1,0 +1,27 @@
+Revision: 5114e8552a4aa09da9ac1a130805e79c19714ea8
+Patch-set: 1
+File: libs/binder/Android.mk
+
+56:2-56:30
+Wed Oct 14 04:13:05 2015 +0000
+Author: Jorge Lucangeli Obes <1076138@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5fa8725b_996b4769
+Bytes: 54
+Looks like the rest of the file doesn't indent ifdefs?
+
+File: libs/binder/IServiceManager.cpp
+
+71:63-71:74
+Wed Oct 14 04:13:05 2015 +0000
+Author: Jorge Lucangeli Obes <1076138@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: bfb7aeb4_c6bf9735
+Bytes: 30
+Android framework permissions?
+
+79:0-79:4
+Wed Oct 14 04:13:05 2015 +0000
+Author: Jorge Lucangeli Obes <1076138@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7f2b7617_69262dcc
+Bytes: 46
+Maybe kill this extra space while you're here?
+
