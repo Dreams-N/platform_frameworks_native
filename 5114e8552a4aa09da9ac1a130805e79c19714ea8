@@ -9,6 +9,14 @@ UUID: 5fa8725b_996b4769
 Bytes: 54
 Looks like the rest of the file doesn't indent ifdefs?
 
+56:2-56:30
+Wed Oct 14 14:05:32 2015 +0000
+Author: Daniel Erat <1074340@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5fa8725b_996b4769
+UUID: aa43ea7f_a7552888
+Bytes: 16
+sure, unindented
+
 File: libs/binder/IServiceManager.cpp
 
 71:63-71:74
@@ -18,10 +26,26 @@ UUID: bfb7aeb4_c6bf9735
 Bytes: 30
 Android framework permissions?
 
+71:63-71:74
+Wed Oct 14 14:05:32 2015 +0000
+Author: Daniel Erat <1074340@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: bfb7aeb4_c6bf9735
+UUID: bf908e0a_3f730717
+Bytes: 4
+Done
+
 79:0-79:4
 Wed Oct 14 04:13:05 2015 +0000
 Author: Jorge Lucangeli Obes <1076138@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 7f2b7617_69262dcc
 Bytes: 46
 Maybe kill this extra space while you're here?
+
+79:0-79:4
+Wed Oct 14 14:05:32 2015 +0000
+Author: Daniel Erat <1074340@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7f2b7617_69262dcc
+UUID: ea588243_2e6b13b4
+Bytes: 4
+Done
 
