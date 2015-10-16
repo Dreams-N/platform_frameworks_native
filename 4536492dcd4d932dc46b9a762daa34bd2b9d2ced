@@ -27,3 +27,11 @@ UUID: d90802ae_ceef5723
 Bytes: 125
 Yeah lets add it as a global define when BRILLO is set. Have no problem with having it, just as long as its used sparingly :)
 
+56
+Fri Oct 16 23:48:27 2015 +0000
+Author: Daniel Erat <1074340@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d90802ae_ceef5723
+UUID: b9198e10_f749c0a4
+Bytes: 228
+great. yeah, __ANDROID__ is still the correct thing to use to protect brillo-specific parts of code that is also built on chrome os. __BRILLO__ is only for brillo-specific parts of code that is also built for non-brillo android.
+
