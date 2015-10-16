@@ -9,3 +9,13 @@ UUID: 79fd56bf_686a9b1b
 Bytes: 71
 you're not setting this globally in build/? that seems like a bad idea?
 
+56
+Fri Oct 16 23:09:45 2015 +0000
+Author: Daniel Erat <1074340@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 79fd56bf_686a9b1b
+UUID: d98ba26e_904e34aa
+Bytes: 235
+i agree that defining __BRILLO__ globally seems like it'd be much safer (i.e. no risk of forgetting to define it before #include-ing a header that depends on it).
+
+cc-ing lee and gaurav to see if they have any objections to doing this.
+
