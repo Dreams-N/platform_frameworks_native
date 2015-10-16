@@ -19,3 +19,11 @@ i agree that defining __BRILLO__ globally seems like it'd be much safer (i.e. no
 
 cc-ing lee and gaurav to see if they have any objections to doing this.
 
+56
+Fri Oct 16 23:22:55 2015 +0000
+Author: Lee Campbell <1052976@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d98ba26e_904e34aa
+UUID: d90802ae_ceef5723
+Bytes: 125
+Yeah lets add it as a global define when BRILLO is set. Have no problem with having it, just as long as its used sparingly :)
+
