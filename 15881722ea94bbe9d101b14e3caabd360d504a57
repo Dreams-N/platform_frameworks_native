@@ -1,0 +1,18 @@
+Revision: 15881722ea94bbe9d101b14e3caabd360d504a57
+Patch-set: 3
+File: libs/binder/Parcel.cpp
+
+1280
+Fri Oct 16 00:40:21 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 79c3965a_3583f004
+Bytes: 107
+I'm pretty sure if I remember the generated Java correctly, they do this with an explicit readInt32() != 0.
+
+1283
+Fri Oct 16 00:40:21 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 99ae8a64_7b1f63a7
+Bytes: 38
+nit: pointers to the left, to the left
+
