@@ -35,3 +35,11 @@ UUID: b9198e10_f749c0a4
 Bytes: 228
 great. yeah, __ANDROID__ is still the correct thing to use to protect brillo-specific parts of code that is also built on chrome os. __BRILLO__ is only for brillo-specific parts of code that is also built for non-brillo android.
 
+56
+Mon Oct 19 18:25:44 2015 +0000
+Author: Gaurav Shah <1072350@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b9198e10_f749c0a4
+UUID: b9ec2e3d_c5a0aece
+Bytes: 12
+sgtm as well
+
