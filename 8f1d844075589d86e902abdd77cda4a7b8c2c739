@@ -1,0 +1,25 @@
+Revision: 8f1d844075589d86e902abdd77cda4a7b8c2c739
+Patch-set: 3
+File: libs/binder/Parcel.cpp
+
+740:11-740:12
+Tue Oct 20 22:52:54 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 79d47637_85512d9f
+Bytes: 39
+nit: return OK or status here and below
+
+1490:9-1490:12
+Tue Oct 20 22:52:54 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 39111e0a_88b24333
+Bytes: 73
+Seems appropriate to use an int32_t since that matches the types of size.
+
+1761:15-1761:25
+Tue Oct 20 22:52:54 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 99020a8c_a39b0d40
+Bytes: 26
+use pArg->setTo(str, len);
+
