@@ -9,6 +9,14 @@ UUID: 791716fc_b8183518
 Bytes: 148
 nit: If you're going to compare with values, let's use the android::OK alias and do it the same way throughout the file.  You use if (status) above.
 
+1342:14-1342:20
+Tue Oct 20 20:46:52 2015 +0000
+Author: Casey Dahlin <1080302@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 791716fc_b8183518
+UUID: 99f3ea1a_93070e32
+Bytes: 4
+Done
+
 1352:4-1352:37
 Tue Oct 20 20:26:17 2015 +0000
 Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -29,4 +37,20 @@ Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 39111e0a_6d99b9eb
 Bytes: 80
 nit: I think an int32_t is appropriate, here and below, since size is an int32_t
+
+1352:9-1352:12
+Tue Oct 20 20:46:52 2015 +0000
+Author: Casey Dahlin <1080302@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 39111e0a_6d99b9eb
+UUID: d90802ae_8385add4
+Bytes: 4
+Done
+
+1352:4-1352:37
+Tue Oct 20 20:46:52 2015 +0000
+Author: Casey Dahlin <1080302@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f91146d4_5763ef1a
+UUID: 99020a8c_b0e0f5a9
+Bytes: 4
+Done
 
