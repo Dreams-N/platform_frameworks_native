@@ -1,0 +1,11 @@
+Revision: 11f523a5a87424cdbbbda1cfc4411d4c3ef3721d
+Patch-set: 1
+File: libs/binder/Parcel.cpp
+
+724
+Tue Oct 20 02:03:51 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 79d47637_f960a28c
+Bytes: 121
+the existing style seems to always use braces. (i thought google3 style was either braces or if and return on same line?)
+
