@@ -1,6 +1,29 @@
 Revision: 11f523a5a87424cdbbbda1cfc4411d4c3ef3721d
 Patch-set: 1
+File: include/binder/Parcel.h
+
+28
+Tue Oct 20 16:30:13 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b9ec2e3d_d40fba47
+Bytes: 63
+nit: this probably should go above the system library includes.
+
 File: libs/binder/Parcel.cpp
+
+720
+Tue Oct 20 16:30:13 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f91146d4_8156c53b
+Bytes: 288
+All these methods looks exactly the same modulo the write method.  Could you refactor this so that we delegated to one writeVector<T> method and use writeAligned<T> to do the member writes?  There will probably be a few special cases that don't template well, and we can specialize those.
+
+722
+Tue Oct 20 16:30:13 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 99f3ea1a_8defed6e
+Bytes: 103
+Shouldn't all these writes have explicit checks that val.size() <= std::numeric_limits<int32_t>::max()?
 
 724
 Tue Oct 20 02:03:51 2015 +0000
@@ -8,4 +31,39 @@ Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 79d47637_f960a28c
 Bytes: 121
 the existing style seems to always use braces. (i thought google3 style was either braces or if and return on same line?)
+
+724
+Tue Oct 20 16:30:13 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 79d47637_f960a28c
+UUID: b9ec2e3d_b414b659
+Bytes: 342
++1 for following in file style here
+
+However, we've been taking the open source guide as our muse in general, and it makes no recommendations for single statement conditionals:
+
+http://google.github.io/styleguide/cppguide.html#Conditionals
+
+Of course, it also recommends a number of things which Android saw fit to disregard in its own style.
+
+1288:26-1288:27
+Tue Oct 20 16:30:13 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 79d47637_6c518e9c
+Bytes: 24
+Similarly re templating.
+
+1292
+Tue Oct 20 16:30:13 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d90802ae_8517f511
+Bytes: 73
+Definitely check that size is a positive number.  This is untrusted data!
+
+1306
+Tue Oct 20 16:30:13 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 99020a8c_fbead314
+Bytes: 112
+It's probably worth it to use something like readAligned<T>(&val[i]) here.   That would half the memory traffic.
 
