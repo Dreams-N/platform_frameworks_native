@@ -9,6 +9,14 @@ UUID: b9ec2e3d_d40fba47
 Bytes: 63
 nit: this probably should go above the system library includes.
 
+28
+Tue Oct 20 18:45:16 2015 +0000
+Author: Casey Dahlin <1080302@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b9ec2e3d_d40fba47
+UUID: b9ec2e3d_286e8abf
+Bytes: 4
+Done
+
 File: libs/binder/Parcel.cpp
 
 720
@@ -18,12 +26,28 @@ UUID: f91146d4_8156c53b
 Bytes: 288
 All these methods looks exactly the same modulo the write method.  Could you refactor this so that we delegated to one writeVector<T> method and use writeAligned<T> to do the member writes?  There will probably be a few special cases that don't template well, and we can specialize those.
 
+720
+Tue Oct 20 18:45:16 2015 +0000
+Author: Casey Dahlin <1080302@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f91146d4_8156c53b
+UUID: 39111e0a_7307e032
+Bytes: 163
+I think we've pretty much determined this can't change without function pointers getting involved, or smearing the dirty details of type lifting all over the code.
+
 722
 Tue Oct 20 16:30:13 2015 +0000
 Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 99f3ea1a_8defed6e
 Bytes: 103
 Shouldn't all these writes have explicit checks that val.size() <= std::numeric_limits<int32_t>::max()?
+
+722
+Tue Oct 20 18:45:16 2015 +0000
+Author: Casey Dahlin <1080302@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 99f3ea1a_8defed6e
+UUID: b9f26ee4_5b956636
+Bytes: 4
+Done
 
 724
 Tue Oct 20 02:03:51 2015 +0000
@@ -46,6 +70,14 @@ http://google.github.io/styleguide/cppguide.html#Conditionals
 
 Of course, it also recommends a number of things which Android saw fit to disregard in its own style.
 
+724
+Tue Oct 20 18:45:16 2015 +0000
+Author: Casey Dahlin <1080302@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b9ec2e3d_b414b659
+UUID: 99f3ea1a_38ac1973
+Bytes: 4
+Done
+
 1288:26-1288:27
 Tue Oct 20 16:30:13 2015 +0000
 Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -60,10 +92,26 @@ UUID: d90802ae_8517f511
 Bytes: 73
 Definitely check that size is a positive number.  This is untrusted data!
 
+1292
+Tue Oct 20 18:45:16 2015 +0000
+Author: Casey Dahlin <1080302@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d90802ae_8517f511
+UUID: b9ec2e3d_a8ef3a6e
+Bytes: 4
+Done
+
 1306
 Tue Oct 20 16:30:13 2015 +0000
 Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 99020a8c_fbead314
 Bytes: 112
 It's probably worth it to use something like readAligned<T>(&val[i]) here.   That would half the memory traffic.
+
+1306
+Tue Oct 20 18:45:16 2015 +0000
+Author: Casey Dahlin <1080302@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 99020a8c_fbead314
+UUID: 79d47637_6f674050
+Bytes: 4
+Done
 
