@@ -1,0 +1,11 @@
+Revision: ea3901eebbb0f52cc1679803c2fac10977d595d5
+Patch-set: 4
+File: libs/binder/IServiceManager.cpp
+
+121
+Thu Oct 22 01:29:16 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 194a9a42_c1d50ca6
+Bytes: 209
+i personally prefer to move forwards, and it's not like it touches many lines. it's just odd that you left this, for example, while removing the kind of trailing whitespace that gerrit _doesn't_ care about :-)
+
