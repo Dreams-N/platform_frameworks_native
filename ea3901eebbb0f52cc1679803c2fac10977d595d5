@@ -9,3 +9,11 @@ UUID: 194a9a42_c1d50ca6
 Bytes: 209
 i personally prefer to move forwards, and it's not like it touches many lines. it's just odd that you left this, for example, while removing the kind of trailing whitespace that gerrit _doesn't_ care about :-)
 
+121
+Thu Oct 22 01:36:24 2015 +0000
+Author: Daniel Erat <1074340@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 194a9a42_c1d50ca6
+UUID: 1636e9de_527a747a
+Bytes: 234
+oh, heh. yeah, i dunno how i missed that. i must've just eyeballed the file instead of doing an "s/  *$//". i'll manually get this one too (my workstation is busted until i come in tomorrow so i don't have a real editor right now...).
+
