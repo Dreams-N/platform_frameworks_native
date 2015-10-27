@@ -9,3 +9,17 @@ UUID: f6b795e1_2e5e3b0b
 Bytes: 103
 Can't change maxDelay when it is not specified by the HAL, this is a part of the sensor API definition.
 
+82:8-82:17
+Tue Oct 27 18:57:09 2015 +0000
+Author: Aniroop Mathur <1043015@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f6b795e1_2e5e3b0b
+UUID: 36e4cdf6_1307d7ec
+Bytes: 529
+I thought "0" would be more dangerous value than 200ms, by default.
+But as you say, we should keep the max delay to be 0 by default.
+I will change it back to 0 and hence change the enable function call as well.
+
+Mainly, this patch focus on "not" enabling the sensor with 0 ms by default.
+Instead enable it with max delay possible or 200 ms so that enabling the sensor without a delay value shall not affect the delay of other parallel running native/android applications using the same sensor.
+Could you please review that part ?
+
