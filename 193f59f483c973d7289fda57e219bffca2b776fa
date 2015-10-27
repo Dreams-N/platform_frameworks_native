@@ -1,0 +1,11 @@
+Revision: 193f59f483c973d7289fda57e219bffca2b776fa
+Patch-set: 3
+File: libs/gui/Sensor.cpp
+
+350:11-350:31
+Tue Oct 27 21:43:00 2015 +0000
+Author: Peng Xu <1074523@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 56fce1c4_64888ab4
+Bytes: 19
+potential overflow.
+
