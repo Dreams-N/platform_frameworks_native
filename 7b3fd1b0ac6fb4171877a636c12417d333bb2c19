@@ -1,0 +1,13 @@
+Revision: 7b3fd1b0ac6fb4171877a636c12417d333bb2c19
+Patch-set: 3
+File: include/binder/Parcel.h
+
+445:15-445:29
+Wed Oct 28 20:56:02 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 56c4e1d1_6a1ff370
+Bytes: 184
+Sorry, I should have caught this earlier.  interface_cast<> can actually fail and return a nullptr (or the equivalent sp<T> instance).
+
+We should catch that and return some error code.
+
