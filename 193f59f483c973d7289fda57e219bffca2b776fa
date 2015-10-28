@@ -9,3 +9,13 @@ UUID: 56fce1c4_64888ab4
 Bytes: 19
 potential overflow.
 
+350:11-350:31
+Wed Oct 28 02:51:35 2015 +0000
+Author: Aniroop Mathur <1043015@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 56fce1c4_64888ab4
+UUID: 7642c5df_26d7fc22
+Bytes: 191
+getMaxDelay returns a 32 bit number and is limited to INT_MAX.
+nsecs_t is a 64 bit number so here 32 bit number is multiplied by 100.
+So overflow does not seem to be happening here... right ?
+
