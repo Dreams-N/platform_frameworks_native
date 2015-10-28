@@ -1,0 +1,13 @@
+Revision: 6149c13e51a1717ee40a61386a92195c0c733393
+Patch-set: 2
+File: include/binder/Parcel.h
+
+205
+Wed Oct 28 20:47:59 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d6d0d18a_6b6b7d6b
+Bytes: 200
+Pull the implementation to the bottom of the file.  This seems consistent with the rest of the file.
+
+Also, we use 4 spaces in this file, and braces for single line statements from my cursory reading.
+
