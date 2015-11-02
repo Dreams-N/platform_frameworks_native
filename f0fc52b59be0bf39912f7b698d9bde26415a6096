@@ -1,0 +1,11 @@
+Revision: f0fc52b59be0bf39912f7b698d9bde26415a6096
+Patch-set: 1
+File: libs/binder/Parcel.cpp
+
+724:8-725:22
+Mon Nov 02 19:09:17 2015 +0000
+Author: Casey Dahlin <1080302@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 765c8636_c10c461b
+Bytes: 8
+....why?
+
