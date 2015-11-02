@@ -9,3 +9,11 @@ UUID: 765c8636_c10c461b
 Bytes: 8
 ....why?
 
+724:8-725:22
+Mon Nov 02 19:27:30 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 765c8636_c10c461b
+UUID: 5625c29e_8b91dd79
+Bytes: 124
+While it probably doesn't matter here, because status_t is just an int, this pattern facilitates return value optimizations.
+
