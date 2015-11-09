@@ -1,0 +1,11 @@
+Revision: 428595c64afc11390103ff907c0382739178f42f
+Patch-set: 2
+File: include/binder/Parcel.h
+
+251
+Mon Nov 09 23:03:55 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d6d7f27c_8ad06bd4
+Bytes: 109
+These should probably be wrapped with objects that close the contained file descriptor all the way down here.
+
