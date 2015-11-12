@@ -9,6 +9,16 @@ UUID: 1648aa4e_d50f8e07
 Bytes: 107
 this seems like an ambiguous header guard name, but i guess it matches the rest of libbinder's headers. :-(
 
+17
+Thu Nov 12 21:15:10 2015 +0000
+Author: Eino-Ville Talvala <1010050@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 1648aa4e_d50f8e07
+UUID: b6da7ea7_d7267f61
+Bytes: 123
+STATUS is ambiguous enough that I'd go with
+ANDROID_BINDER_STATUS_H
+The other classes here are (relatively) uniquely-named.
+
 34
 Thu Nov 12 20:51:35 2015 +0000
 Author: Daniel Erat <1074340@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -22,6 +32,13 @@ Author: Daniel Erat <1074340@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 36392eb5_708eeee1
 Bytes: 127
 does this actually compile, or do you need to put extra parentheses around all of these assignments to avoid compiler warnings?
+
+39
+Thu Nov 12 21:15:10 2015 +0000
+Author: Eino-Ville Talvala <1010050@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5b2a4b7b_f16cc24f
+Bytes: 99
+would be good to indicate what 'those' are (in my understanding, errors in the Binder layer itself)
 
 72:35-72:44
 Thu Nov 12 20:51:35 2015 +0000
@@ -67,6 +84,50 @@ UUID: b636fec5_2f0fad47
 Bytes: 147
 whoa, this is super-surprising. i'd rather you just drop operator bool() instead of having it return the opposite of what most people would expect.
 
+103
+Thu Nov 12 21:15:10 2015 +0000
+Author: Eino-Ville Talvala <1010050@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b636fec5_2f0fad47
+UUID: bb3987d2_65b00e20
+Bytes: 849
+It does match the existing semantics of status_t (where OK = 0), though generally I do see code written as
+
+  status_t res = foo();
+  if (res != OK) { ...}
+
+instead of
+
+  if (res) {...}
+
+to avoid ambiguity.
+It's clearer when it's called error:
+
+   status_t err = foo();
+   if (err) { ... }
+
+which would be an argument for calling this Error instead of Status. 
+But I've seen code use both 'err' and 'res' as names for status_t, so I don't think changing Status to Error would necessarily disambiguate.
+
+BTW, would
+
+   Status res = foo();
+   if (res != Status::Ok()) { ...}
+
+work? I'm assuming no, without a explicit operator=. I'm not sure if it's worth supporting, note, especially since there's
+
+   if (!res.isOk()) { ... }
+
+which should be sufficient.
+
+Perhaps dropping the bool makes sense, given isOk(), but I think I'm fine with leaving it in.
+
+111
+Thu Nov 12 21:15:10 2015 +0000
+Author: Eino-Ville Talvala <1010050@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: fb2e9f8f_ce800320
+Bytes: 120
+Android native code (incl. the rest of the binder code in lib/binder) mostly uses the mException member variable syntax.
+
 File: libs/binder/Status.cpp
 
 21
@@ -96,4 +157,19 @@ Author: Daniel Erat <1074340@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 36392eb5_d053221d
 Bytes: 87
 be consistent with indentation here and elsewhere -- you're mostly using 4-space indent
+
+32
+Thu Nov 12 21:15:10 2015 +0000
+Author: Eino-Ville Talvala <1010050@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 36392eb5_d053221d
+UUID: 3b2597a9_134f5469
+Bytes: 60
+yes, please stick to 4-space, for Android style consistency.
+
+128
+Thu Nov 12 21:15:10 2015 +0000
+Author: Eino-Ville Talvala <1010050@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1b3453db_12998cec
+Bytes: 10
+whitespace
 
