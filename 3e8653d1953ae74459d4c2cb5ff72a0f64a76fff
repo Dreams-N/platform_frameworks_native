@@ -1,0 +1,27 @@
+Revision: 3e8653d1953ae74459d4c2cb5ff72a0f64a76fff
+Patch-set: 3
+File: include/binder/Parcel.h
+
+26
+Thu Nov 12 18:13:39 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3b2597a9_5045d248
+Bytes: 9
+nit: sort
+
+153:49-154:45
+Thu Nov 12 18:13:39 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3b2597a9_90657af2
+Bytes: 226
+The nice thing about sfd is that it defines its ownership semantics without a lot of documentation.  You may mention that this will dup() sfd internally, since that's interesting from a global resources management perspective.
+
+File: libs/binder/Parcel.cpp
+
+1144
+Thu Nov 12 18:13:39 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1b3453db_2fc7851b
+Bytes: 6
+Thanks
+
