@@ -222,6 +222,14 @@ or
   if (!status.isOk())
     ...
 
+103
+Thu Nov 12 22:25:27 2015 +0000
+Author: Eino-Ville Talvala <1010050@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3b2597a9_1364f4c6
+UUID: bb3987d2_00637090
+Bytes: 134
+I'm OK with dropping it, I don't think I'd want to personally use it due to the ambiguity. So doesn't sound like it has any champions.
+
 111
 Thu Nov 12 21:15:10 2015 +0000
 Author: Eino-Ville Talvala <1010050@85c56323-6fa9-3386-8a01-6480fb634889>
