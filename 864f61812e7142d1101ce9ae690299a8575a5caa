@@ -19,12 +19,28 @@ STATUS is ambiguous enough that I'd go with
 ANDROID_BINDER_STATUS_H
 The other classes here are (relatively) uniquely-named.
 
+17
+Thu Nov 12 22:19:34 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b6da7ea7_d7267f61
+UUID: b6da7ea7_f76f4205
+Bytes: 10
+Certainly.
+
 34
 Thu Nov 12 20:51:35 2015 +0000
 Author: Daniel Erat <1074340@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: b636fec5_af02bd1f
 Bytes: 52
 would something like remote_error be a clearer name?
+
+34
+Thu Nov 12 22:19:34 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b636fec5_af02bd1f
+UUID: 5b25eb9e_25fb18a3
+Bytes: 4
+Yes.
 
 35
 Thu Nov 12 20:51:35 2015 +0000
@@ -33,12 +49,28 @@ UUID: 36392eb5_708eeee1
 Bytes: 127
 does this actually compile, or do you need to put extra parentheses around all of these assignments to avoid compiler warnings?
 
+35
+Thu Nov 12 22:19:34 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 36392eb5_708eeee1
+UUID: 5b2a4b7b_5445c448
+Bytes: 28
+Sure doesn't.  Added parens.
+
 39
 Thu Nov 12 21:15:10 2015 +0000
 Author: Eino-Ville Talvala <1010050@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 5b2a4b7b_f16cc24f
 Bytes: 99
 would be good to indicate what 'those' are (in my understanding, errors in the Binder layer itself)
+
+39
+Thu Nov 12 22:19:34 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5b2a4b7b_f16cc24f
+UUID: 96d1fa8e_636c394f
+Bytes: 184
+Split them up and added meaningful comments.  Writing this code by hand is pretty bad/error prone, but for the sake of future me, I'll write down what's gone wrong in these situations.
 
 72:35-72:44
 Thu Nov 12 20:51:35 2015 +0000
@@ -49,12 +81,28 @@ you don't need android:: here.
 
 also, should the message be a const ref? that appears to be used for other read-only String8s in libbinder, and also setException() below.
 
+72:35-72:44
+Thu Nov 12 22:19:34 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f642362f_aec477b5
+UUID: bb3987d2_602ebc83
+Bytes: 148
+Doing so prevents copy elision in the construction of this object.  I guess I could make it const& anyway, and then add an overload for const char*?
+
 75:26-75:34
 Thu Nov 12 20:51:35 2015 +0000
 Author: Daniel Erat <1074340@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 563ea29c_d41b14ae
 Bytes: 36
 nit: "copyable" might be more common
+
+75:26-75:34
+Thu Nov 12 22:19:34 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 563ea29c_d41b14ae
+UUID: bb3987d2_e0306ce5
+Bytes: 4
+Done
 
 91
 Thu Nov 12 20:51:35 2015 +0000
@@ -63,6 +111,18 @@ UUID: 765726ea_4113d4a5
 Bytes: 114
 how does this differ from fromStatusT()? can you make it be private if you don't expect outside callers to use it?
 
+91
+Thu Nov 12 22:19:34 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 765726ea_4113d4a5
+UUID: bb3987d2_204f9469
+Bytes: 269
+One mutates an existing instance, the other is a factory.  I found when I was updating our integration tests that it's pretty common to "return OK" and that's super annoying if I tell you know have to write:
+
+  Status ret;
+  status.setFromStatusT(status);
+  return ret;
+
 98
 Thu Nov 12 20:51:35 2015 +0000
 Author: Daniel Erat <1074340@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -70,12 +130,28 @@ UUID: 36392eb5_90599a43
 Bytes: 39
 should this return a const ref instead?
 
+98
+Thu Nov 12 22:19:34 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 36392eb5_90599a43
+UUID: b6da7ea7_b7d4aa12
+Bytes: 13
+Good thought.
+
 100
 Thu Nov 12 20:51:35 2015 +0000
 Author: Daniel Erat <1074340@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 563ea29c_f42010dd
 Bytes: 39
 nit: add a blank line after this method
+
+100
+Thu Nov 12 22:19:34 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 563ea29c_f42010dd
+UUID: 1b3453db_72269065
+Bytes: 4
+Done
 
 103
 Thu Nov 12 20:51:35 2015 +0000
@@ -121,12 +197,45 @@ which should be sufficient.
 
 Perhaps dropping the bool makes sense, given isOk(), but I think I'm fine with leaving it in.
 
+103
+Thu Nov 12 22:19:34 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: bb3987d2_65b00e20
+UUID: 3b2597a9_1364f4c6
+Bytes: 642
+I actually hate the bool operator, precisely because the convention is arbitrary.  I'm accustomed to returning false on error, so I get upset to see:
+
+  if (service->DoSomething()) {
+    // this is an error????
+  }
+
+but yet, this is consistent with status_t's non-zero means error convention.  When I use status_t, I like to always write: if (status != OK) { ... }.
+
+If etalvala@ is ok with dropping the bool operator, I'd like to do so.  I included it mostly because I inferred he was interested. I much prefer to read:
+
+  if (!service->DoSomething().isOk())
+    ...
+
+or
+
+  auto status = service->DoSomething();
+  if (!status.isOk())
+    ...
+
 111
 Thu Nov 12 21:15:10 2015 +0000
 Author: Eino-Ville Talvala <1010050@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: fb2e9f8f_ce800320
 Bytes: 120
 Android native code (incl. the rest of the binder code in lib/binder) mostly uses the mException member variable syntax.
+
+111
+Thu Nov 12 22:19:34 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: fb2e9f8f_ce800320
+UUID: bb3987d2_40ae185a
+Bytes: 95
+My mistake.  I did a pretty good job faking comfort with the style guide elsewhere didn't I? :)
 
 File: libs/binder/Status.cpp
 
@@ -137,6 +246,14 @@ UUID: f642362f_0eb4ab3e
 Bytes: 66
 i don't think you need these; this is all in the android namespace
 
+21
+Thu Nov 12 22:19:34 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f642362f_0eb4ab3e
+UUID: 96d1fa8e_becac670
+Bytes: 4
+Done
+
 25
 Thu Nov 12 20:51:35 2015 +0000
 Author: Daniel Erat <1074340@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -144,12 +261,28 @@ UUID: 563ea29c_5430042a
 Bytes: 28
 nit: delete extra blank line
 
+25
+Thu Nov 12 22:19:34 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 563ea29c_5430042a
+UUID: b6da7ea7_f7ee2272
+Bytes: 4
+Done
+
 28:40-28:42
 Thu Nov 12 20:51:35 2015 +0000
 Author: Daniel Erat <1074340@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 96549ae5_3996130c
 Bytes: 23
 nit: just use String8()
+
+28:40-28:42
+Thu Nov 12 22:19:34 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 96549ae5_3996130c
+UUID: bb3987d2_00b5b03c
+Bytes: 4
+Done
 
 32
 Thu Nov 12 20:51:35 2015 +0000
@@ -166,10 +299,26 @@ UUID: 3b2597a9_134f5469
 Bytes: 60
 yes, please stick to 4-space, for Android style consistency.
 
+32
+Thu Nov 12 22:19:34 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3b2597a9_134f5469
+UUID: 76d4867d_f9ee1572
+Bytes: 7
+My bad.
+
 128
 Thu Nov 12 21:15:10 2015 +0000
 Author: Eino-Ville Talvala <1010050@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 1b3453db_12998cec
 Bytes: 10
 whitespace
+
+128
+Thu Nov 12 22:19:34 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 1b3453db_12998cec
+UUID: fb2e9f8f_11e50ccc
+Bytes: 6
+thanks
 
