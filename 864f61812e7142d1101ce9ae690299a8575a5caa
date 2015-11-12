@@ -1,0 +1,99 @@
+Revision: 864f61812e7142d1101ce9ae690299a8575a5caa
+Patch-set: 2
+File: include/binder/Status.h
+
+17
+Thu Nov 12 20:51:35 2015 +0000
+Author: Daniel Erat <1074340@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1648aa4e_d50f8e07
+Bytes: 107
+this seems like an ambiguous header guard name, but i guess it matches the rest of libbinder's headers. :-(
+
+34
+Thu Nov 12 20:51:35 2015 +0000
+Author: Daniel Erat <1074340@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b636fec5_af02bd1f
+Bytes: 52
+would something like remote_error be a clearer name?
+
+35
+Thu Nov 12 20:51:35 2015 +0000
+Author: Daniel Erat <1074340@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 36392eb5_708eeee1
+Bytes: 127
+does this actually compile, or do you need to put extra parentheses around all of these assignments to avoid compiler warnings?
+
+72:35-72:44
+Thu Nov 12 20:51:35 2015 +0000
+Author: Daniel Erat <1074340@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f642362f_aec477b5
+Bytes: 170
+you don't need android:: here.
+
+also, should the message be a const ref? that appears to be used for other read-only String8s in libbinder, and also setException() below.
+
+75:26-75:34
+Thu Nov 12 20:51:35 2015 +0000
+Author: Daniel Erat <1074340@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 563ea29c_d41b14ae
+Bytes: 36
+nit: "copyable" might be more common
+
+91
+Thu Nov 12 20:51:35 2015 +0000
+Author: Daniel Erat <1074340@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 765726ea_4113d4a5
+Bytes: 114
+how does this differ from fromStatusT()? can you make it be private if you don't expect outside callers to use it?
+
+98
+Thu Nov 12 20:51:35 2015 +0000
+Author: Daniel Erat <1074340@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 36392eb5_90599a43
+Bytes: 39
+should this return a const ref instead?
+
+100
+Thu Nov 12 20:51:35 2015 +0000
+Author: Daniel Erat <1074340@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 563ea29c_f42010dd
+Bytes: 39
+nit: add a blank line after this method
+
+103
+Thu Nov 12 20:51:35 2015 +0000
+Author: Daniel Erat <1074340@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b636fec5_2f0fad47
+Bytes: 147
+whoa, this is super-surprising. i'd rather you just drop operator bool() instead of having it return the opposite of what most people would expect.
+
+File: libs/binder/Status.cpp
+
+21
+Thu Nov 12 20:51:35 2015 +0000
+Author: Daniel Erat <1074340@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f642362f_0eb4ab3e
+Bytes: 66
+i don't think you need these; this is all in the android namespace
+
+25
+Thu Nov 12 20:51:35 2015 +0000
+Author: Daniel Erat <1074340@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 563ea29c_5430042a
+Bytes: 28
+nit: delete extra blank line
+
+28:40-28:42
+Thu Nov 12 20:51:35 2015 +0000
+Author: Daniel Erat <1074340@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 96549ae5_3996130c
+Bytes: 23
+nit: just use String8()
+
+32
+Thu Nov 12 20:51:35 2015 +0000
+Author: Daniel Erat <1074340@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 36392eb5_d053221d
+Bytes: 87
+be consistent with indentation here and elsewhere -- you're mostly using 4-space indent
+
