@@ -9,12 +9,30 @@ UUID: 3b2597a9_5045d248
 Bytes: 9
 nit: sort
 
+26
+Fri Nov 13 01:11:25 2015 +0000
+Author: Casey Dahlin <1080302@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3b2597a9_5045d248
+UUID: 5b2a4b7b_57226637
+Bytes: 4
+Done
+
 153:49-154:45
 Thu Nov 12 18:13:39 2015 +0000
 Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 3b2597a9_90657af2
 Bytes: 226
 The nice thing about sfd is that it defines its ownership semantics without a lot of documentation.  You may mention that this will dup() sfd internally, since that's interesting from a global resources management perspective.
+
+153:49-154:45
+Fri Nov 13 01:11:25 2015 +0000
+Author: Casey Dahlin <1080302@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3b2597a9_90657af2
+UUID: fb2e9f8f_d482d2b5
+Bytes: 172
+Descriptor semantics extend well beyond ownership. It's important to mention that the file pointer doesn't move, the fcntl flags don't change, etc.
+
+But I can note the dup.
 
 File: libs/binder/Parcel.cpp
 
@@ -31,4 +49,12 @@ Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 3b2597a9_f3be08f0
 Bytes: 105
 If you sync, you should be able to use the templated version and get consistent null reference detection.
+
+1952
+Fri Nov 13 01:11:25 2015 +0000
+Author: Casey Dahlin <1080302@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3b2597a9_f3be08f0
+UUID: 3b2597a9_c1f33296
+Bytes: 4
+Done
 
