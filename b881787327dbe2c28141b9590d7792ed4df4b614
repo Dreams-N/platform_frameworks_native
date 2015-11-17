@@ -16,6 +16,14 @@ UUID: 36392eb5_f6c49664
 Bytes: 64
 To match method caps style guide, "ok" or "buildOk" or "fromOk"?
 
+74:0-74:23
+Tue Nov 17 20:18:00 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 36392eb5_f6c49664
+UUID: 96d1fa8e_af8f2b4c
+Bytes: 26
+I like ok().  Will change.
+
 File: libs/binder/Status.cpp
 
 79:0-81:5
@@ -29,4 +37,35 @@ Logic is just a touch funky to read.  Maybe:
     writeString
   }
   return status;
+
+79:0-81:5
+Tue Nov 17 20:18:00 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 1648aa4e_06ae4ea8
+UUID: fb75bfb9_59ff0359
+Bytes: 1233
+Agreed that this is kind of hard to read. I can break it up and add some comments inline that will make it a little easier?
+
+The intent of doing it this way was to avoid a lot of if-nesting.  The next change proposed by the green doc (link in the bug) is to add support for an application specific error that contains both an int and a string message.  This error would allow service writers to express specific error conditions to client code in a standard way.
+
+This method would then change to look like:
+
+status_t Status::writeToParcel(Parcel* parcel) const {
+    status_t status = parcel->writeInt32(mException);
+    if (status != OK) { return status; }
+    if (mException == EX_NONE) {
+        // We have no more information to write.
+        return status;
+    }
+    status = parcel->writeString16(String16(mMessage));
+    if (status != OK) { return status; }
+    if (mException != EX_APPLICATION_SPECIFIC) {
+        // We have no more information to write.
+        return status;
+    }
+    status = parcel->writeInt32(mApplicationErrorCode);
+    return status;
+}
+
+But I don't feel too strongly about this, we're only talking about 2 levels of nesting.  If you aren't satisfied with comments, I can change this as you suggest.
 
