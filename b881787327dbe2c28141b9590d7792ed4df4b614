@@ -69,3 +69,11 @@ status_t Status::writeToParcel(Parcel* parcel) const {
 
 But I don't feel too strongly about this, we're only talking about 2 levels of nesting.  If you aren't satisfied with comments, I can change this as you suggest.
 
+79:0-81:5
+Tue Nov 17 20:46:01 2015 +0000
+Author: Jeff Sharkey <1013508@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: fb75bfb9_59ff0359
+UUID: 7b91cf0c_4272b47f
+Bytes: 200
+I'm okay with either approach; the current version in the patchset now, or the new verbose mode.  (If you're going to iterate and add the richer app version later, I'm fine with the current patchset.)
+
