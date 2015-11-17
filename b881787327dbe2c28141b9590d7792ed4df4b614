@@ -24,6 +24,15 @@ UUID: 96d1fa8e_af8f2b4c
 Bytes: 26
 I like ok().  Will change.
 
+103:0-104:61
+Tue Nov 17 23:02:34 2015 +0000
+Author: Jeff Sharkey <1006166@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 962d7a79_6bd43d69
+Bytes: 113
+exceptionCode() or getExceptionCode()?
+
+same feedback for msg, and maybe want to expand to getExceptionMessage()?
+
 File: libs/binder/Status.cpp
 
 79:0-81:5
