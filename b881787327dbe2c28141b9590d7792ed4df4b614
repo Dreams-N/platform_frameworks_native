@@ -9,3 +9,24 @@ UUID: 5bfc0b2b_61cc708d
 Bytes: 75
 Obviously not in this CL, but we should add a matching note to Parcel.java.
 
+74:0-74:23
+Tue Nov 17 18:38:24 2015 +0000
+Author: Jeff Sharkey <1006166@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 36392eb5_f6c49664
+Bytes: 64
+To match method caps style guide, "ok" or "buildOk" or "fromOk"?
+
+File: libs/binder/Status.cpp
+
+79:0-81:5
+Tue Nov 17 18:38:24 2015 +0000
+Author: Jeff Sharkey <1006166@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1648aa4e_06ae4ea8
+Bytes: 122
+Logic is just a touch funky to read.  Maybe:
+
+  if (status == OK && mEx != EX_NONE) {
+    writeString
+  }
+  return status;
+
