@@ -33,6 +33,14 @@ exceptionCode() or getExceptionCode()?
 
 same feedback for msg, and maybe want to expand to getExceptionMessage()?
 
+103:0-104:61
+Wed Nov 18 00:42:20 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 962d7a79_6bd43d69
+UUID: fb75bfb9_a785d2ee
+Bytes: 48
+good catch. exceptionCode and exceptionMessage()
+
 File: libs/binder/Status.cpp
 
 79:0-81:5
