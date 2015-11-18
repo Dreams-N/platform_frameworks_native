@@ -1,0 +1,25 @@
+Revision: c1eec0e60f3f8ed6d1fcdd7b5364d941bd24b895
+Patch-set: 7
+File: libs/binder/Parcel.cpp
+
+1063
+Wed Nov 18 00:56:28 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1b3453db_6716c228
+Bytes: 61
+nit: { on the same line, and what's up with this indentation?
+
+1695:9-1695:30
+Wed Nov 18 00:56:28 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 76d4867d_a638ec7c
+Bytes: 26
+nit: val->reset(dup(got));
+
+1706
+Wed Nov 18 00:56:28 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5b25eb9e_6db32bc3
+Bytes: 30
+same nits re indentation and {
+
