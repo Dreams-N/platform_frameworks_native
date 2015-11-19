@@ -1,0 +1,14 @@
+Revision: b952f42bef69e5cfb31e1f2d3b5acf351cac0461
+Patch-set: 1
+File: opengl/libs/Android.mk
+
+135:1-135:18
+Thu Nov 19 01:53:41 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 76d4867d_d83b3578
+Bytes: 221
+Looks like bad idea to have two (almost) identical files in the system.img.
+Would the following work?
+LOCAL_SRC_FILES := dummpy.cpp  # build an empty .so
+LOCAL_SHARED_LIBRARIES := libGLESv2  # with libGLESv2 in DT_NEEDED.
+
