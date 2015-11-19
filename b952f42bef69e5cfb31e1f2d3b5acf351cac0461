@@ -12,3 +12,13 @@ Would the following work?
 LOCAL_SRC_FILES := dummpy.cpp  # build an empty .so
 LOCAL_SHARED_LIBRARIES := libGLESv2  # with libGLESv2 in DT_NEEDED.
 
+135:1-135:18
+Thu Nov 19 01:58:21 2015 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 76d4867d_d83b3578
+UUID: 76d4867d_584e2518
+Bytes: 301
+Well, it will work is most cases but with a bit different symbol lookup order, we need to export the symbols from libGLESv3.so in order to ensure the correct lookup order.
+
+I know that we are wasting a little bit of space here - but I do not really see other reliable way of solving dt_soname problem.
+
