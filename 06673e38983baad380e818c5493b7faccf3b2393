@@ -1,0 +1,18 @@
+Revision: 06673e38983baad380e818c5493b7faccf3b2393
+Patch-set: 1
+File: include/binder/Parcel.h
+
+161
+Mon Nov 23 22:22:19 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1bfc537c_e1d1cc22
+Bytes: 32
+nit: this should fit on one line
+
+266
+Mon Nov 23 22:22:19 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5b1b2bb8_00a85af6
+Bytes: 33
+nit: this should fit on one line.
+
