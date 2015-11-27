@@ -1,0 +1,50 @@
+Revision: 42d4c1ccc7f90c3ecbaaf33bb49166c1e9298d5d
+Patch-set: 3
+File: libs/binder/PersistableBundle.cpp
+
+40
+Fri Nov 27 18:38:20 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: fbe4dff8_c762118b
+Bytes: 142
+Maybe make this an enum and keep the same VAL_* naming scheme from Parcel.java?  That makes the constants show up in code search the same way.
+
+196
+Fri Nov 27 18:38:20 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: fbe4dff8_275ad5cd
+Bytes: 125
+This seems useful to consumers of the bundle.  Maybe declare/define PersistableBundle::empty() and PersistableBundle::size()?
+
+219
+Fri Nov 27 18:38:20 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: fbe4dff8_87fe49d1
+Bytes: 67
+Add a comment that notes that the length includes the length header
+
+222
+Fri Nov 27 18:38:20 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3bdbd73a_e08d3c55
+Bytes: 33
+Use std::numeric_limits for this.
+
+294
+Fri Nov 27 18:38:20 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1bea93c4_3f958364
+Bytes: 117
+It looks like all these methods return a binary exists or not value.  Could they return a bool instead of a status_t?
+
+379
+Fri Nov 27 18:38:20 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: fb0f7f76_6c178fd4
+Bytes: 247
+I'd mildly prefer this read more like:
+
+returnIfFailed(parcel.writeString16(key_val_pair.first));
+
+That way you can write one macro and not have to get the type right twice (once in the macro, once in the callsite to the macro.  What do you think?
+
