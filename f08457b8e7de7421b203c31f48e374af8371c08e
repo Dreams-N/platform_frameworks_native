@@ -1,0 +1,18 @@
+Revision: f08457b8e7de7421b203c31f48e374af8371c08e
+Patch-set: 1
+File: include/binder/Parcel.h
+
+128
+Fri Nov 27 20:31:58 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: dbc1db6d_fd254357
+Bytes: 39
+The strings themselves can also be null
+
+133
+Fri Nov 27 20:31:58 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: dbc1db6d_dd2a7f25
+Bytes: 32
+Probably should be unique_ptr<T>
+
