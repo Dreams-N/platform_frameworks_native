@@ -48,3 +48,10 @@ returnIfFailed(parcel.writeString16(key_val_pair.first));
 
 That way you can write one macro and not have to get the type right twice (once in the macro, once in the callsite to the macro.  What do you think?
 
+463:60-463:73
+Fri Nov 27 20:24:46 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5be08be0_e7b8f003
+Bytes: 85
+seems like BAD_INDEX might be a good value to use here given the semantics of emplace
+
