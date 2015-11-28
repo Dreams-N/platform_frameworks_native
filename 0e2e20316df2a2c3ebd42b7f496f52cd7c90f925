@@ -17,6 +17,16 @@ I think it might be good to have a few sentences about what errorCode means, rel
 
 Is that correct?
 
+51
+Sat Nov 28 14:49:03 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 1bfc537c_c6dae63f
+UUID: 9bbbe3f1_d2e14452
+Bytes: 115
+That is correct.  I guess you'd like that to be written up here?
+
+Maybe mSubError would be a more descriptive name?
+
 File: libs/binder/Status.cpp
 
 27:33-27:34
@@ -26,4 +36,12 @@ UUID: bb2a67bd_1dd283dc
 Bytes: 97
 Is this meant to be OK? Or just a 'no error code set' value?
 If the former, might as well use OK.
+
+27:33-27:34
+Sat Nov 28 14:49:03 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: bb2a67bd_1dd283dc
+UUID: 9b2123e5_63f3125d
+Bytes: 62
+It's sort of "no value set".  You're right, I could use NO_ERR
 
