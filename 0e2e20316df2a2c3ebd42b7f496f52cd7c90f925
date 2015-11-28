@@ -27,6 +27,14 @@ That is correct.  I guess you'd like that to be written up here?
 
 Maybe mSubError would be a more descriptive name?
 
+51
+Sat Nov 28 15:04:06 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 9bbbe3f1_d2e14452
+UUID: dbe63b28_32d5300f
+Bytes: 224
+I'm just going to change the getter to specifically reference status_t to make the usage clearer.  You're right that if I have to explicitly comment on what the confusing API should mean, then I should just clean up the API.
+
 File: libs/binder/Status.cpp
 
 27:33-27:34
