@@ -21,3 +21,11 @@ UUID: db0f1bb0_cdc63d96
 Bytes: 60
 Your understanding is correct. How about transactionError()?
 
+51
+Mon Nov 30 20:56:36 2015 +0000
+Author: Eino-Ville Talvala <1010050@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: db0f1bb0_cdc63d96
+UUID: 9bf043de_b3492266
+Bytes: 4
+SGTM
+
