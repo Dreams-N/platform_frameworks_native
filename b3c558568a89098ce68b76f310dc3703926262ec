@@ -13,3 +13,11 @@ applicationErrorCode() seems fine, but reading the class fresh, I'm not sure I'd
 
 We can get statusT() == OK and also !isOk() at the same time, which seems confusing. Is there a name for statusT() that would make it clear that it's about transaction failures, not general status? (assuming I'm understanding it correctly myself?)
 
+51
+Mon Nov 30 20:48:08 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: bbe987fc_71e85812
+UUID: db0f1bb0_cdc63d96
+Bytes: 60
+Your understanding is correct. How about transactionError()?
+
