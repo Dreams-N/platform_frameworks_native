@@ -1,0 +1,15 @@
+Revision: b3c558568a89098ce68b76f310dc3703926262ec
+Patch-set: 3
+File: include/binder/Status.h
+
+51
+Mon Nov 30 19:11:42 2015 +0000
+Author: Eino-Ville Talvala <1010050@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: bbe987fc_71e85812
+Bytes: 453
+(cont from CL1)
+Not sure this is still totally clear.
+applicationErrorCode() seems fine, but reading the class fresh, I'm not sure I'd know what the difference between 'isOk' and 'statusT == OK' would be.
+
+We can get statusT() == OK and also !isOk() at the same time, which seems confusing. Is there a name for statusT() that would make it clear that it's about transaction failures, not general status? (assuming I'm understanding it correctly myself?)
+
