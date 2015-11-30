@@ -9,12 +9,28 @@ UUID: fbe4dff8_c762118b
 Bytes: 142
 Maybe make this an enum and keep the same VAL_* naming scheme from Parcel.java?  That makes the constants show up in code search the same way.
 
+40
+Mon Nov 30 23:03:08 2015 +0000
+Author: Samuel Tan <1077754@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: fbe4dff8_c762118b
+UUID: 9b1763d8_d8aaadae
+Bytes: 106
+Done. I have also put put these const variables in an anonymous enum, as per instructions the style guide.
+
 196
 Fri Nov 27 18:38:20 2015 +0000
 Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: fbe4dff8_275ad5cd
 Bytes: 125
 This seems useful to consumers of the bundle.  Maybe declare/define PersistableBundle::empty() and PersistableBundle::size()?
+
+196
+Mon Nov 30 23:03:08 2015 +0000
+Author: Samuel Tan <1077754@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: fbe4dff8_275ad5cd
+UUID: 7bf38fea_9513a4a6
+Bytes: 4
+Done
 
 219
 Fri Nov 27 18:38:20 2015 +0000
@@ -23,6 +39,14 @@ UUID: fbe4dff8_87fe49d1
 Bytes: 67
 Add a comment that notes that the length includes the length header
 
+219
+Mon Nov 30 23:03:08 2015 +0000
+Author: Samuel Tan <1077754@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: fbe4dff8_87fe49d1
+UUID: 3bd59733_73dbb845
+Bytes: 4
+Done
+
 222
 Fri Nov 27 18:38:20 2015 +0000
 Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -30,12 +54,28 @@ UUID: 3bdbd73a_e08d3c55
 Bytes: 33
 Use std::numeric_limits for this.
 
+222
+Mon Nov 30 23:03:08 2015 +0000
+Author: Samuel Tan <1077754@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3bdbd73a_e08d3c55
+UUID: bb1267d6_cfa2b1be
+Bytes: 4
+Done
+
 294
 Fri Nov 27 18:38:20 2015 +0000
 Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 1bea93c4_3f958364
 Bytes: 117
 It looks like all these methods return a binary exists or not value.  Could they return a bool instead of a status_t?
+
+294
+Mon Nov 30 23:03:08 2015 +0000
+Author: Samuel Tan <1077754@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 1bea93c4_3f958364
+UUID: 9bf043de_b645902a
+Bytes: 4
+Done
 
 379
 Fri Nov 27 18:38:20 2015 +0000
@@ -48,10 +88,26 @@ returnIfFailed(parcel.writeString16(key_val_pair.first));
 
 That way you can write one macro and not have to get the type right twice (once in the macro, once in the callsite to the macro.  What do you think?
 
+379
+Mon Nov 30 23:03:08 2015 +0000
+Author: Samuel Tan <1077754@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: fb0f7f76_6c178fd4
+UUID: bb1267d6_2fbcaddc
+Bytes: 93
+Done. I like this suggestion a lot since it cuts down the number of macros used in this file.
+
 463:60-463:73
 Fri Nov 27 20:24:46 2015 +0000
 Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 5be08be0_e7b8f003
 Bytes: 85
 seems like BAD_INDEX might be a good value to use here given the semantics of emplace
+
+463:60-463:73
+Mon Nov 30 23:03:08 2015 +0000
+Author: Samuel Tan <1077754@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5be08be0_e7b8f003
+UUID: 1be45325_32bbe890
+Bytes: 4
+Done
 
