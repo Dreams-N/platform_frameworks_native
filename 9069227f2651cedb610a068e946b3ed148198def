@@ -9,12 +9,28 @@ UUID: 9b1763d8_cc274fa3
 Bytes: 32
 Shouldn't this be unique_ptr<T>?
 
+144:80-144:81
+Tue Dec 01 21:09:34 2015 +0000
+Author: Casey Dahlin <1080302@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 9b1763d8_cc274fa3
+UUID: dbae3bf9_121aec57
+Bytes: 4
+Done
+
 149
 Tue Dec 01 19:20:20 2015 +0000
 Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: db0f1bb0_e47596d8
 Bytes: 274
 All the nullable versions should have a consistent naming scheme.  I don't know that I care particularly whether they call out the nullable property explicitly (eg. writeNullableParcelable) or just overload the const ref version of the function, but we should be consistent.
+
+149
+Tue Dec 01 21:09:34 2015 +0000
+Author: Casey Dahlin <1080302@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: db0f1bb0_e47596d8
+UUID: 1b17f3fd_b4f3200d
+Bytes: 4
+Done
 
 587
 Tue Dec 01 19:20:20 2015 +0000
@@ -25,10 +41,26 @@ nit: Could we give this a separate name (e.g. readNullableTypedVector?  That wou
 
 There are a whole bunch below that should also have separate names.
 
+587
+Tue Dec 01 21:09:34 2015 +0000
+Author: Casey Dahlin <1080302@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: bbe987fc_45afcae8
+UUID: dbae3bf9_9277fc6f
+Bytes: 4
+Done
+
 646
 Tue Dec 01 19:20:20 2015 +0000
 Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 9bf043de_ff876bf9
 Bytes: 44
 indentation, here, and a couple places below
+
+646
+Tue Dec 01 21:09:34 2015 +0000
+Author: Casey Dahlin <1080302@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 9bf043de_ff876bf9
+UUID: 5b1deb19_f622c094
+Bytes: 4
+Done
 
