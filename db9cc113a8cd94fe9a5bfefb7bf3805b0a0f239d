@@ -1,0 +1,27 @@
+Revision: db9cc113a8cd94fe9a5bfefb7bf3805b0a0f239d
+Patch-set: 4
+File: include/binder/Parcel.h
+
+648:15-648:21
+Tue Dec 01 21:24:31 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5b1deb19_96770c70
+Bytes: 90
+nit: we tend not to explicitly write this-> elsewhere.  Can we omit this-> here and below?
+
+File: libs/binder/Parcel.cpp
+
+720
+Tue Dec 01 21:24:31 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: dbae3bf9_f2bac82d
+Bytes: 89
+nit: I think we omit the space between unary operator and operand elsewhere in this file.
+
+740
+Tue Dec 01 21:24:31 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: fb113f0a_f6459e29
+Bytes: 9
+heh, fine
+
