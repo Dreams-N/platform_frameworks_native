@@ -1,0 +1,11 @@
+Revision: 0c55d487058f219b5089debc5b676d84621ecb1c
+Patch-set: 1
+File: services/surfaceflinger/DisplayDevice.cpp
+
+91
+Tue Dec 01 14:59:07 2015 +0000
+Author: Dan Stoza <1043625@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9bf043de_24372abc
+Bytes: 224
+I would actually prefer calling this 'surface' and renaming the EGL variable below to 'EGLSurface eglSurface'. It's a little confusing for this to be called windowSurface, since it's not the result of eglCreateWindowSurface.
+
