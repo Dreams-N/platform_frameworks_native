@@ -19,12 +19,28 @@ Maybe declare a companion macro:
 
 #define RETURN_IF_FAILED_INIT status_t returnIfFailedStatus = OK;
 
+60
+Wed Dec 02 21:48:38 2015 +0000
+Author: Samuel Tan <1077754@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: db0f1bb0_44ea22ca
+UUID: 1bac5306_a0c62294
+Bytes: 47
+Thanks for catching this. I have fixed this up.
+
 108
 Tue Dec 01 18:30:57 2015 +0000
 Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 9b0923b2_d1949669
 Bytes: 58
 Probably should return the status_t of readFromParcelInner
+
+108
+Wed Dec 02 21:48:38 2015 +0000
+Author: Samuel Tan <1077754@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 9b0923b2_d1949669
+UUID: dbae3bf9_a6af5ebc
+Bytes: 4
+Done
 
 141
 Tue Dec 01 18:30:57 2015 +0000
@@ -59,6 +75,14 @@ void putValue(const String16& key,
 
 }  // namespace
 
+141
+Wed Dec 02 21:48:38 2015 +0000
+Author: Samuel Tan <1077754@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: fbde9f59_7a4ee5bb
+UUID: 3b18372c_24319ce8
+Bytes: 232
+operator[] will also do what we want here, albeit a little more inefficiently. I prefer this because it is clean and readable. We can replace this with the template function you suggested if we choose to optimize this in the future.
+
 191
 Tue Dec 01 18:30:57 2015 +0000
 Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -66,10 +90,26 @@ UUID: fbde9f59_ba91ed38
 Bytes: 53
 nit: this should probably be a templated function too
 
+191
+Wed Dec 02 21:48:38 2015 +0000
+Author: Samuel Tan <1077754@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: fbde9f59_ba91ed38
+UUID: 5ba24b12_75f1978d
+Bytes: 4
+Done
+
 346:9-346:32
 Tue Dec 01 18:30:57 2015 +0000
 Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 1be45325_004f7613
 Bytes: 31
 Weird.  Why?  We have |length|?
+
+346:9-346:32
+Wed Dec 02 21:48:38 2015 +0000
+Author: Samuel Tan <1077754@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 1be45325_004f7613
+UUID: 1bac5306_e0d02a4c
+Bytes: 189
+It turns out that checking parcel->dataAvail() is not appropriate, since the parcel might have other stuff serialized after the PersistableBundle. I have switched back to checking |length|.
 
