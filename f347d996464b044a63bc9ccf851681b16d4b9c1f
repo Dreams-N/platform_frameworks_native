@@ -1,0 +1,39 @@
+Revision: f347d996464b044a63bc9ccf851681b16d4b9c1f
+Patch-set: 6
+File: include/binder/PersistableBundle.h
+
+91
+Wed Dec 02 21:56:57 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5b1deb19_8aa87bf9
+Bytes: 40
+Don't do this.  Just return ! lhs == rhs
+
+File: libs/binder/PersistableBundle.cpp
+
+123
+Wed Dec 02 21:56:57 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: fb113f0a_c8eb9bd1
+Bytes: 65
+nit: you could express this with less duplication as size() == 0u
+
+304
+Wed Dec 02 21:56:57 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1b17f3fd_63642c64
+Bytes: 11
+Still true?
+
+346
+Wed Dec 02 21:56:57 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1bac5306_009a9692
+Bytes: 165
+auto it = mStringVectorMap.find(key);
+if (it != mStringVectorMap.end()) {
+  return BAD_INDEX;
+}
+
+RETURN_IF_FAILED(parcel->readString16Vector(&mStringVectorMap[key]);
+
