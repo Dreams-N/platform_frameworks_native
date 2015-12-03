@@ -1,0 +1,37 @@
+Revision: b0528b649a18d8fcb1742d88c5ebeaf1bebf5a74
+Patch-set: 7
+File: include/binder/PersistableBundle.h
+
+38
+Thu Dec 03 17:11:17 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c0148835_19c3eb5e
+Bytes: 56
+Maybe explicitly declare the copy constructor = default?
+
+45
+Thu Dec 03 17:11:17 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 201f2457_7420a8df
+Bytes: 15
+maybe hasKey()?
+
+File: libs/binder/PersistableBundle.cpp
+
+82
+Thu Dec 03 17:11:17 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a00b1417_581b9dbe
+Bytes: 102
+Phew, this is special.  We ought to test the empty bundle case with trailing data in integration tests
+
+155
+Thu Dec 03 17:11:17 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 60259c9f_d6066463
+Bytes: 187
+Two notes:
+
+1) Kind of scary to return with no error code here
+2) What should be the behavior?  Will the Java overwrite the existing value?  I suspect this is the more intuitive behavior.
+
