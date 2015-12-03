@@ -1,0 +1,15 @@
+Revision: 4a214913704b572d8da24482dd9f73f6afc35967
+Patch-set: 8
+File: include/binder/PersistableBundle.h
+
+46
+Thu Dec 03 21:14:43 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 40933818_a065b4f3
+Bytes: 161
+If you returned a size_t here, the API would be consistent with std::map::erase():
+
+http://www.cplusplus.com/reference/map/map/erase/
+
+You might call it erase()?
+
