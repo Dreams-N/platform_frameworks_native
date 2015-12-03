@@ -17,12 +17,28 @@ UUID: 00486077_638b620a
 Bytes: 8
 Will do.
 
+38
+Thu Dec 03 21:00:46 2015 +0000
+Author: Samuel Tan <1077754@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 00486077_638b620a
+UUID: e06d0cee_7a98b999
+Bytes: 4
+Done
+
 45
 Thu Dec 03 17:11:17 2015 +0000
 Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 201f2457_7420a8df
 Bytes: 15
 maybe hasKey()?
+
+45
+Thu Dec 03 21:00:46 2015 +0000
+Author: Samuel Tan <1077754@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 201f2457_7420a8df
+UUID: 00486077_43ad06c7
+Bytes: 29
+Changed this method entirely.
 
 File: libs/binder/PersistableBundle.cpp
 
@@ -58,4 +74,12 @@ Parent: 60259c9f_d6066463
 UUID: 8091b00f_5fefebe1
 Bytes: 243
 Thanks for pointing this out. I guess the correct thing to do here would be to delete the existing key (if it exists in some other map), then add this new key-value pair. I can change hasKey() to deleteEntryIfExists() to perform this deletion.
+
+155
+Thu Dec 03 21:00:46 2015 +0000
+Author: Samuel Tan <1077754@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8091b00f_5fefebe1
+UUID: e0842cce_421dd2ee
+Bytes: 4
+Done
 
