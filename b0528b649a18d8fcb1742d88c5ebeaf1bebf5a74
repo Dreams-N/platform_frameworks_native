@@ -9,6 +9,14 @@ UUID: c0148835_19c3eb5e
 Bytes: 56
 Maybe explicitly declare the copy constructor = default?
 
+38
+Thu Dec 03 18:56:55 2015 +0000
+Author: Samuel Tan <1077754@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c0148835_19c3eb5e
+UUID: 00486077_638b620a
+Bytes: 8
+Will do.
+
 45
 Thu Dec 03 17:11:17 2015 +0000
 Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -25,6 +33,14 @@ UUID: a00b1417_581b9dbe
 Bytes: 102
 Phew, this is special.  We ought to test the empty bundle case with trailing data in integration tests
 
+82
+Thu Dec 03 18:56:55 2015 +0000
+Author: Samuel Tan <1077754@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a00b1417_581b9dbe
+UUID: 00486077_832adeb8
+Bytes: 77
+I will test for the empty bundles and trailing data in the integration tests.
+
 155
 Thu Dec 03 17:11:17 2015 +0000
 Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -34,4 +50,12 @@ Two notes:
 
 1) Kind of scary to return with no error code here
 2) What should be the behavior?  Will the Java overwrite the existing value?  I suspect this is the more intuitive behavior.
+
+155
+Thu Dec 03 18:56:55 2015 +0000
+Author: Samuel Tan <1077754@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 60259c9f_d6066463
+UUID: 8091b00f_5fefebe1
+Bytes: 243
+Thanks for pointing this out. I guess the correct thing to do here would be to delete the existing key (if it exists in some other map), then add this new key-value pair. I can change hasKey() to deleteEntryIfExists() to perform this deletion.
 
