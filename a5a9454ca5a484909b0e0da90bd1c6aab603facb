@@ -1,0 +1,11 @@
+Revision: a5a9454ca5a484909b0e0da90bd1c6aab603facb
+Patch-set: 1
+File: include/binder/IBinder.h
+
+26:0-26:62
+Fri Dec 04 22:29:14 2015 +0000
+Author: Michael K. Sanders <1087027@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 40933818_a6c94781
+Bytes: 63
+Why can't you include linux/binder.h instead of duplicating it?
+
