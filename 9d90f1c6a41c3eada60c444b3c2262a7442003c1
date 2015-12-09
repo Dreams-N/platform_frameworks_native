@@ -1,0 +1,11 @@
+Revision: 9d90f1c6a41c3eada60c444b3c2262a7442003c1
+Patch-set: 2
+File: libs/binder/Parcel.cpp
+
+1937
+Wed Dec 09 00:59:56 2015 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 40efb832_8304e25a
+Bytes: 4
+tabs
+
