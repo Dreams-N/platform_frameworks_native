@@ -9,3 +9,11 @@ UUID: 05487277_fde92718
 Bytes: 99
 No reporting? Wouldn't it be useful to get at least errno for why there was no emmc info recovered?
 
+125
+Thu Dec 10 22:00:36 2015 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 05487277_fde92718
+UUID: 855c6237_41f6164b
+Bytes: 230
+bugreports are already too full with noise, not adding noise upon noise! If this is missing, we know it is because the field does not exist, or has been blocked by permissions; silence in that case is golden for this kind of data.
+
