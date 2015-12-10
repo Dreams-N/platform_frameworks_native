@@ -1,0 +1,11 @@
+Revision: ce7acf4ffe232da78e3a9462dda4af18bd41d4d9
+Patch-set: 1
+File: cmds/dumpstate/dumpstate.c
+
+125
+Thu Dec 10 21:52:16 2015 +0000
+Author: Todd Kjos <1069543@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 05487277_fde92718
+Bytes: 99
+No reporting? Wouldn't it be useful to get at least errno for why there was no emmc info recovered?
+
