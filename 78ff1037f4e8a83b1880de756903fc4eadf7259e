@@ -1,0 +1,69 @@
+Revision: 78ff1037f4e8a83b1880de756903fc4eadf7259e
+Patch-set: 6
+File: libs/binder/Parcel.cpp
+
+748
+Mon Dec 14 17:39:00 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a57de6ee_288f2b15
+Bytes: 119
+As before, please don't leave space between unary operators and operands.  The rest of this file doesn't seem to do it.
+
+755
+Mon Dec 14 17:39:00 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0593126b_8bff2d1a
+Bytes: 49
+Pretty sure you don't need to edit this function.
+
+1332
+Mon Dec 14 17:39:00 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c5865a2d_293d6d0d
+Bytes: 107
+Are there functional changes here?  If not, please hold off on editting this function for a refactoring CL.
+
+1437
+Mon Dec 14 17:39:00 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 45db4a39_511c04b5
+Bytes: 39
+nit: this doesn't seem to be necessary.
+
+1483
+Mon Dec 14 17:39:00 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 05e5d2f2_e1f38203
+Bytes: 870
+Yeah, reading over this again, it's always more efficient to simply read the int32_t directly in the nullable functions and then reset the data pointer if we need to.  Both nullable vectors, regardless of the null-ness of the vector, we will:
+
+readAligned will:
+  - copy the 4 bytes
+  - increment data position
+
+peekInt32 will:
+  - reset the data position
+
+repeat readAligned (either to read the vector, or consume the null marker).
+
+I think every place we write:
+
+  int32_t size;
+  status = peekInt32(&size);
+  if (status != OK || size < 0) { 
+    readInt32();  // unchecked read kind of smells anyway
+    return status;
+  }
+
+We just as well may have written:
+
+  const int32_t start = dataPosition();
+  int32_t size;
+  status = readInt32(&size);
+  if (status != OK || size < 0) { 
+    return status;
+  }
+  setDataPosition(start);
+
+peekInt32 seems pretty easy to misuse.
+
