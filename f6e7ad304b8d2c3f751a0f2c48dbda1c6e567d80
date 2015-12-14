@@ -1,0 +1,32 @@
+Revision: f6e7ad304b8d2c3f751a0f2c48dbda1c6e567d80
+Patch-set: 12
+File: libs/binder/PersistableBundle.cpp
+
+347:34-347:50
+Mon Dec 14 16:36:46 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 05e5d2f2_01aeaeed
+Bytes: 104
+nit: I think this case is just for PersistableBundle right?  the end of data bit is confusing to readers
+
+359
+Mon Dec 14 16:36:46 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 05e5d2f2_21248a5c
+Bytes: 256
+You needn't comment about what num_entries means, it's actually pretty obvious from usage.  However, you might move these comments about the equivalence between BaseBundle.unparcel() and Parcel.readArrayMapInternal() to the top of this method or something.
+
+369
+Mon Dec 14 16:36:46 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e5cc3e7f_eb04415d
+Bytes: 40
+nit: prefer a for loop in this situation
+
+423:45-423:63
+Mon Dec 14 16:36:46 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e598be91_02cf6a35
+Bytes: 62
+Yeah, I'm pretty sure you could just call readParcelable here.
+
