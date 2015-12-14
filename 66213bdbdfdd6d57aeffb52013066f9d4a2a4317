@@ -1,0 +1,11 @@
+Revision: 66213bdbdfdd6d57aeffb52013066f9d4a2a4317
+Patch-set: 1
+File: include/binder/Parcel.h
+
+136
+Mon Dec 14 16:30:47 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 85d9c240_a86ebf46
+Bytes: 107
+Surely PersistableBundle subclasses Parcelable.  Why are these additional type specific versions necessary?
+
