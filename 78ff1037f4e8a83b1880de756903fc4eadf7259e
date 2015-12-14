@@ -9,12 +9,28 @@ UUID: a57de6ee_288f2b15
 Bytes: 119
 As before, please don't leave space between unary operators and operands.  The rest of this file doesn't seem to do it.
 
+748
+Mon Dec 14 19:30:17 2015 +0000
+Author: Casey Dahlin <1080302@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a57de6ee_288f2b15
+UUID: 25ead6c4_8514881d
+Bytes: 4
+Done
+
 755
 Mon Dec 14 17:39:00 2015 +0000
 Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 0593126b_8bff2d1a
 Bytes: 49
 Pretty sure you don't need to edit this function.
+
+755
+Mon Dec 14 19:30:17 2015 +0000
+Author: Casey Dahlin <1080302@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 0593126b_8bff2d1a
+UUID: 45a7cad1_5d82fb71
+Bytes: 4
+Done
 
 1332
 Mon Dec 14 17:39:00 2015 +0000
@@ -23,12 +39,28 @@ UUID: c5865a2d_293d6d0d
 Bytes: 107
 Are there functional changes here?  If not, please hold off on editting this function for a refactoring CL.
 
+1332
+Mon Dec 14 19:30:17 2015 +0000
+Author: Casey Dahlin <1080302@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c5865a2d_293d6d0d
+UUID: 45a7cad1_fd70a778
+Bytes: 51
+Done. Should I keep the diff and apply these later?
+
 1437
 Mon Dec 14 17:39:00 2015 +0000
 Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 45db4a39_511c04b5
 Bytes: 39
 nit: this doesn't seem to be necessary.
+
+1437
+Mon Dec 14 19:30:17 2015 +0000
+Author: Casey Dahlin <1080302@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 45db4a39_511c04b5
+UUID: 25157684_6d9cad8c
+Bytes: 4
+Done
 
 1483
 Mon Dec 14 17:39:00 2015 +0000
@@ -66,4 +98,12 @@ We just as well may have written:
   setDataPosition(start);
 
 peekInt32 seems pretty easy to misuse.
+
+1483
+Mon Dec 14 19:30:17 2015 +0000
+Author: Casey Dahlin <1080302@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 05e5d2f2_e1f38203
+UUID: a57de6ee_c8f12f8e
+Bytes: 4
+Done
 
