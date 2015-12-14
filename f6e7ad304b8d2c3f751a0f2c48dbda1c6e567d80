@@ -2,6 +2,13 @@ Revision: f6e7ad304b8d2c3f751a0f2c48dbda1c6e567d80
 Patch-set: 12
 File: libs/binder/PersistableBundle.cpp
 
+130:15-130:24
+Mon Dec 14 20:55:45 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0593126b_eea27f19
+Bytes: 27
+This should UNEXPECTED_NULL
+
 347:34-347:50
 Mon Dec 14 16:36:46 2015 +0000
 Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -57,4 +64,14 @@ Parent: e598be91_02cf6a35
 UUID: 25157684_2d6755d3
 Bytes: 186
 This is what I previously did, and that caused integration tests to fail. The extra int (|have_parcelable|) written to the Parcel is not handled by Java's Parcel.readPersistableBundle().
+
+423:45-423:63
+Mon Dec 14 20:55:45 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 25157684_2d6755d3
+UUID: 25fc967c_2fdaa59a
+Bytes: 107
+speaking offline: this should read...
+
+RETURN_IF_FAILED(mPersistableBundleMap[key].readFromParcel(parcel));
 
