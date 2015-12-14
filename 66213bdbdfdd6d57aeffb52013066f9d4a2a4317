@@ -9,3 +9,15 @@ UUID: 85d9c240_a86ebf46
 Bytes: 107
 Surely PersistableBundle subclasses Parcelable.  Why are these additional type specific versions necessary?
 
+136
+Mon Dec 14 17:57:35 2015 +0000
+Author: Samuel Tan <1077754@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 85d9c240_a86ebf46
+UUID: 05e5d2f2_01b4ee0a
+Bytes: 479
+The reason for this is that we need to stay in sync with the [read|write]PersistableBundle methods in Parcel.java.
+
+The [read|write]Parcelable methods attach an extra type to the Parcelable. In C++, an int (|have_parcelable|) is attached to indicate whether the Parcelable is null. In Java, the name of a Parcelable Creator is attached. (Note: reading and writing Parcelables will probably not work across C++ and Java because of this difference.)
+
+I call bad design on this one.
+
