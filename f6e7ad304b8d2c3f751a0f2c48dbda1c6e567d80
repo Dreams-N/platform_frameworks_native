@@ -9,6 +9,14 @@ UUID: 0593126b_eea27f19
 Bytes: 27
 This should UNEXPECTED_NULL
 
+130:15-130:24
+Mon Dec 14 21:26:46 2015 +0000
+Author: Samuel Tan <1077754@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 0593126b_eea27f19
+UUID: 85a542c9_a2b440a8
+Bytes: 4
+Done
+
 347:34-347:50
 Mon Dec 14 16:36:46 2015 +0000
 Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -50,6 +58,14 @@ UUID: e5cc3e7f_eb04415d
 Bytes: 40
 nit: prefer a for loop in this situation
 
+369
+Mon Dec 14 21:26:46 2015 +0000
+Author: Samuel Tan <1077754@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e5cc3e7f_eb04415d
+UUID: 651beeb8_494d6550
+Bytes: 4
+Done
+
 423:45-423:63
 Mon Dec 14 16:36:46 2015 +0000
 Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -74,4 +90,12 @@ Bytes: 107
 speaking offline: this should read...
 
 RETURN_IF_FAILED(mPersistableBundleMap[key].readFromParcel(parcel));
+
+423:45-423:63
+Mon Dec 14 21:26:46 2015 +0000
+Author: Samuel Tan <1077754@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 25fc967c_2fdaa59a
+UUID: 85a542c9_62975807
+Bytes: 4
+Done
 
