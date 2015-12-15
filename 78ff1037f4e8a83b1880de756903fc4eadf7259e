@@ -47,6 +47,14 @@ UUID: 45a7cad1_fd70a778
 Bytes: 51
 Done. Should I keep the diff and apply these later?
 
+1332
+Tue Dec 15 01:05:03 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 45a7cad1_fd70a778
+UUID: 25ead6c4_704738fc
+Bytes: 112
+I'd rather not.  I notice that they are consistent with, for instance, the statements in the very next function.
+
 1437
 Mon Dec 14 17:39:00 2015 +0000
 Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
