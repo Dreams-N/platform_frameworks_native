@@ -1,0 +1,11 @@
+Revision: 1d4323db350e600d411e0b71712c588bf71ecfc0
+Patch-set: 3
+File: libs/binder/Parcel.cpp
+
+129:20-129:30
+Wed Jan 27 18:01:44 2016 +0000
+Author: Adrian Roos <1061009@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b4a43ebb_3a24beef
+Bytes: 4
+!ret
+
