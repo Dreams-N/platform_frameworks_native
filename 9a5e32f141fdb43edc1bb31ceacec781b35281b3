@@ -1,0 +1,11 @@
+Revision: 9a5e32f141fdb43edc1bb31ceacec781b35281b3
+Patch-set: 3
+File: libs/binder/Parcel.cpp
+
+765:4-765:51
+Mon Feb 01 19:00:03 2016 +0000
+Author: Casey Dahlin <1080302@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d468d2a0_1b2db681
+Bytes: 100
+Where does this come from? We know it does the same thing as String16(String8(str))? Will it always?
+
