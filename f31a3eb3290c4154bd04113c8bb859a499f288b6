@@ -1,0 +1,18 @@
+Revision: f31a3eb3290c4154bd04113c8bb859a499f288b6
+Patch-set: 1
+File: libs/binder/IPCThreadState.cpp
+
+291:7-292:20
+Mon Feb 01 21:27:44 2016 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b486fe94_278419c8
+Bytes: 70
+I could argue we should abort, but I wanted to keep the old semantics.
+
+300:12-301:48
+Mon Feb 01 21:27:44 2016 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 749006cb_485690df
+Bytes: 6
+Ditto.
+
