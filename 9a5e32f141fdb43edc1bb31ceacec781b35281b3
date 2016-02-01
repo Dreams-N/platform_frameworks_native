@@ -9,3 +9,11 @@ UUID: d468d2a0_1b2db681
 Bytes: 100
 Where does this come from? We know it does the same thing as String16(String8(str))? Will it always?
 
+765:4-765:51
+Mon Feb 01 21:21:18 2016 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d468d2a0_1b2db681
+UUID: d468d2a0_b636a1b5
+Bytes: 93
+For posterity, this family of functions is how String{16,8} implements their unicode support.
+
