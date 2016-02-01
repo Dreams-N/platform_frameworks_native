@@ -2,6 +2,13 @@ Revision: f31a3eb3290c4154bd04113c8bb859a499f288b6
 Patch-set: 1
 File: libs/binder/IPCThreadState.cpp
 
+287:8-287:34
+Mon Feb 01 21:30:02 2016 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5422228b_1fba1b28
+Bytes: 206
+Note: we could detect the "getspecific always returns null" case by using another boolean: it's only expected (during normal execution) to hit this when gHaveTLS was wrong when the method started executing.
+
 291:7-292:20
 Mon Feb 01 21:27:44 2016 +0000
 Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
