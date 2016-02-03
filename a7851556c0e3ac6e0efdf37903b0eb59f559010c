@@ -11,6 +11,13 @@ atomic_load_explicit(...memory_order_acquire)
 
 Good citizenship award. Would help reduce the window for multiple threads to be running the following code. a mutex is considered too costly and thus precludes being able to run any of this in a signal handler (nbd ... and ick).
 
+110:0-110:34
+Wed Feb 03 20:19:33 2016 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b121b0e4_57017698
+Bytes: 46
+This is bad practice, zero will prevent match.
+
 130:4-130:48
 Tue Feb 02 23:11:25 2016 +0000
 Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
