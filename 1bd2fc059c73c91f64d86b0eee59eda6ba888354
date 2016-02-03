@@ -1,0 +1,11 @@
+Revision: 1bd2fc059c73c91f64d86b0eee59eda6ba888354
+Patch-set: 1
+File: services/inputflinger/tests/InputDispatcher_test.cpp
+
+173:49-173:52
+Wed Feb 03 01:03:07 2016 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 711bb8b8_0f9b6d9a
+Bytes: 40
+Huh? Am I stupid? How's that equivalent?
+
