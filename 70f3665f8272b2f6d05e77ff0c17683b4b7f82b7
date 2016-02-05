@@ -25,3 +25,11 @@ BSS is close to r/o text segments and furthest away from stack; and thus is leas
 
 Counterpoint: this is 8 bytes, not worth taking a stand. The Android coding standard does _not_ talk about this issue. https://docs.google.com/document/d/1QivJI_03TcfRAyMGWkTNHEdiQh8h_F-rYGup9soSeLA/edit#heading=h.to9xa261xn1w
 
+102:17-102:30
+Fri Feb 05 17:42:00 2016 +0000
+Author: Andres Morales <1038928@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 91682c72_e79ca282
+UUID: 11543cb0_c397165e
+Bytes: 81
+Just a nit. Didn't know that it would carry a cost like that. Great to know. LGTM
+
