@@ -1,0 +1,11 @@
+Revision: 1d44b0b74b3868a96802c2b047f6682f6e92bc83
+Patch-set: 4
+File: cmds/dumpstate/dumpstate.cpp
+
+238:25-238:31
+Fri Feb 05 22:19:10 2016 +0000
+Author: Mohamad Ayyash <1037321@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f1e0883e_653560ab
+Bytes: 7
+#define
+
