@@ -1,0 +1,11 @@
+Revision: daff0397610d4962f23ebc4a8e05dae9588c2c1f
+Patch-set: 3
+File: cmds/dumpstate/dumpstate.cpp
+
+143:2-143:3
+Fri Feb 05 20:05:04 2016 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 11543cb0_c6cf244f
+Bytes: 5
+MErde
+
