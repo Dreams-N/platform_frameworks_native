@@ -1,0 +1,18 @@
+Revision: 7b2ca69d3cfa58bcccbc49638d764fe2d6e5084b
+Patch-set: 2
+File: cmds/dumpstate/dumpstate.cpp
+
+117:13-117:22
+Fri Feb 05 18:56:39 2016 +0000
+Author: Andres Morales <1038928@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 11543cb0_63f98230
+Bytes: 8
+int64_t?
+
+154:8-154:17
+Fri Feb 05 18:56:39 2016 +0000
+Author: Andres Morales <1038928@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 515a34de_2554eea2
+Bytes: 89
+it could be clearer what fields[N] is. Consider making constants for field array indices.
+
