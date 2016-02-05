@@ -9,3 +9,19 @@ UUID: 3115c084_ff6798f4
 Bytes: 50
 initialize to 0 even though it's static for safety
 
+102:17-102:30
+Fri Feb 05 17:31:46 2016 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3115c084_ff6798f4
+UUID: 91682c72_e79ca282
+Bytes: 1276
+How strongly do you feel about this?
+
+[TL;DR]
+
+This carries a cost as we move this from BSS to DATA. Linux coding standard (I know this is application space, and CPP, not pure C) strictly prohibits zero/nul initializations and is reported as a coding error. We are guaranteed that bss is zero'd (all-bits-zero) on all platforms except fringe embedded environments (crt0's duty) which we are not.
+
+BSS is close to r/o text segments and furthest away from stack; and thus is least likely to be interfered with when programs run amok. Application boot time is reduced when bss is traded to data. data initializers take space in the executable image increasing shipping weight, and depending on platform (crt0 & linker), share with the r/o text segment and r/o data segment continuing to reside in memory (so double the amount of memory is taken). The C runtime would need to unmap the segments associated with data initializers once they are copied to move the page into the free pool, I checked and I do not see this happening (?) (maybe the linker?)
+
+Counterpoint: this is 8 bytes, not worth taking a stand. The Android coding standard does _not_ talk about this issue. https://docs.google.com/document/d/1QivJI_03TcfRAyMGWkTNHEdiQh8h_F-rYGup9soSeLA/edit#heading=h.to9xa261xn1w
+
