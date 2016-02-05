@@ -1,0 +1,11 @@
+Revision: 70f3665f8272b2f6d05e77ff0c17683b4b7f82b7
+Patch-set: 2
+File: libs/binder/Parcel.cpp
+
+102:17-102:30
+Fri Feb 05 16:21:17 2016 +0000
+Author: Andres Morales <1038928@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3115c084_ff6798f4
+Bytes: 50
+initialize to 0 even though it's static for safety
+
