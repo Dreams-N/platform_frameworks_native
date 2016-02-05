@@ -9,10 +9,28 @@ UUID: 11543cb0_63f98230
 Bytes: 8
 int64_t?
 
+117:13-117:22
+Fri Feb 05 19:18:45 2016 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 11543cb0_63f98230
+UUID: 515a34de_c8972f5e
+Bytes: 225
+uint64_t would be too specific and make printing/debugging more difficult to handle (PRIu64), just want to make sure it is the longest value the user space platform supports efficiently to handle what the kernel can dish out.
+
 154:8-154:17
 Fri Feb 05 18:56:39 2016 +0000
 Author: Andres Morales <1038928@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 515a34de_2554eea2
 Bytes: 89
 it could be clearer what fields[N] is. Consider making constants for field array indices.
+
+154:8-154:17
+Fri Feb 05 19:18:45 2016 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 515a34de_2554eea2
+UUID: f16b2868_ea79c75d
+Bytes: 369
+I mentioned to mkayyash that I was willing to figure out a means to deal with this. My proposal was a union of the array and structure, field indexes will do. I was researching if anyone has ever referenced these fields by name (they are numerical indexes in the kernel) and take them as my own.
+
+external/toybox/posix/ps.c has names and indexes, so thats a good start.
 
