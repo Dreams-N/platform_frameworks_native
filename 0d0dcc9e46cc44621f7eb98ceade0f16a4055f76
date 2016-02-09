@@ -1,0 +1,11 @@
+Revision: 0d0dcc9e46cc44621f7eb98ceade0f16a4055f76
+Patch-set: 1
+File: cmds/dumpstate/utils.cpp
+
+266:0-266:24
+Tue Feb 09 15:21:46 2016 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1d89b03a_6d44d523
+Bytes: 78
+This is an internal concept, not available in AOSP yet. NEed to port it first.
+
