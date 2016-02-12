@@ -9,3 +9,11 @@ UUID: 5df328ea_38c98870
 Bytes: 41
 Yuk, this should have used std::auto_lock
 
+65:0-65:19
+Fri Feb 12 23:29:05 2016 +0000
+Author: Jeff Sharkey <1013508@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5df328ea_38c98870
+UUID: 3ddaf464_0362dce6
+Bytes: 22
+std::lock_guard rather
+
