@@ -1,0 +1,11 @@
+Revision: 8ed4270fea554ced8898be205727279db1c5c677
+Patch-set: 2
+File: libs/binder/AppOpsManager.cpp
+
+93:13-93:46
+Sat Feb 13 02:04:39 2016 +0000
+Author: Svetoslav Ganov <1003338@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ddc9d89d_d0edbdac
+Bytes: 172
+The service would be null only on Brillo. Hence, if the service is null can we just return AppOpsManager::MODE_ALLOWED and avoid declaring APP_OPS_MANAGER_UNAVAILABLE_MODE?
+
