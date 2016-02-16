@@ -9,3 +9,11 @@ UUID: ddc9d89d_d0edbdac
 Bytes: 172
 The service would be null only on Brillo. Hence, if the service is null can we just return AppOpsManager::MODE_ALLOWED and avoid declaring APP_OPS_MANAGER_UNAVAILABLE_MODE?
 
+93:13-93:46
+Tue Feb 16 16:47:17 2016 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ddc9d89d_d0edbdac
+UUID: bd82644f_9284fccc
+Bytes: 323
+That seems kind of racy doesn't it?  While it is true that it is unlikely that the service would stay down sufficiently long on a full Android system to trigger this case, I wouldn't rule it out in exceptional edge cases.  I actually kind of appreciated that this code degraded nicely in the face of service unavailability.
+
