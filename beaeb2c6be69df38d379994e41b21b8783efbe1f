@@ -1,0 +1,28 @@
+Revision: beaeb2c6be69df38d379994e41b21b8783efbe1f
+Patch-set: 1
+File: /COMMIT_MSG
+
+7:12-7:27
+Wed Mar 23 16:26:21 2016 +0000
+Author: Greg Hackmann <1015340@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: dcf63e9d_64214c88
+Bytes: 293
+"Buffer overflow" has a very specific meaning in security contexts.  AFAICT there's no buffer overflow here: when the input is too large, atrace safely truncates it.  (Which might cause atrace to unexpected reject inputs, but it doesn't open security holes in the way a buffer overflow would.)
+
+File: cmds/atrace/atrace.cpp
+
+528:4-559:52
+Wed Mar 23 16:26:21 2016 +0000
+Author: Greg Hackmann <1015340@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: dcf63e9d_64530ce4
+Bytes: 578
+Android support for the C++ standard library has significantly improved since this code was written.  If this code needs to be changed, it should be updated to use C++ string and file I/O classes.  This will let you get rid of the fixed-sized buffer *and* make the code significantly easier to understand.
+
+We have a helper in libbase that should be able to reduce the entire file-reading routine to just a few lines of code:
+
+std::string buf;
+if (!android::base::ReadFileToString(k_ftraceFilterPath, &buf)) {
+  // log error and return false
+}
+std::string funcList = "\n" + buf;
+
