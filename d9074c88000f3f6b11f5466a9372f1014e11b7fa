@@ -1,0 +1,19 @@
+Revision: d9074c88000f3f6b11f5466a9372f1014e11b7fa
+Patch-set: 1
+File: libs/gui/SensorManager.cpp
+
+127
+Fri Apr 08 21:19:31 2016 +0000
+Author: Bin Chen <1054390@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0ba24e63_7c96796b
+Bytes: 42
+coding style.
+for (int i = 0; i < 60; i++)
+
+140
+Fri Apr 08 21:19:31 2016 +0000
+Author: Bin Chen <1054390@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0ba24e63_1c9bb592
+Bytes: 44
+coding style. need { } even for single line.
+
