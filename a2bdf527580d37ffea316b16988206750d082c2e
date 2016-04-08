@@ -1,0 +1,11 @@
+Revision: a2bdf527580d37ffea316b16988206750d082c2e
+Patch-set: 1
+File: cmds/service/service.cpp
+
+70
+Fri Apr 08 03:15:40 2016 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8e09ecb1_a4fd4616
+Bytes: 25
+use android::base::Split.
+
