@@ -26,3 +26,18 @@ if (!android::base::ReadFileToString(k_ftraceFilterPath, &buf)) {
 }
 std::string funcList = "\n" + buf;
 
+528:4-559:52
+Tue Apr 12 23:52:34 2016 +0000
+Author: Stephane Gasparini <1102448@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: dcf63e9d_64530ce4
+UUID: ebf7badf_661c104f
+Bytes: 652
+Hi Greg
+I may have miss something, however it seems to me that you suggestion does not work with a file that can have a string that is larger than 1024 bytes.
+
+android::base::ReadFileToString uses ReadFdToString do call to ReadFdToString to read from fd for a max of 1024 bytes, at least on M and N code base I have access to.
+
+So I don't see how android::base::ReadFileToString is going to read the big string created by an atrace command that uses wildcards on kernel trace point.
+
+Are you referring to improvements made to ReadFileToString on very recent N release that makes ReadFileToString only limited by memory available when reading a string ?
+
