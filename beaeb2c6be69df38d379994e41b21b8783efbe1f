@@ -53,3 +53,14 @@ AFAICT this has been the case ever since ReadFileToString was exposed through li
 
 Are you seeing different behavior in practice?  I just ran a quick test and had no issue fully reading /system/framework/framework-res.apk with ReadFileToString(), which is ~28 MB on my dev board.
 
+528:4-559:52
+Wed Apr 13 00:39:38 2016 +0000
+Author: Stephane Gasparini <1102448@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ebf7badf_495fe54a
+UUID: ebf7badf_293149c8
+Bytes: 267
+I have been busy those weeks and as I'm travelling I have no board to try out this week.
+I was just reading code to try to understand what ReadFielToString() is doing. Obviously  I miss something in the code.
+
+So I'll take care of this when back at office (next week)
+
