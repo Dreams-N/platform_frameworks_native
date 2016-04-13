@@ -38,3 +38,11 @@ Actually it must be valid, it would need to be ::std::vector<::android::String16
 I was thinking of when AIDL passes you this and the ptr is NULL:
 std::unique_ptr<std::vector<uint8_t>>* rx_data
 
+48:61-48:73
+Wed Apr 13 22:02:18 2016 +0000
+Author: Jorge Lucangeli Obes <1076138@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 0bac0e06_a6891aae
+UUID: 0bac0e06_2696cac5
+Bytes: 41
+Still, no harm done in checking for NULL.
+
