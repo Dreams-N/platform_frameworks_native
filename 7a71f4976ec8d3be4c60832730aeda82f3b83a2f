@@ -1,0 +1,45 @@
+Revision: 7a71f4976ec8d3be4c60832730aeda82f3b83a2f
+Patch-set: 1
+File: services/nativeperms/Android.mk
+
+23:0-23:21
+Wed Apr 13 18:52:55 2016 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0bac0e06_f20480b3
+Bytes: 13
+Also -Werror?
+
+File: services/nativeperms/android/os/IPermissionController.aidl
+
+1:0-1:54
+Wed Apr 13 18:52:55 2016 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0bac0e06_d20984cb
+Bytes: 1
+?
+
+3:13-3:17
+Wed Apr 13 18:52:55 2016 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0bac0e06_12ecac1a
+Bytes: 5
+2016?
+
+21:10-21:31
+Wed Apr 13 18:52:55 2016 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0bac0e06_9226dc4d
+Bytes: 17
+Maybe @utf8InCpp?
+
+File: services/nativeperms/nativeperms.cpp
+
+36
+Wed Apr 13 18:52:55 2016 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0bac0e06_92d1bc4b
+Bytes: 132
+In frameworks native, the style is defined thusly:
+
+https://docs.google.com/document/d/1QivJI_03TcfRAyMGWkTNHEdiQh8h_F-rYGup9soSeLA/
+
