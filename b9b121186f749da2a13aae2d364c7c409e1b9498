@@ -1,0 +1,13 @@
+Revision: b9b121186f749da2a13aae2d364c7c409e1b9498
+Patch-set: 2
+File: services/nativeperms/nativeperms.cpp
+
+48:61-48:73
+Wed Apr 13 21:52:40 2016 +0000
+Author: Lee Campbell <1052976@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0bac0e06_2611aa75
+Bytes: 137
+Does AIDL pass an empty vector here or NULL?
+
+I remember in PIO I had to allocate the returned vector for out params (not return params).
+
