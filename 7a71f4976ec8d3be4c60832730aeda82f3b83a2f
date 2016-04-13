@@ -9,6 +9,14 @@ UUID: 0bac0e06_f20480b3
 Bytes: 13
 Also -Werror?
 
+23:0-23:21
+Wed Apr 13 20:50:08 2016 +0000
+Author: Jorge Lucangeli Obes <1076138@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 0bac0e06_f20480b3
+UUID: 0bac0e06_dbf19fb4
+Bytes: 4
+Done
+
 File: services/nativeperms/android/os/IPermissionController.aidl
 
 1:0-1:54
