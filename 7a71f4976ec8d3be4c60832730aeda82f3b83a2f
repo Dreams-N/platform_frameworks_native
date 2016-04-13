@@ -18,6 +18,14 @@ UUID: 0bac0e06_d20984cb
 Bytes: 1
 ?
 
+1:0-1:54
+Wed Apr 13 19:38:51 2016 +0000
+Author: Jorge Lucangeli Obes <1076138@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 0bac0e06_d20984cb
+UUID: 0bac0e06_75ffda0d
+Bytes: 116
+This file is copied verbatim, and it does say IPowerManager.aidl unfortunately. I'd rather not change anything here.
+
 3:13-3:17
 Wed Apr 13 18:52:55 2016 +0000
 Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -42,4 +50,12 @@ Bytes: 132
 In frameworks native, the style is defined thusly:
 
 https://docs.google.com/document/d/1QivJI_03TcfRAyMGWkTNHEdiQh8h_F-rYGup9soSeLA/
+
+36
+Wed Apr 13 19:38:51 2016 +0000
+Author: Jorge Lucangeli Obes <1076138@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 0bac0e06_92d1bc4b
+UUID: 0bac0e06_b532e2d0
+Bytes: 7
+Eff me.
 
