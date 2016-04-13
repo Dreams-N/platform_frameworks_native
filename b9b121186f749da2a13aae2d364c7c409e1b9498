@@ -19,3 +19,11 @@ UUID: 0bac0e06_06ebce58
 Bytes: 109
 Hard to tell since this is not actually getting called in Tier 1 builds. I could just leave it alone I guess.
 
+48:61-48:73
+Wed Apr 13 22:00:37 2016 +0000
+Author: Jorge Lucangeli Obes <1076138@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 0bac0e06_06ebce58
+UUID: 0bac0e06_86485e34
+Bytes: 45
+Wrapped in if statement to avoid segfaulting.
+
