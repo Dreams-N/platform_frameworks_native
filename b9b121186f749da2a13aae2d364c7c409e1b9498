@@ -27,3 +27,14 @@ UUID: 0bac0e06_86485e34
 Bytes: 45
 Wrapped in if statement to avoid segfaulting.
 
+48:61-48:73
+Wed Apr 13 22:00:57 2016 +0000
+Author: Lee Campbell <1052976@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 0bac0e06_06ebce58
+UUID: 0bac0e06_a6891aae
+Bytes: 220
+Actually it must be valid, it would need to be ::std::vector<::android::String16>** for you to allocate it.
+
+I was thinking of when AIDL passes you this and the ptr is NULL:
+std::unique_ptr<std::vector<uint8_t>>* rx_data
+
