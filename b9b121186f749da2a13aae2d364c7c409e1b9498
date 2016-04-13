@@ -11,3 +11,11 @@ Does AIDL pass an empty vector here or NULL?
 
 I remember in PIO I had to allocate the returned vector for out params (not return params).
 
+48:61-48:73
+Wed Apr 13 21:55:28 2016 +0000
+Author: Jorge Lucangeli Obes <1076138@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 0bac0e06_2611aa75
+UUID: 0bac0e06_06ebce58
+Bytes: 109
+Hard to tell since this is not actually getting called in Tier 1 builds. I could just leave it alone I guess.
+
