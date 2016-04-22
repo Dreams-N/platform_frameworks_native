@@ -1,0 +1,11 @@
+Revision: abb93e1b4d476f8a04553462f5ba841f3a55715d
+Patch-set: 1
+File: services/sensorservice/SensorService.cpp
+
+1109
+Fri Apr 22 17:52:04 2016 +0000
+Author: ashutoshj <1059954@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e87a6032_780b517d
+Bytes: 136
+This is fine. Perhaps even better would be to use "%" PRIx32 to explictly call out the int32_t format. I will accept the change anyways.
+
