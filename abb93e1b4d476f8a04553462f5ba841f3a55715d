@@ -16,3 +16,16 @@ UUID: e87a6032_98107da7
 Bytes: 6
 PRId32
 
+1109:70-1109:71
+Fri Apr 22 18:11:19 2016 +0000
+Author: Khalid Zubair <1023211@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e87a6032_98107da7
+UUID: e87a6032_b88459ff
+Bytes: 473
+I think %d would be more consistent with the rest of this project. I noticed this when clang threw a warning (below), however bionic doesn't seems to mind. It ran fine when I tried running ALOGI("%D %d", 1, 1).
+ 
+I'll reword the commit message to clarify.
+
+    frameworks/native/services/sensorservice/SensorService.cpp:1123:71: warning: invalid conversion specifier 'D' [-Wformat-invalid-specifier]
+            ALOGE("%s a sensor (%s) without enabled required app op: %D",
+
