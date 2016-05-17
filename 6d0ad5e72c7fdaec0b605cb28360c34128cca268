@@ -1,0 +1,11 @@
+Revision: 6d0ad5e72c7fdaec0b605cb28360c34128cca268
+Patch-set: 1
+File: cmds/dumpstate/utils.cpp
+
+929:0-932:18
+Tue May 17 15:15:32 2016 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f2725490_ed89ff36
+Bytes: 74
+No need to adjust the size of the buffer given the current set of indexes.
+
