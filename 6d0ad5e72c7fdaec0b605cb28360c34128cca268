@@ -9,3 +9,12 @@ UUID: f2725490_ed89ff36
 Bytes: 74
 No need to adjust the size of the buffer given the current set of indexes.
 
+947:0-966:75
+Tue May 17 15:39:47 2016 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d7caa238_eb9cf16a
+Bytes: 358
+or just android::base::ReadFileToString and then cast in the opposite direction?
+
+the length check seems odd too. oh, there are more length checks as we go along. still seems a little odd, but maybe it's legit? or is that another reason that this code should use ReadFileToString and the truncations are actually because this code doesn't handle short reads?
+
