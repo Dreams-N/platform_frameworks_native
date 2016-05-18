@@ -1,0 +1,11 @@
+Revision: e1efe8f0f910814e2c5eb89f987c015fde09db2d
+Patch-set: 3
+File: cmds/dumpstate/utils.cpp
+
+939
+Wed May 18 21:49:29 2016 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 57f312ea_d8904154
+Bytes: 34
+ReadFileToString returns a boolean
+
