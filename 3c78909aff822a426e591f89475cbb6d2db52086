@@ -11,3 +11,24 @@ This config has an identical CONFIG_ID to config_4_attribute_list, which isn't v
 
 It's also the same in every other attribute except EGL_NATIVE_VISUAL_ID. How do clients differentiate between these two (i.e. how do they know which one to pick), considering that the GGL_PIXEL_FORMAT enum is private to libagl and meaningless to clients?
 
+1014
+Fri May 20 19:01:49 2016 +0000
+Author: Amit Pundir <1031448@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b7ae0ef8_817844e1
+UUID: 573072cd_c7699eeb
+Bytes: 773
+> This config has an identical CONFIG_ID to config_4_attribute_list,
+ > which isn't valid.
+ > 
+ > It's also the same in every other attribute except
+ > EGL_NATIVE_VISUAL_ID.
+
+We did copy config_4_attribute_list with an intention of creating a custom BGRA_8888 EGL_NATIVE_VISUAL_ID and this CONFIG_ID mixup is indeed an oversight. Thanks for pointing that out, we will fix that.
+
+ > How do clients differentiate between these
+ > two (i.e. how do they know which one to pick), considering that the
+ > GGL_PIXEL_FORMAT enum is private to libagl and meaningless to
+ > clients?
+
+I did not understand what you mean by the client part. Did you mean opengles client? We don't use any external clients for software rendering. We just use whatever comes bundled with libGLES_android.
+
