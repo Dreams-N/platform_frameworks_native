@@ -9,3 +9,10 @@ UUID: ae9cfe2a_e783cd68
 Bytes: 43
 Extension has been ratified, remove comment
 
+54
+Wed Jun 22 20:04:43 2016 +0000
+Author: Pablo Ceballos <1095973@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6ee926fa_31bbf0d6
+Bytes: 68
+I would just completely remove this #define everywhere in this file.
+
