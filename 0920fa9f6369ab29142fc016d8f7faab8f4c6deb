@@ -1,0 +1,28 @@
+Revision: 0920fa9f6369ab29142fc016d8f7faab8f4c6deb
+Patch-set: 1
+File: cmds/dumpstate/dumpstate.cpp
+
+396:4-396:56
+Fri Jul 01 16:01:30 2016 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 606e977c_7db27faa
+Bytes: 373
+Default is not entirely what you think it is? Default is only taken if the property does not exist. If the property is set to "" (a common approach to clear a variable), it will report the nul string. I suggest that some (minimal !wifi_iface[0]) validity checking be applied to this?
+
+Are there a known set of valid interface names? That might be too restrictive though ...
+
+583:0-584:62
+Fri Jul 01 16:01:30 2016 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7d11e241_542004a1
+Bytes: 278
+This is C++, new code must try to use std::string.
+
+std::string ifname("IF_NAME=");
+ifname += wifi_iface;
+run_command(....., ifname.c_str(), ...)
+
+or use libbase StringPrintf since the scope can be an rval:
+
+run_command(...., StringPrintf("IF_NAME=%s", wifi_iface).c_str(), ...)
+
