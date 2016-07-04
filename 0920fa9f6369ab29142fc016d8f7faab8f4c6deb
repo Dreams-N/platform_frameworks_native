@@ -11,6 +11,14 @@ Default is not entirely what you think it is? Default is only taken if the prope
 
 Are there a known set of valid interface names? That might be too restrictive though ...
 
+396:4-396:56
+Mon Jul 04 01:11:16 2016 +0000
+Author: Young-Ho Cha <1005082@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 606e977c_7db27faa
+UUID: 3df04adc_9085f4ee
+Bytes: 4
+Done
+
 583:0-584:62
 Fri Jul 01 16:01:30 2016 +0000
 Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -25,4 +33,12 @@ run_command(....., ifname.c_str(), ...)
 or use libbase StringPrintf since the scope can be an rval:
 
 run_command(...., StringPrintf("IF_NAME=%s", wifi_iface).c_str(), ...)
+
+583:0-584:62
+Mon Jul 04 01:11:16 2016 +0000
+Author: Young-Ho Cha <1005082@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7d11e241_542004a1
+UUID: 3df04adc_706bb006
+Bytes: 4
+Done
 
