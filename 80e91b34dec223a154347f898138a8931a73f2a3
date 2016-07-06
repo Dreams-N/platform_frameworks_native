@@ -1,0 +1,22 @@
+Revision: 80e91b34dec223a154347f898138a8931a73f2a3
+Patch-set: 3
+File: cmds/dumpstate/dumpstate.cpp
+
+391:0-391:40
+Wed Jul 06 14:43:09 2016 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: fddf9221_beed0ec3
+Bytes: 216
+Primarily because of merge conflicts I have to request yet another change that serendipitously is yet another C++ adjustment.
+
+Please put variable definitions close to their first use (so bundle it with line 399-402)
+
+399:0-402:5
+Wed Jul 06 14:43:09 2016 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: fddf9221_5e2a4add
+Bytes: 453
+Because of merge conflicts into the other Android source trees, this code lands in a header printing routine rather than in dumpstate() splitting this operation and variable definition from the function it is used in.
+
+Please move this code (and above variable definition) to be close to first use (so bundle them all with line 589-591). This will simplify the merge conflicts downstream, and ensure that this new codepath lands in the correct function.
+
