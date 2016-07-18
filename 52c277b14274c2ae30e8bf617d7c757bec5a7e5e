@@ -9,3 +9,11 @@ UUID: bac440d3_f6f45327
 Bytes: 64
 This ignores an error condition: reaching the end of the buffer.
 
+1861
+Mon Jul 18 20:26:48 2016 +0000
+Author: Roshan Pius <1074459@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: bac440d3_f6f45327
+UUID: bac440d3_3619cb27
+Bytes: 83
+Done. I've tried to keep this method similar to |readString16<unique_ptr>| version.
+
