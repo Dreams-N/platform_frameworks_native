@@ -1,0 +1,11 @@
+Revision: f915ed2ea65ef6171423ac707c25e46da390c779
+Patch-set: 3
+File: libs/binder/Parcel.cpp
+
+1870
+Mon Jul 18 21:28:56 2016 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: bac440d3_accd6e6a
+Bytes: 300
+Could you just not write this function?  It's pretty hard to understand how to use this from the header, and very few people should be doing this anyway.  Just put the critical logic  into status_t readString8(String8*) and have the non-error code version reset to an empty string on UNEXPECTED_NULL?
+
