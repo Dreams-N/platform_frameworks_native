@@ -1,0 +1,11 @@
+Revision: 52c277b14274c2ae30e8bf617d7c757bec5a7e5e
+Patch-set: 1
+File: libs/binder/Parcel.cpp
+
+1861
+Mon Jul 18 20:03:30 2016 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: bac440d3_f6f45327
+Bytes: 64
+This ignores an error condition: reaching the end of the buffer.
+
