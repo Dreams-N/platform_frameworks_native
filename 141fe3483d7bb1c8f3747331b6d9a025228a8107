@@ -1,0 +1,11 @@
+Revision: 141fe3483d7bb1c8f3747331b6d9a025228a8107
+Patch-set: 2
+File: libs/binder/Parcel.cpp
+
+1851:2-1851:26
+Mon Jul 18 20:42:04 2016 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: bac440d3_91dc09ef
+Bytes: 52
+Omit this line, having a return != OK is sufficient.
+
