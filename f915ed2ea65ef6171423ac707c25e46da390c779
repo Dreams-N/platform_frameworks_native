@@ -9,3 +9,11 @@ UUID: bac440d3_accd6e6a
 Bytes: 300
 Could you just not write this function?  It's pretty hard to understand how to use this from the header, and very few people should be doing this anyway.  Just put the critical logic  into status_t readString8(String8*) and have the non-error code version reset to an empty string on UNEXPECTED_NULL?
 
+1870
+Mon Jul 18 22:24:37 2016 +0000
+Author: Roshan Pius <1074459@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: bac440d3_accd6e6a
+UUID: bac440d3_e7e01f06
+Bytes: 4
+Done
+
