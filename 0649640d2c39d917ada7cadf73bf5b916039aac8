@@ -1,0 +1,20 @@
+Revision: 0649640d2c39d917ada7cadf73bf5b916039aac8
+Patch-set: 4
+File: libs/binder/Parcel.cpp
+
+1859
+Wed Jul 20 23:45:39 2016 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2aa1dfaa_d382c6a3
+Bytes: 14
+no tabs please
+
+1864
+Wed Jul 20 23:45:39 2016 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2aa1dfaa_b3638214
+Bytes: 442
+This isn't really what that error code means.  Strictly speaking, it means that someone wrote a null value into the parcel (e.g. they passed in null, which encodes as 0 here).   The problem is that the wire format for String8 makes no difference between null and 0 length, so you can't validly return this.  In this context, because you've checked the bounds already above, a nullptr return means not enough data in the parcel.
+
+So BAD_VALUE?
+
