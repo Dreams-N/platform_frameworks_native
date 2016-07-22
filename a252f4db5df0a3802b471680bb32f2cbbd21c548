@@ -1,0 +1,25 @@
+Revision: a252f4db5df0a3802b471680bb32f2cbbd21c548
+Patch-set: 1
+File: cmds/atrace/atrace.cpp
+
+780:8-780:26
+Fri Jul 22 17:03:22 2016 +0000
+Author: Christopher Ferris <1019050@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6a359761_25e298c9
+Bytes: 70
+Is this check necessary? Won't you abort if memory can't be allocated?
+
+812:20-812:28
+Fri Jul 22 17:03:22 2016 +0000
+Author: Christopher Ferris <1019050@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6a359761_652f40f4
+Bytes: 75
+As long as you are here, any chance of changing this to a non-c style cast?
+
+832:16-832:24
+Fri Jul 22 17:03:22 2016 +0000
+Author: Christopher Ferris <1019050@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6a359761_852cc4fe
+Bytes: 14
+Same as above.
+
