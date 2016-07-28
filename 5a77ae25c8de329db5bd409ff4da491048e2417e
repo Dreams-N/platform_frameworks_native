@@ -9,3 +9,22 @@ UUID: cfd21544_0de79c17
 Bytes: 124
 When you read this, it allows you to confuse transport and SSE.  If you don't care, then you should simply use isOk() below.
 
+138:8-139:35
+Thu Jul 28 16:26:28 2016 +0000
+Author: Chia-I Wu <1096171@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: cfd21544_0de79c17
+UUID: 4f9e257e_a1067eea
+Bytes: 409
+You are right that it is bad.  But "legacy" here means the use predates binder::Status.  I want it to be first-class citizen to help convert existing native services to binder::Status.  New code should not use it.
+
+There can be code that does
+
+  status_t ret = producer->dequeueBuffer(...);
+  if (ret == WOULD_BLOCK) {
+    // do something
+  } else if (ret != NO_ERROR) {
+    // bail
+  }
+
+isOk() is not enough.
+
