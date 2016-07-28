@@ -28,3 +28,23 @@ There can be code that does
 
 isOk() is not enough.
 
+138:8-139:35
+Thu Jul 28 16:57:23 2016 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 4f9e257e_a1067eea
+UUID: cfd21544_0898aac1
+Bytes: 373
+This code is still confuses service specific and transport errors, since it confuses a transport error WOULD_BLOCK with a service specific WOULD_BLOCK.  Right?
+
+You really need:
+
+Status ret = producer->dequeueBuffer(...);
+
+if (!ret.isOk()) {
+  if (ret.serviceSpecificErrorCode() == WOULD_BLOCK) {
+    // detected your particular error condition
+  } else {
+    // bail
+  }
+}
+
