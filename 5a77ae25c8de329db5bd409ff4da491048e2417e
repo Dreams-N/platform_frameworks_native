@@ -1,0 +1,11 @@
+Revision: 5a77ae25c8de329db5bd409ff4da491048e2417e
+Patch-set: 1
+File: include/binder/Status.h
+
+138:8-139:35
+Thu Jul 28 15:53:57 2016 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: cfd21544_0de79c17
+Bytes: 124
+When you read this, it allows you to confuse transport and SSE.  If you don't care, then you should simply use isOk() below.
+
