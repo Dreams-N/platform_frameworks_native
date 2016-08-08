@@ -16,3 +16,15 @@ UUID: b99e1320_1584d1b1
 Bytes: 129
 Given the kernel messages are somewhat distinct from main/system/crash should this go in it's own section, like events and radio?
 
+457
+Mon Aug 08 22:54:52 2016 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b99e1320_1584d1b1
+UUID: b99e1320_09eb5c77
+Bytes: 668
+The complaint when we did that was it duplicated the content of dmesg (except printed with realtime stamps). So we backed off. Here it adds value to the common logs by inserting the kernel logs in as user space activities are performed.
+
+I am not married to this because people that want correlated kernel activities want to see them merged with radio or events log buffers as well. Having a separate section will allow one to look back and forth.
+
+Your tool would have no problem merging the content in for each right? Can I see main, system, crash and events buffer merged together in your tool for example? If so, then landing it as a separate one is not a problem.
+
