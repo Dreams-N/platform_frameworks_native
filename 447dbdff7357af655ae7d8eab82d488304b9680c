@@ -28,3 +28,13 @@ I am not married to this because people that want correlated kernel activities w
 
 Your tool would have no problem merging the content in for each right? Can I see main, system, crash and events buffer merged together in your tool for example? If so, then landing it as a separate one is not a problem.
 
+457
+Mon Aug 08 23:01:22 2016 +0000
+Author: Mitchell Wills <1079753@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b99e1320_09eb5c77
+UUID: b99e1320_a90a6827
+Bytes: 323
+My tool can pull from wherever :). Take a look at the combined view, which pulls logs from all over. Currently they get a tag of "Kernel" when they are formatted.
+
+I would prefer it separate as it gives people the option to turn it off. From looking at the logd output there would be no way to differentiate them otherwise.
+
