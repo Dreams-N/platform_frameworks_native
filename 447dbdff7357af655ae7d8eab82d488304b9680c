@@ -9,3 +9,10 @@ UUID: b99e1320_0327bebb
 Bytes: 33
 blew past the 100 character limit
 
+457
+Mon Aug 08 20:37:30 2016 +0000
+Author: Mitchell Wills <1079753@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b99e1320_1584d1b1
+Bytes: 129
+Given the kernel messages are somewhat distinct from main/system/crash should this go in it's own section, like events and radio?
+
