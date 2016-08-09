@@ -9,3 +9,11 @@ UUID: d9a907a8_c04ce0cf
 Bytes: 118
 any chance we could call this something else? the dmesg kernel log is called "KERNEL LOG". Or rename the dmesg section
 
+483:17-483:27
+Tue Aug 09 18:06:45 2016 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d9a907a8_c04ce0cf
+UUID: d9a907a8_e0547c2f
+Bytes: 187
+dmesg is a legacy first class citizen (however I search for it using dmesg, not KERNEL), what about KERNEL BUFFER LOG? I could be tempted to do KERNEL LOGCAT to be shorter? straw poll ...
+
