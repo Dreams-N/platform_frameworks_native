@@ -1,0 +1,11 @@
+Revision: deda1d4bc9ee932b07ce21e6cb7c86276c693ce2
+Patch-set: 2
+File: cmds/dumpstate/dumpstate.cpp
+
+483:17-483:27
+Tue Aug 09 17:53:42 2016 +0000
+Author: Mitchell Wills <1079753@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d9a907a8_c04ce0cf
+Bytes: 118
+any chance we could call this something else? the dmesg kernel log is called "KERNEL LOG". Or rename the dmesg section
+
