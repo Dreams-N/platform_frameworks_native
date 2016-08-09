@@ -25,3 +25,25 @@ UUID: d9a907a8_c06740f6
 Bytes: 76
 KENERL LOGCAT seems good as it makes it clear it's not just the kernel logs.
 
+483:17-483:27
+Tue Aug 09 19:32:13 2016 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d9a907a8_c06740f6
+UUID: f9c96b7a_96c76c11
+Bytes: 559
+Before I commit.
+
+------ KERNEL LOG (logcat -b kernel -v threadtime -v printable -d *:v) ------
+
+and
+
+------ KERNEL LOG (dmesg) ------
+
+not truly enough if a differentiator? Because now that I see it:
+
+------ KERNEL LOGCAT (logcat -b kernel -v threadtime -v printable -d *:v) ------
+
+made me uncomfortable because of the stutter, and I did not like KERNEL BUFFER LOG as too wordy. So if the command differentiator remains as too little difference then maybe just KERNEL BUFFER:
+
+------ KERNEL BUFFER (logcat -b kernel -v threadtime -v printable -d *:v) ------
+
