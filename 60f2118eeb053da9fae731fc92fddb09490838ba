@@ -16,6 +16,16 @@ UUID: 39b5c344_500c6c90
 Bytes: 114
 Doesn't acquiring the mutex above imply the fence? Or do we need to have another fence after the load on line 275?
 
+283
+Wed Aug 10 19:13:03 2016 +0000
+Author: Hans Boehm <1042828@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 39b5c344_500c6c90
+UUID: 19d39f97_bb7bff21
+Bytes: 265
+Good point. mHeapId is only modified while holding the lock, so prior updates synchronize with the lock acquisition here.
+
+Mutexes don't really act as fences, in that they only establish ordering if the same mutex is acquired in both threads. But that is true here.
+
 423
 Wed Aug 10 10:03:56 2016 +0000
 Author: Vladimir Marko <1018108@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -23,10 +33,26 @@ UUID: 39b5c344_906ed431
 Bytes: 70
 Style: why break the line? This fits into a single 100-character line.
 
+423
+Wed Aug 10 19:13:03 2016 +0000
+Author: Hans Boehm <1042828@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 39b5c344_906ed431
+UUID: 19d39f97_0d46555c
+Bytes: 123
+This seems to be kind of, sort of, mostly formatted to 80 columns. What do we usually do in such cases? Just format to 100?
+
 456:38-456:39
 Wed Aug 10 10:03:56 2016 +0000
 Author: Vladimir Marko <1018108@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 59dd179f_a969fd2d
 Bytes: 76
 Style: In ART, I would break the line after '(' and add 4-space indentation.
+
+456:38-456:39
+Wed Aug 10 19:13:03 2016 +0000
+Author: Hans Boehm <1042828@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 59dd179f_a969fd2d
+UUID: 19d39f97_cd3d5d74
+Bytes: 184
+It still doesn't quite fit in 80 columns. I took your 4 columns indent suggestion, since I find it a lot easier to read. If we decide on a 100 columns, I'll take the rest of this, too.
 
