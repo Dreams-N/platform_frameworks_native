@@ -2,6 +2,13 @@ Revision: 60f2118eeb053da9fae731fc92fddb09490838ba
 Patch-set: 1
 File: libs/binder/IMemory.cpp
 
+58:8-58:25
+Wed Aug 10 11:50:42 2016 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 39cea3f0_c8db8fe2
+Bytes: 90
+it's a pity that we cannot (easily) ask the compiler to enforce this, given how it's used.
+
 283
 Wed Aug 10 10:03:56 2016 +0000
 Author: Vladimir Marko <1018108@85c56323-6fa9-3386-8a01-6480fb634889>
