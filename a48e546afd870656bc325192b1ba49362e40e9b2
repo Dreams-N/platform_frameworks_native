@@ -9,3 +9,13 @@ UUID: 19d39f97_7beb4777
 Bytes: 15
 else close(fd)?
 
+333:8-333:9
+Wed Aug 10 20:08:19 2016 +0000
+Author: Hans Boehm <1042828@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 19d39f97_7beb4777
+UUID: 19d39f97_bb0bff27
+Bytes: 197
+Yes. Good catch. That does indeed look broken in all versions.
+
+Since you started looking at system call hygiene, the previous function doesn't check dup() for an error return. Fixing that as well.
+
