@@ -41,6 +41,14 @@ UUID: 19d39f97_0d46555c
 Bytes: 123
 This seems to be kind of, sort of, mostly formatted to 80 columns. What do we usually do in such cases? Just format to 100?
 
+423
+Wed Aug 10 19:18:57 2016 +0000
+Author: Vladimir Marko <1018108@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 19d39f97_0d46555c
+UUID: 99a5cf1d_cbb6f53f
+Bytes: 53
+At least add the 4-space indentation for consistency.
+
 456:38-456:39
 Wed Aug 10 10:03:56 2016 +0000
 Author: Vladimir Marko <1018108@85c56323-6fa9-3386-8a01-6480fb634889>
