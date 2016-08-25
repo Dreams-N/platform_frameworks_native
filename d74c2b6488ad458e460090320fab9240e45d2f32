@@ -1,0 +1,11 @@
+Revision: d74c2b6488ad458e460090320fab9240e45d2f32
+Patch-set: 1
+File: libs/binder/Parcel.cpp
+
+1962
+Thu Aug 25 17:16:49 2016 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 058256cd_39cc8b90
+Bytes: 165
+The contract in many of these functions is that the passed in out pointers are not allowed to be NULL.  Is there some reason why this particular function is special?
+
