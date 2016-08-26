@@ -9,3 +9,11 @@ UUID: 058256cd_39cc8b90
 Bytes: 165
 The contract in many of these functions is that the passed in out pointers are not allowed to be NULL.  Is there some reason why this particular function is special?
 
+1962
+Fri Aug 26 02:16:21 2016 +0000
+Author: Bin Chen <1042518@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 058256cd_39cc8b90
+UUID: c5111e9a_44a0ae89
+Bytes: 237
+I agree with you. Just wondering if we can do better than just crash in case NULL is passed in. Maybe pass by reference can make the contract more explicit and safe? But that won't be an optional now, since it will break the legacy code.
+
