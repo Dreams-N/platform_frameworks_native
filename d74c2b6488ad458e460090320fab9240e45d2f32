@@ -33,3 +33,22 @@ The idea is that you would never call this function unless you actually wanted t
   status = parcel.readParcelable(&mp);  // Calls the templated wrapper
   if (status != OK) ...
 
+1962
+Sat Aug 27 01:06:30 2016 +0000
+Author: Bin Chen <1042518@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e5ac6270_53aa871a
+UUID: 45144ed4_78bb61b2
+Bytes: 391
+I was trying to see if can make the code more robust in following case, when the user forget the `if (mp)` checking.
+
+void doSOmethihg(int intput, MyParceable *mp) {
+  marshalling the input to parcel
+  call the BnSide and get the reply
+  if (mp) {
+      reply.readParclale(tmp);
+  }
+}
+
+An example: 
+https://android-review.googlesource.com/#/c/263512/1/keystore/IKeystoreService.cpp line 1065
+
