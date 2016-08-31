@@ -9,3 +9,10 @@ UUID: 11b0ddbd_0d60729f
 Bytes: 234
 This is fine for Android since bionic maintains portability here. If one wants to be portable outside our garden, one is supposed to use sysconf(_SC_PAGESIZE) according to the man page. getpagesize has been deprecated in POSIX.1-2001.
 
+43:40-43:51
+Wed Aug 31 15:46:46 2016 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 11b0ddbd_2df52eb6
+Bytes: 42
+I suggest leaving this as 2*getpagesize().
+
