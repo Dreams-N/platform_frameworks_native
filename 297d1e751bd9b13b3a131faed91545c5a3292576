@@ -9,6 +9,28 @@ UUID: b1e391ef_fba88f79
 Bytes: 83
 I don't understand.  How could the vm area size not be a multiple of the page size?
 
+13:52-14:14
+Thu Sep 01 03:08:19 2016 +0000
+Author: Ganesh Mahendran <1111544@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b1e391ef_fba88f79
+UUID: f1d26943_4ff4714d
+Bytes: 627
+> I don't understand.  How could the vm area size not be a multiple
+ > of the page size?
+
+You are right, vm area will be multiple of pagesize. 
+
+System with 64KB pagesize, kernel will alloc (1MB + 64KB) vm area size. And the binder vm area need to be aligned in 512KB which calculated by below formula in kernel __get_vm_area_node()：
+---		
+align = 1ul << clamp_t(int, fls_long(size),
+	       PAGE_SHIFT, IOREMAP_MAX_ORDER);
+=>
+align = 1ul << min(max(19, 12), 19) = 512KB
+---
+If the binder mmap() is called successively， the next binder area will start at (1MB + 512KB), (512 - 64)KB fragment will exist in vm area.
+
+Thanks.
+
 File: libs/binder/ProcessState.cpp
 
 43:40-43:51
