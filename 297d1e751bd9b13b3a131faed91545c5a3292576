@@ -99,3 +99,14 @@ Thanks for your suggestion.
 sysconf(_SC_PAGE_SIZE) is better.
 Thanks.
 
+43:40-43:51
+Thu Sep 01 05:32:58 2016 +0000
+Author: Ganesh Mahendran <1111544@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 11b0ddbd_2df52eb6
+UUID: f1d26943_943cdd21
+Bytes: 143
+> I suggest leaving this as 2*getpagesize().
+
+kernel will only add one page guard. So I thinks we only need to substract one page size.
+Thanks.
+
