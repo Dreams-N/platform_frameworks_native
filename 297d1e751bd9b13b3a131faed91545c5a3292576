@@ -84,3 +84,18 @@ Bytes: 195
 If in the future pagesize is 512KB, maybe we need use 2M-getpagesize() to give enough vm area for binder.
 If we use -8KB in system with 512KB pagesize, kernel vm area will have a lot of fragment.
 
+43:40-43:51
+Thu Sep 01 05:32:23 2016 +0000
+Author: Ganesh Mahendran <1111544@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 11b0ddbd_0d60729f
+UUID: f1d26943_74526169
+Bytes: 316
+> This is fine for Android since bionic maintains portability here.
+ > If one wants to be portable outside our garden, one is supposed to
+ > use sysconf(_SC_PAGESIZE) according to the man page. getpagesize
+ > has been deprecated in POSIX.1-2001.
+
+Thanks for your suggestion.
+sysconf(_SC_PAGE_SIZE) is better.
+Thanks.
+
