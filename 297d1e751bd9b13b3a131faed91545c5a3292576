@@ -33,3 +33,32 @@ UUID: b1e391ef_1bfa9b61
 Bytes: 298
 If we change this to getpagesize(), it's presumably because we're worried about non-4K pages. We'd then also presumably need a sanity check to guard against at least some future getpagesize() >= 512K. Since there is no hard requirement for this to be page aligned, the original seems cleaner to me.
 
+43:40-43:51
+Thu Sep 01 02:48:43 2016 +0000
+Author: Ganesh Mahendran <1111544@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 11b0ddbd_0d60729f
+UUID: f1d26943_64019410
+Bytes: 69
+Thanks for your suggestion.
+sysconf(_SC_PAGE_SIZE) is better.
+Thanks.
+
+43:40-43:51
+Thu Sep 01 02:48:43 2016 +0000
+Author: Ganesh Mahendran <1111544@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 11b0ddbd_2df52eb6
+UUID: f1d26943_4498d8c6
+Bytes: 98
+kernel will only add one page guard. So I thinks we only need to substract one page size.
+
+Thanks.
+
+43:40-43:51
+Thu Sep 01 02:48:43 2016 +0000
+Author: Ganesh Mahendran <1111544@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b1e391ef_1bfa9b61
+UUID: f1d26943_446d7897
+Bytes: 195
+If in the future pagesize is 512KB, maybe we need use 2M-getpagesize() to give enough vm area for binder.
+If we use -8KB in system with 512KB pagesize, kernel vm area will have a lot of fragment.
+
