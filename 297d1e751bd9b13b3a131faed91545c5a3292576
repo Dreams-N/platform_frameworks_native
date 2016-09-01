@@ -110,3 +110,20 @@ Bytes: 143
 kernel will only add one page guard. So I thinks we only need to substract one page size.
 Thanks.
 
+43:40-43:51
+Thu Sep 01 05:33:43 2016 +0000
+Author: Ganesh Mahendran <1111544@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b1e391ef_1bfa9b61
+UUID: f1d26943_74d021bf
+Bytes: 517
+> If we change this to getpagesize(), it's presumably because we're
+ > worried about non-4K pages. We'd then also presumably need a sanity
+ > check to guard against at least some future getpagesize() >= 512K.
+ > Since there is no hard requirement for this to be page aligned, the
+ > original seems cleaner to me.
+
+If in the future pagesize is 512KB, maybe we need use 2M-getpagesize() to give enough vm area for binder.
+If we use -8KB in system with 512KB pagesize, kernel vm area will have a lot of fragment.
+
+Thanks
+
