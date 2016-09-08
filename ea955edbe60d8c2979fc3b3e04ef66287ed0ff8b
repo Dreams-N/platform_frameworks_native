@@ -1,0 +1,32 @@
+Revision: ea955edbe60d8c2979fc3b3e04ef66287ed0ff8b
+Patch-set: 7
+File: cmds/installd/commands.cpp
+
+701:29-701:40
+Thu Sep 08 20:54:47 2016 +0000
+Author: Nicolas Geoffray <1038443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0bfd0a27_de36859d
+Bytes: 58
+Old code, but is the fd really important to dump in a log?
+
+1635:0-1648:5
+Thu Sep 08 20:54:47 2016 +0000
+Author: Nicolas Geoffray <1038443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8b601ae6_2a3adff5
+Bytes: 14
+Add a comment.
+
+1650:0-1676:5
+Thu Sep 08 20:54:47 2016 +0000
+Author: Nicolas Geoffray <1038443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 4b562216_c81b4f89
+Bytes: 5
+ditto
+
+2235:0-2236:37
+Thu Sep 08 20:54:47 2016 +0000
+Author: Nicolas Geoffray <1038443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2bf48e40_df479b46
+Bytes: 69
+You probably also clean up b_path, if it's the vdex_path that failed?
+
