@@ -9,12 +9,28 @@ UUID: 0bfd0a27_de36859d
 Bytes: 58
 Old code, but is the fd really important to dump in a log?
 
+701:29-701:40
+Fri Sep 09 09:19:32 2016 +0000
+Author: David Brazdil <1059815@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 0bfd0a27_de36859d
+UUID: 2b556e39_97aca491
+Bytes: 62
+This is just for debugging, no question. Want me to remove it?
+
 1635:0-1648:5
 Thu Sep 08 20:54:47 2016 +0000
 Author: Nicolas Geoffray <1038443@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 8b601ae6_2a3adff5
 Bytes: 14
 Add a comment.
+
+1635:0-1648:5
+Fri Sep 09 09:19:32 2016 +0000
+Author: David Brazdil <1059815@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8b601ae6_2a3adff5
+UUID: 8bff3a6b_f2c40834
+Bytes: 4
+Done
 
 1650:0-1676:5
 Thu Sep 08 20:54:47 2016 +0000
@@ -23,10 +39,26 @@ UUID: 4b562216_c81b4f89
 Bytes: 5
 ditto
 
+1650:0-1676:5
+Fri Sep 09 09:19:32 2016 +0000
+Author: David Brazdil <1059815@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 4b562216_c81b4f89
+UUID: 8bff3a6b_d2c10422
+Bytes: 4
+Done
+
 2235:0-2236:37
 Thu Sep 08 20:54:47 2016 +0000
 Author: Nicolas Geoffray <1038443@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 2bf48e40_df479b46
 Bytes: 69
 You probably also clean up b_path, if it's the vdex_path that failed?
+
+2235:0-2236:37
+Fri Sep 09 09:19:32 2016 +0000
+Author: David Brazdil <1059815@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2bf48e40_df479b46
+UUID: 4b054249_b0ba78b9
+Bytes: 91
+Pretty confusing with unlinks inside move_ab_path. Moved things around but still not happy.
 
