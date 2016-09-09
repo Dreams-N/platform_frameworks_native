@@ -1,0 +1,19 @@
+Revision: 8b5cf33227a2ca8176133201549a36b6b49ea32f
+Patch-set: 8
+File: cmds/installd/commands.cpp
+
+2231:0-2236:54
+Fri Sep 09 09:49:49 2016 +0000
+Author: Nicolas Geoffray <1038443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0b6eea0d_76f2b085
+Bytes: 165
+How about (feel free to combine the ifs if you prefer):
+
+if (!a_image_path.empty()) {
+  if (!move_ab_path()) {
+    if (!kIgnore) {
+      success = false;
+    }
+  }
+}
+
