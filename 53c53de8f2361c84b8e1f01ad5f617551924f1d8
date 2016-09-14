@@ -1,0 +1,11 @@
+Revision: 53c53de8f2361c84b8e1f01ad5f617551924f1d8
+Patch-set: 4
+File: cmds/dumpstate/dumpstate.cpp
+
+1300
+Wed Sep 14 23:14:48 2016 +0000
+Author: Felipe Leme <1013984@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8b6c9a82_42746161
+Bytes: 107
+I would prefer that this file was accessible by shell and dumped after root is drop - would that be doable?
+
