@@ -9,3 +9,11 @@ UUID: 8b6c9a82_42746161
 Bytes: 107
 I would prefer that this file was accessible by shell and dumped after root is drop - would that be doable?
 
+1300
+Thu Sep 15 00:13:32 2016 +0000
+Author: Ajay Panicker <1077498@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8b6c9a82_42746161
+UUID: 8b6c9a82_585c541d
+Bytes: 246
+I did some tests and found out that chmod 777ing both the file and the directory allowed me to move this line to a section that isn't ran as root, the issue now is I do not know how to allow dumpstate to access the /data/misc/bluedroid directory.
+
