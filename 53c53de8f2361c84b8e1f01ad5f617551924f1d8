@@ -17,3 +17,13 @@ UUID: 8b6c9a82_585c541d
 Bytes: 246
 I did some tests and found out that chmod 777ing both the file and the directory allowed me to move this line to a section that isn't ran as root, the issue now is I do not know how to allow dumpstate to access the /data/misc/bluedroid directory.
 
+1300
+Thu Sep 15 18:16:26 2016 +0000
+Author: Jeff Sharkey <1006166@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8b6c9a82_585c541d
+UUID: eb3b56ab_b38ce090
+Bytes: 322
+Hmm, I'm starting to see how this change is qcom specific.  We really want to keep the generic framework bits vendor-agnostic.
+
+Is there a method to add all files under a directory to the bugreport?  Then we could write this as adding "/data/misc/bluetooth/logs/*" and vendors can name the actual files whatever they want.
+
