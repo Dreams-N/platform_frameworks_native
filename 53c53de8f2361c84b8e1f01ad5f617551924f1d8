@@ -27,3 +27,12 @@ Hmm, I'm starting to see how this change is qcom specific.  We really want to ke
 
 Is there a method to add all files under a directory to the bugreport?  Then we could write this as adding "/data/misc/bluetooth/logs/*" and vendors can name the actual files whatever they want.
 
+1300
+Thu Sep 15 18:38:50 2016 +0000
+Author: Andre Eisenbach <1058798@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: eb3b56ab_b38ce090
+UUID: eb3b56ab_36ce1e25
+Bytes: 303
+Just to be clear here, there is *nothing* vendor specific about this. Though I do like your idea to add /data/misc/bluetooth/logs/*.
+In lieu of updating the current config file locations in bluedroid/, we can at least start collecting the logs in bluetooth/... and switch the rest over at a later point.
+
