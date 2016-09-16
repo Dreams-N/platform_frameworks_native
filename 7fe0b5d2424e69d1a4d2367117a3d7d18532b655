@@ -1,0 +1,11 @@
+Revision: 7fe0b5d2424e69d1a4d2367117a3d7d18532b655
+Patch-set: 5
+File: cmds/dumpstate/utils.cpp
+
+832:27-832:43
+Fri Sep 16 16:19:11 2016 +0000
+Author: Jeff Sharkey <1006166@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: eb3b56ab_1bd4dd3a
+Bytes: 91
+If we switch the dirs over to using only AID_BLUETOOTH GID then we won't need NET_BT_STACK.
+
