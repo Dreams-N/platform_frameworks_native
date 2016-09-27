@@ -1,0 +1,11 @@
+Revision: 494ed550f5aea1332984fb9f0f11036fc58bd716
+Patch-set: 1
+File: include/android/native_window_jni.h
+
+54
+Tue Sep 27 21:05:30 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f08d07b7_85479447
+Bytes: 144
+This was in the NDK headers but not in the frameworks. It's been missing here since at least the move from frameworks/base to frameworks/native.
+
